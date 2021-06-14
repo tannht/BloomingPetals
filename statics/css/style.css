@@ -1,0 +1,7 @@
+@import url("bootstrap/bootstrap.min.css"); 
+:root{
+    --main-color: #794645;
+    --second-color: #E3D3D4;
+    --text-color: #202020;
+    --link-color: #D3AAA4;
+}

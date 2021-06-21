@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Blooming Petals</title>
+    <link rel="stylesheet" href="statics/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="statics/css/fontawesome/all.min.css" />
     <link rel="stylesheet" href="statics/css/style.css" />
   </head>
   <body>
-  <!-- MAIN NAVIGATION -->
-      <nav class="navbar">
+    <!-- MAIN NAVIGATION -->
+    <nav class="navbar">
       <div class="navbar_logo">
         <a href="index.html">
-          <img src="./statics/images/logo.svg" alt="logo" />
+          <img src="statics/images/logo.svg" alt="logo" />
         </a>
       </div>
       <div class="navbar_menu">
@@ -24,68 +26,168 @@
         </ul>
       </div>
       <div class="navbar_right">
-          <div class="navbar_right_cart-icon"></div>
-          <div class="navbar_right_login">Login/Register</div>
+        <div class="navbar_right_cart-icon"></div>
+        <div class="navbar_right_login">Login/Register</div>
       </div>
     </nav>
     <!-- BANNER -->
     <div class="homebanner">
-        
-        <div class="homebanner_intro-txt">
-            <h1>Welcome to Blooming Petals</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quidem excepturi iste, impedit architecto doloremque dolorum vitae enim porro tempora deleniti voluptatem non animi maxime quos omnis, amet, sapiente odio.</p>
+      <div class="homebanner_intro-txt">
+        <h1>Welcome to Blooming Petals</h1>
+        <p>
+          We specialize in providing fresh flowers, wedding flowers, event
+          flowers with a variety of designs
+        </p>
+      </div>
+      <div class="homebanner_hotline">
+        <img src="./statics/images/hotline.svg" alt="hotline" />
+      </div>
+    </div>
+    <!-- MAIN CONTAIN -->
+    <!-- Product Category -->
+    <section id="product-categories">
+      <div class="product-cat">
+        <div class="product-cat-item">
+          <img src="statics/images/660x360.png" alt="Flower by Name">
+          <h4>Flower by Name</h4>
         </div>
-        <div class="homebanner_hotline">
-            <img src="./statics/images/hotline.svg" alt="hotline">
+        <div class="product-cat-item">
+          <img src="statics/images/660x360.png" alt="Flower by Style">
+          <h4>Flower by Style</h4>
         </div>
-    </div>
-  <!-- MAIN CONTAIN -->
-  <!-- Popular Products-->
-  <section id="popular-product">
-    <!-- |Products Slide-->
-    <div class="prd-slider">
-      <!-- ||Query Database -->
-      <div class="prd-slider_item">
-        <img src="#" alt="">
-        <p>Product Title</p>
-        <p>$10.00</p>
+        <div class="product-cat-item">
+          <img src="statics/images/660x360.png" alt="Occasions">
+          <h4>Occasions</h4>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- Lastest Products -->
-  <section id="lastest-product">
-    <!-- |Products Slide-->
-    <div class="prd-slider">
-      <!-- ||Query Database -->
-      <div class="prd-slider_item">
-        <img src="#" alt="">
-        <p>Product Title</p>
-        <p>$10.00</p>
+    </section>
+    <!-- Why choose us? -->
+    <section id="why-us">
+      <div class="whyus_textblock">
+        <h2>Why choose<span>Blooming Petals?</span></h2>
+        <p>
+          “For development and long-term orientation, Blooming Petals always has
+          a guideline of its own value standards and mission, but still never
+          stops learning to improve the best service.”
+        </p>
       </div>
-    </div>
-  </section>
-  <!-- NEWSLETTER FORM -->
-  <section id="newsletters">
-    <div class="newsletter_inner">
-      <form id="newsletters-form">
-      <div>
-        <input type="text" name="your-name" placeholder="Your Name">
+      <div class="whyus-txtbox">
+        <div>
+          <img src="statics/images/best-service.svg" alt="Best Service" />
+          <p class="whyus_txtbox_title">Best Service</p>
+          <p class="whyus_txtbox_content">
+            We have a skilled team and always keep up with new trends in
+            decoration
+          </p>
+        </div>
+        <div>
+          <img
+            src="statics/images/always-dedicated.svg"
+            alt="Always Dedicated"
+          />
+          <p class="whyus_txtbox_title">Always Dedicated</p>
+          <p class="whyus_txtbox_content">
+            We believe that dedication will bring trust and confidence from
+            customers
+          </p>
+        </div>
+        <div>
+          <img src="statics/images/top-reputation.svg" alt="Top Reputation" />
+          <p class="whyus_txtbox_title">Top Reputation</p>
+          <p class="whyus_txtbox_content">
+            Prestige is the decisive factor to help us develop and have many
+            customers
+          </p>
+        </div>
+        <div>
+          <img src="statics/images/true-commitment.svg" alt="True Commitment" />
+          <p class="whyus_txtbox_title">True Commitment</p>
+          <p class="whyus_txtbox_content">
+            Time is an important principle that makes the reputation of Blooming
+            Petals
+          </p>
+        </div>
       </div>
-      <div>
-        <input type="email" name="your-email"  placeholder="Your Email">
+    </section>
+    <!-- Popular Products-->
+    <section id="popular-product">
+      <!-- |Products Slide-->
+      <div class="prd-slider">
+        <!-- ||Database query -->
+        <div class="prd-slider_item">
+          <img src="#" alt="" />
+          <p>Product Title</p>
+          <p>$10.00</p>
+        </div>
       </div>
-             
-        <input type="button" value="Send Now" >
-      </form>
-    </div>
-  </section>
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer_main"></div>
-    <div class="footer_bottom-bar">
+    </section>
+    <!-- Lastest Products -->
+    <section id="lastest-product">
+      <!-- |Products Slide-->
+      <div class="prd-slider">
+        <!-- ||Database query -->
+        <div class="prd-slider_item">
+          <img src="#" alt="" />
+          <p>Product Title</p>
+          <p>$10.00</p>
+        </div>
+      </div>
+    </section>
+    <!-- NEWSLETTER FORM -->
+    <section id="newsletters">
+      <div class="newsletter_inner">
+        <form id="newsletters-form">
+          <div>
+            <input type="text" name="your-name" placeholder="Your Name" />
+          </div>
+          <div>
+            <input type="email" name="your-email" placeholder="Your Email" />
+          </div>
 
-    </div>
-  </footer>
+          <input type="button" value="Send Now" />
+        </form>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer_main">
+        <div class="footer_main_logo">
+          <img src="statics/images/logo-gold.svg" />
+        </div>
+        <div class="footer_main_info">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker"></i>
+              <span>351 Hoang Sa Street, Tan Dinh Ward, District 1, HCMC</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:19008899">1900 88 99</a>>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:contact@bloomingpetals.com"
+                >contact@bloomingpetals.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer_main_links"></div>
+      </div>
+      <div class="footer_bottom-bar">
+        <div class="footer_bottom-bar_left">
+          <p>Copyright © 2021 Blooming Petals. All Rights Reserved</p>
+        </div>
+        <div class="footer_bottom-bar_right">
+          <ul class="social-icons">
+            <li><i class="far fa-facebook-f"></i></li>
+            <li><i class="far fa-pinterest"></i></li>
+            <li><i class="far fa-twitter"></i></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="statics/js/bootstrap.min.js"></script>
   <script src="statics/js/jquery.min.js"></script>

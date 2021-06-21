@@ -1,4 +1,4 @@
-@import "scss/bootstrap";
+
 
 /*//////////////DEFINE COLORS///////////////*/
 $colors: (
@@ -39,4 +39,7 @@ $big-desktop-width: 1200px;
   @media (min-width: #{$big-desktop-width}) {
     @content;
   }
+}
+li{
+  list-style: none;
 }

@@ -1,8 +1,5 @@
-
-
 /*//////////////DEFINE COLORS///////////////*/
-$colors: (
-  main-color: pink,
+$colors: (main-color: pink,
   second-color: blue,
   light-color:#fff,
   dark-color: #000,
@@ -35,11 +32,13 @@ $big-desktop-width: 1200px;
     @content;
   }
 }
+
 @mixin big-desktop {
   @media (min-width: #{$big-desktop-width}) {
     @content;
   }
 }
-li{
+
+li {
   list-style: none;
 }

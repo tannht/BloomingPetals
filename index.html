@@ -1,41 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Blooming Petals</title>
-  <link rel="stylesheet" href="statics/css/style.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-          aria-expanded="false" aria-label="Toggle navigation"></button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a class="dropdown-item" href="#">Action 1</a>
-                      <a class="dropdown-item" href="#">Action 2</a>
-                  </div>
-              </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Blooming Petals</title>
+    <link rel="stylesheet" href="statics/css/style.css" />
+  </head>
+  <body>
+  <!-- MAIN NAVIGATION -->
+      <nav class="navbar">
+      <div class="navbar_logo">
+        <a href="index.html">
+          <img src="./statics/images/logo.svg" alt="logo" />
+        </a>
       </div>
-  </nav>
-</body>
-<script src="statics/js/bootstrap.min.js"></script>
-<script src="statics/js/jquery.min.js"></script>
-<script src="statics/js/main.js"></script>
+      <div class="navbar_menu">
+        <ul class="navbar_menu_items">
+          <li>Home</li>
+          <li>About us</li>
+          <li>Products</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="navbar_right">
+          <div class="navbar_right_cart-icon"></div>
+          <div class="navbar_right_login">Login/Register</div>
+      </div>
+    </nav>
+    <!-- BANNER -->
+    <div class="homebanner">
+        
+        <div class="homebanner_intro-txt">
+            <h1>Welcome to Blooming Petals</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque quidem excepturi iste, impedit architecto doloremque dolorum vitae enim porro tempora deleniti voluptatem non animi maxime quos omnis, amet, sapiente odio.</p>
+        </div>
+        <div class="homebanner_hotline">
+            <img src="./statics/images/hotline.svg" alt="hotline">
+        </div>
+    </div>
+  <!-- MAIN CONTAIN -->
+  <!-- Popular Products-->
+  <section id="popular-product">
+    <!-- |Products Slide-->
+    <div class="prd-slider">
+      <!-- ||Query Database -->
+      <div class="prd-slider_item">
+        <img src="#" alt="">
+        <p>Product Title</p>
+        <p>$10.00</p>
+      </div>
+    </div>
+  </section>
+  <!-- Lastest Products -->
+  <section id="lastest-product">
+    <!-- |Products Slide-->
+    <div class="prd-slider">
+      <!-- ||Query Database -->
+      <div class="prd-slider_item">
+        <img src="#" alt="">
+        <p>Product Title</p>
+        <p>$10.00</p>
+      </div>
+    </div>
+  </section>
+  <!-- NEWSLETTER FORM -->
+  <section id="newsletters">
+    <div class="newsletter_form">
+      <input>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="button" value="Send" >
+      </form>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer_main"></div>
+    <div class="footer_bottom-bar">
+
+    </div>
+  </footer>
+  </body>
+  <script src="statics/js/bootstrap.min.js"></script>
+  <script src="statics/js/jquery.min.js"></script>
+  <script src="statics/js/main.js"></script>
 </html>

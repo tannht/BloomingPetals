@@ -1,0 +1,42 @@
+@import "scss/bootstrap";
+
+/*//////////////DEFINE COLORS///////////////*/
+$colors: (
+  main-color: pink,
+  second-color: blue,
+  light-color:#fff,
+  dark-color: #000,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+/* Device Breakpoint */
+$mobile-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$big-desktop-width: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$big-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin big-desktop {
+  @media (min-width: #{$big-desktop-width}) {
+    @content;
+  }
+}

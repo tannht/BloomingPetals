@@ -44,7 +44,7 @@ $big-desktop-width: 1200px;
 
 ::-webkit-scrollbar {
   width: 8px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: white;
 }
 
@@ -165,7 +165,7 @@ section#header {
 
   /* MEGA MENU */
   .megamenu {
-
+    display:none;
     margin: 0;
 
     &_promo {

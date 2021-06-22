@@ -1,0 +1,149 @@
+/*//////////////DEFINE COLORS///////////////*/
+/* Device Breakpoint */
+::-webkit-scrollbar {
+  width: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+/* Device::-webkit-scrollbar-track {
+  background-color: color(second-color);
+}*/
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A9780B;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+ul,
+li,
+span,
+i {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #A9780B;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #f1b329;
+}
+
+.dark-skin {
+  background-color: #580101 !important;
+  color: #795608 !important;
+}
+
+.dark-skin a {
+  color: #f8f8f8 !important;
+}
+
+.light-skin {
+  background-color: #f8f8f8 !important;
+  color: #A9780B !important;
+}
+
+.txt-light, .txt-light a {
+  color: #f8f8f8;
+}
+
+.txt-dark, .txt-dark a {
+  color: #580101;
+}
+
+section#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* NAVIGATION BAR */
+.navibar {
+  position: fixed;
+  background: #646363;
+  z-index: 999;
+  /* MEGA MENU */
+}
+
+.navibar #main-menu {
+  padding: 10px 0;
+  margin-left: 0 !important;
+}
+
+.navibar_inner {
+  padding: 10px 0;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navibar_inner_logo img {
+  height: 90px;
+}
+
+.navibar_inner_menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navibar_inner_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.navibar_inner_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navibar_inner_right i {
+  padding-right: 10px;
+}
+
+.navibar .megamenu {
+  margin: 0;
+}
+
+.navibar .megamenu_promo img {
+  max-width: 100%;
+}
+
+.navibar .megamenu_list-cat p {
+  text-transform: uppercase;
+  color: #A9780B;
+  font-weight: 500;
+  border-bottom: 2px solid #dee2e6;
+  text-indent: 5px;
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */

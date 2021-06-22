@@ -56,22 +56,29 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-
   background-color: color(primary);
 }
-
 
 li {
   list-style: none;
 }
 
-a:hover {
-  text-decoration: none !important;
-  color: color(primary-light)
+p,
+ul,
+li,
+span,
+i {
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: color(primary);
+
+  &:hover {
+    text-decoration: none !important;
+    color: color(primary-light)
+  }
 }
 
 .dark-skin {
@@ -86,7 +93,6 @@ a {
 .light-skin {
   background-color: color(light) !important;
   color: color(primary) !important;
-
 }
 
 .txt-light {
@@ -102,5 +108,61 @@ a {
 
   a {
     @extend .txt-dark;
+  }
+}
+
+.megamenu {
+  margin: 0;
+  &_promo {
+
+    img {
+      max-width: 100%;
+    }
+  }
+  &_list-cat{
+    p{
+      text-transform: uppercase;
+      color: color(primary);
+      font-weight: 500;
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+}
+
+.navibar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: color(dark);
+
+  &_logo {
+
+    img {
+      height: 90px;
+    }
+  }
+
+  &_menu {
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    ul {
+
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    i {
+      padding-right: 10px;
+    }
   }
 }

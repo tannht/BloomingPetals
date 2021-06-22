@@ -1,8 +1,11 @@
 /*//////////////DEFINE COLORS///////////////*/
-$colors: (main-color: pink,
-  second-color: blue,
-  light-color:#fff,
-  dark-color: #000,
+$colors: (primary: #A9780B,
+  primary-light: lighten(#A9780B, 20%),
+  primary-dark: darken(#A9780B, 10%),
+  second-color: rgb(255, 115, 0),
+  light:#f8f8f8,
+  dark: rgb(88, 1, 1),
+
 );
 
 @function color($color-name) {
@@ -39,6 +42,65 @@ $big-desktop-width: 1200px;
   }
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+/* Device::-webkit-scrollbar-track {
+  background-color: color(second-color);
+}*/
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background-color: color(primary);
+}
+
+
 li {
   list-style: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: color(primary-light)
+}
+
+a {
+  color: color(primary);
+}
+
+.dark-skin {
+  background-color: color(dark) !important;
+  color: color(primary-dark) !important;
+
+  a {
+    color: color(light) !important;
+  }
+}
+
+.light-skin {
+  background-color: color(light) !important;
+  color: color(primary) !important;
+
+}
+
+.txt-light {
+  color: color(light);
+
+  a {
+    @extend .txt-light;
+  }
+}
+
+.txt-dark {
+  color: color(dark);
+
+  a {
+    @extend .txt-dark;
+  }
 }

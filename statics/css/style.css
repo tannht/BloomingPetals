@@ -1,6 +1,54 @@
 /*//////////////DEFINE COLORS///////////////*/
 /* Device Breakpoint */
+::-webkit-scrollbar {
+  width: 8px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+/* Device::-webkit-scrollbar-track {
+  background-color: color(second-color);
+}*/
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A9780B;
+}
+
 li {
   list-style: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #f1b329;
+}
+
+a {
+  color: #A9780B;
+}
+
+.dark-skin {
+  background-color: #580101 !important;
+  color: #795608 !important;
+}
+
+.dark-skin a {
+  color: #f8f8f8 !important;
+}
+
+.light-skin {
+  background-color: #f8f8f8 !important;
+  color: #A9780B !important;
+}
+
+.txt-light, .txt-light a {
+  color: #f8f8f8;
+}
+
+.txt-dark, .txt-dark a {
+  color: #580101;
 }
 /*# sourceMappingURL=style.css.map */

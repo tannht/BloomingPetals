@@ -71,11 +71,18 @@ section#header {
           justify-content: center;
 }
 
+.open-mega {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 /* NAVIGATION BAR */
 .navibar {
   position: fixed;
   background: #646363;
   z-index: 999;
+  width: 85%;
   /* MEGA MENU */
 }
 
@@ -104,7 +111,7 @@ section#header {
   font-weight: 700;
 }
 
-.navibar_inner_menu ul {
+.navibar_inner_menu > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,9 +137,17 @@ section#header {
   padding-right: 10px;
 }
 
+.navibar div#mega-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .navibar .megamenu {
-  display: none;
+  position: absolute;
   margin: 0;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .navibar .megamenu_promo img {

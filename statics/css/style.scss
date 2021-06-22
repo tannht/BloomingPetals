@@ -1,4 +1,5 @@
 /*//////////////DEFINE COLORS///////////////*/
+
 $colors: (primary: #A9780B,
   primary-light: lighten(#A9780B, 20%),
   primary-dark: darken(#A9780B, 10%),
@@ -115,12 +116,15 @@ section#header {
   display: flex;
   justify-content: center;
 }
+.open-mega{
+  display:flex!important;
+}
 /* NAVIGATION BAR */
 .navibar {
   position: fixed;
   background: rgb(100, 99, 99);
   z-index: 999;
-
+  width:85%;
   #main-menu {
     padding: 10px 0;
     margin-left: 0!important;
@@ -143,7 +147,7 @@ section#header {
       text-transform: uppercase;
       font-weight: 700;
 
-      ul {
+      > ul {
 
         display: flex;
         justify-content: space-between;
@@ -164,10 +168,14 @@ section#header {
   }
 
   /* MEGA MENU */
+  div#mega-menu{
+  display: flex;}
   .megamenu {
-    display:none;
+    
+   position: absolute;
     margin: 0;
-
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
     &_promo {
 
       img {

@@ -12,69 +12,73 @@
 </head>
 
 <body>
-  <!-- MAIN NAVIGATION -->
-  <nav class="navbar container">
-    <!-- maga menu -->
-    <div class="row megamenu">
-      <div class="sub-1 col-md-3">
-        <p>Flowers by Name</p>
-        <ul class="submenu_items">
-          <li><a href="#">Rose</a></li>
-          <li><a href="#">Lily</a></li>
-          <li><a href="#">Sunflower</a></li>
-          <li><a href="#">Orchid Kinds</a></li>
-          <li><a href="#">Phalaenopsis Orchid</a></li>
-        </ul>
+  <section id="header">
+    <!-- MAIN NAVIGATION -->
+    <nav class="navibar">
+      <div id="main-menu" class="row container">
+        <div class="navibar_inner_logo col-3">
+          <a href="index.html">
+            <img src="statics/images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="navibar_inner_menu col-6 d-flex justify-content-center ">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#" class="lv2-menu">Products</a>
+
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navibar_inner_right col-3">
+          <i class="fas fa-shopping-cart"></i>
+          <span><a href="#">Login/Register</a></span>
+        </div>
       </div>
-      <div class="sub-2 col-md-3">
-        <p>Flowers by Style</p>
-        <ul class="submenu_items">
-          <li><a href="#">VIP Flowers</a></li>
-          <li><a href="#">99 Rose</a></li>
-          <li><a href="#">Love Flowers</a></li>
-          <li><a href="#">Basket Arrangements</a></li>
-          <li><a href="#">Bouquet</a></li>
-        </ul>
-      </div>
-      <div class="sub-3 col-md-3">
-        <p>Occasions</p>
-        <ul class="submenu_items">
-          <li><a href="#">Wedding</a></li>
-          <li><a href="#">Valentine's day</a></li>
-          <li><a href="#">Birthday</a></li>
-          <li><a href="#">Feast day</a></li>
-          <li><a href="#">Events</a></li>
-        </ul>
-      </div>
-      <div class="sub-4 col-md-3">
-        <img src="statics/images/340x240.png" alt="">
+      <!-- maga menu -->
+      <div class="row megamenu container">
+        <div class="megamenu_list-cat col-md-3">
+          <p>Flowers by Name</p>
+          <ul class="submenu_items">
+            <li><a href="#">Rose</a></li>
+            <li><a href="#">Lily</a></li>
+            <li><a href="#">Sunflower</a></li>
+            <li><a href="#">Orchid Kinds</a></li>
+            <li><a href="#">Phalaenopsis Orchid</a></li>
+          </ul>
+        </div>
+        <div class="megamenu_list-cat col-md-3">
+          <p>Flowers by Style</p>
+          <ul class="submenu_items">
+            <li><a href="#">VIP Flowers</a></li>
+            <li><a href="#">99 Rose</a></li>
+            <li><a href="#">Love Flowers</a></li>
+            <li><a href="#">Basket Arrangements</a></li>
+            <li><a href="#">Bouquet</a></li>
+          </ul>
+        </div>
+        <div class="megamenu_list-cat col-md-3">
+          <p>Occasions</p>
+          <ul class="submenu_items">
+            <li><a href="#">Wedding</a></li>
+            <li><a href="#">Valentine's day</a></li>
+            <li><a href="#">Birthday</a></li>
+            <li><a href="#">Feast day</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="megamenu_promo sub-4 col-md-3">
+          <img src="statics/images/340x240.png" alt="">
+        </div>
       </div>
       <!-- end megamenu -->
-      <div class="navbar_logo">
-        <a href="index.html">
-          <img src="statics/images/logo.svg" alt="logo" />
-        </a>
-      </div>
-      <div class="navbar_menu">
-        <ul class="navbar_menu_items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li>
-            <a href="#" id="products">Products</a>
+    </nav>
 
-      </div>
-      </li>
-      <li><a href="#">Contact</a></li>
-      </ul>
     </div>
-    <div class="navbar_right">
-      <div class="navbar_right_cart-icon"></div>
-      <div class="navbar_right_login">Login/Register</div>
-    </div>
-  </nav>
-  <!-- BANNER -->
-  <section id="banner">
-    <div class="homebanner container">
+    <!-- BANNER -->
+
+    <div class="homebanner">
       <div class="homebanner_intro-txt">
         <h1>Welcome to Blooming Petals</h1>
         <p>
@@ -238,7 +242,7 @@
       </div>
     </div>
     <!-- |Bottom Bar -->
-    <div class="footer_bottom-bar bg-dark text-light">
+    <div class="footer_bottom-bar dark-skin">
       <div class="container">
         <div class="row align-items-center">
           <div class="footer_bottom-bar_left col-sm">

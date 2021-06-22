@@ -131,6 +131,7 @@ section#header {
 }
 
 .navibar .megamenu {
+  display: none;
   margin: 0;
 }
 

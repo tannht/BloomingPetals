@@ -141,6 +141,19 @@ section#header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 80px;
+  width: 765px;
+  left: -17%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navibar div#mega-menu {
+    width: 730px;
+    left: -50%;
+  }
 }
 
 .navibar .megamenu {

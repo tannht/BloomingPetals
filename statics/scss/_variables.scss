@@ -1,0 +1,51 @@
+/*//////////////DEFINE COLORS///////////////*/
+
+$colors: (primary: #A9780B,
+  primary-light: lighten(#A9780B, 20%),
+  primary-dark: darken(#A9780B, 10%),
+  second-color: rgb(255, 115, 0),
+  light:#f8f8f8,
+  dark: rgb(88, 1, 1),
+
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+/* mixin */
+/* Device Breakpoint */
+$mobile-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$big-desktop-width: 1200px;
+
+@mixin flex-align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$big-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media (min-width: #{$big-desktop-width}) {
+    @content;
+  }
+}
+/* END */ 

@@ -165,14 +165,14 @@ section#header {
 }
 
 .navibar_inner_center #mega-menu .submenu_items {
-  border: 1px solid #580101;
+  border: 2px solid #580101;
 }
 
 .navibar_inner_center #mega-menu .submenu_items .cat-title {
   text-transform: uppercase;
   color: #A9780B;
   font-weight: 500;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 1px solid #3d3d3d 6;
   margin: 10px;
 }
 

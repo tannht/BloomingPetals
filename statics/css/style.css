@@ -1,8 +1,10 @@
+/*//////////////DEFINE COLORS///////////////*/
+/* mixin */
 /* Device Breakpoint */
+/* END */
 ::-webkit-scrollbar {
   width: 8px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: white;
 }
 
@@ -14,7 +16,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: color(primary);
+  background-color: #A9780B;
 }
 
 li {
@@ -31,83 +33,65 @@ i {
 }
 
 a {
-  color: color(primary);
+  color: #A9780B;
 }
 
 a:hover {
   text-decoration: none !important;
-  color: color(primary-light);
+  color: #f1b329;
 }
 
 .dark-skin {
-  background-color: color(dark) !important;
-  color: color(primary-dark) !important;
+  background-color: #580101 !important;
+  color: #795608 !important;
 }
 
 .dark-skin a {
-  color: color(light) !important;
+  color: #f8f8f8 !important;
 }
 
 .light-skin {
-  background-color: color(light) !important;
-  color: color(primary) !important;
+  background-color: #f8f8f8 !important;
+  color: #A9780B !important;
 }
 
 .txt-light, .txt-light a {
-  color: color(light);
+  color: #f8f8f8;
 }
 
 .txt-dark, .txt-dark a {
-  color: color(dark);
+  color: #580101;
 }
 
 section#header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .open-mega {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 
 /* NAVIGATION BAR */
 .navibar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   background: #646363;
   z-index: 999;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .navibar_inner {
   padding: 10px 0;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .navibar_inner_left, .navibar_inner_center, .navibar_inner_right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .navibar_inner_left img {
@@ -121,33 +105,22 @@ section#header {
 }
 
 .navibar_inner_center > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 .navibar_inner_center #mega-menu {
-  background-color: color(light);
+  background-color: #f8f8f8;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 80px;
   width: 765px;
   left: -17%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  justify-content: space-between;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -162,24 +135,21 @@ section#header {
 }
 
 .navibar_inner_center #mega-menu .submenu_items {
-  border: 1px solid color(dark);
+  border: 2px solid #580101;
 }
 
 .navibar_inner_center #mega-menu .submenu_items .cat-title {
   text-transform: uppercase;
-  color: color(primary);
+  color: #A9780B;
   font-weight: 500;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 1px solid #3d3d3d 6;
   margin: 10px;
 }
 
 .navibar_inner_right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .navibar_inner_right i {
   padding-right: 10px;
 }
-/*# sourceMappingURL=style.css.map */

@@ -139,13 +139,14 @@ section#header {
         }
 
         .submenu_items {
-          border: 1px solid color(dark);
+
+          border: 2px solid color(dark);
 
           .cat-title {
             text-transform: uppercase;
             color: color(primary);
             font-weight: 500;
-            border-bottom: 2px solid #dee2e6;
+            border-bottom: 1px solid rgb(61, 61, 61)6;
             margin: 10px;
           }
         }

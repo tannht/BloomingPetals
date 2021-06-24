@@ -13,12 +13,22 @@ $colors: (primary: #A9780B,
   @return map-get($colors, $color-name);
 }
 
-/* mixin */
+/* Fonts */
+@font-face {
+  font-family: 'SVN-Blenda Script';
+  src: url('../fonts/SVN-BlendaScript.woff2') format('woff2'),
+    url('../fonts/SVN-BlendaScript.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Device Breakpoint */
 $mobile-width: 576px;
 $tablet-width: 768px;
-$desktop-width: 992px;
-$big-desktop-width: 1200px;
+$tablet-land-width: 1024px;
+$desktop-width: 1200px;
+$big-desktop-width: 1400px;
 
 @mixin flex-align-items-center {
   display: flex;
@@ -30,9 +40,19 @@ $big-desktop-width: 1200px;
     @content;
   }
 }
+@mixin mobile-landscape {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-land-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (min-width: #{$tablet-land-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
@@ -48,4 +68,5 @@ $big-desktop-width: 1200px;
     @content;
   }
 }
-/* END */ 
+
+/* END */

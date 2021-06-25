@@ -82,20 +82,21 @@
 
 #why-us .whyus_textblock {
   text-align: center;
+  align-items: center;
 }
 
-#why-us_title {
+#why-us .whyus_textblock_title {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-#why-us > div {
-  display: flex;
+#why-us .whyus_textblock img {
+  width: 76px;
+  height: 76px;
+}
+
+#why-us .whyus_textblock > div {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-#why-us > div img {
-  width: 30%;
 }

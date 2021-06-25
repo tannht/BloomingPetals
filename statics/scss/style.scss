@@ -156,7 +156,7 @@ section#header {
 /* MEGA MENU */
 .megamenu {
 
-  background-color: rgba(255, 255, 255, 0.8)!important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
   padding-top: 10px;
   left: -8vw;
@@ -207,9 +207,11 @@ section#header {
       font-weight: 700;
       margin-bottom: 10px;
       border-bottom: 1px solid color(primary);
-      a{
+
+      a {
         color: color(primary);
-        &:hover{
+
+        &:hover {
           color: color(primary-light)
         }
       }

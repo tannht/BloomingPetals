@@ -89,7 +89,14 @@ section#header {
   z-index: 999;
   width: 100%;
   justify-content: center;
-  /* MEGA MENU */
+}
+
+.navibar a {
+  color: #f8f8f8;
+}
+
+.navibar a:hover {
+  color: #f1b329;
 }
 
 .navibar_inner {
@@ -115,7 +122,7 @@ section#header {
 
 .navibar_inner_center .have-sub:hover .megamenu {
   display: flex !important;
-  animation: fade-in-bottom 0.3s linear both;
+  animation: fade-in-bottom 0.2s linear 0.2s both;
 }
 
 .navibar_inner_center > ul {
@@ -129,62 +136,63 @@ section#header {
   justify-content: flex-end;
 }
 
-.navibar_right i {
+.navibar i {
   padding-right: 10px;
+  color: #f8f8f8;
 }
 
-.navibar .megamenu {
-  display: none;
-  opacity: 0 2s;
-  background-color: #f8f8f8;
-  border-radius: 10px;
+/* MEGA MENU */
+.megamenu {
+  background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
   padding-top: 10px;
   left: -8vw;
   width: 55vw;
   justify-content: start;
-  background-image: url(../images/mega-menu-bg.jpg);
+  background-image: url(../images/mega-menu-bg.png);
   min-height: 220px;
   box-sizing: content-box;
   background-color: #f8f8f8;
   background-position: right center;
   background-size: contain;
   background-repeat: no-repeat;
+  transform: translateY(50px);
+  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .navibar .megamenu {
+  .megamenu {
     width: 85vw;
     left: -46%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .navibar .megamenu {
+  .megamenu {
     width: 68vw;
     left: -28%;
   }
 }
 
 @media (min-width: 1400px) {
-  .navibar .megamenu {
+  .megamenu {
     left: 0;
     width: 35vw;
   }
 }
 
-.navibar .megamenu .submenu_items {
+.megamenu .submenu_items {
   padding: 0 20px;
   min-width: 180px;
   text-transform: capitalize;
 }
 
-.navibar .megamenu .submenu_items li:not(:first-child) a {
+.megamenu .submenu_items li:not(:first-child) a {
   color: #580101;
   line-height: 30px;
 }
 
-.navibar .megamenu .submenu_items .cat-title {
+.megamenu .submenu_items .cat-title {
   text-transform: uppercase;
   color: #A9780B;
   font-weight: 700;
@@ -192,29 +200,34 @@ section#header {
   border-bottom: 1px solid #A9780B;
 }
 
-#scrollTop {
-  background: #A9780B;
-  border-radius: 50%;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 50px;
-  height: 50px;
+.megamenu .submenu_items .cat-title a {
+  color: #A9780B;
+}
+
+.megamenu .submenu_items .cat-title a:hover {
+  color: #f1b329;
+}
+
+#to-top-btn {
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 9999;
+  animation: fade-in-bottom 0.3s linear both;
 }
 
-#scrollTop a {
+#to-top-btn a {
+  background: #A9780B;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#scrollTop a:hover {
-  color: #f8f8f8;
-}
-
-#scrollTop a i {
+#to-top-btn a:hover,
+#to-top-btn a i {
   color: #f8f8f8;
 }

@@ -1,7 +1,10 @@
+@import 'variables';
 // BANNER
 .homebanner {
-    background-image: url(/uploads/media/banner-bg.png);
-    min-height: 550px;
+    background-image: url(/uploads/media/banner-bg-3.jpg);
+
+
+    height: $banner-height;
     box-sizing: content-box;
     background-color: color(light);
     background-position: center;
@@ -15,12 +18,12 @@
     text-align: center;
 
     .overlay {
+        height: $banner-height;
         background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        inset: 0;
+        padding:0;
+        
     }
 
     div {
@@ -28,8 +31,12 @@
     }
 
     &_intro-txt {
-       margin-top: 15vh;
+        margin-top: 35vh;
+        h1,
+        p {
+            color:color(light);
+        }
     }
 
-    &_hotline {}
+
 }

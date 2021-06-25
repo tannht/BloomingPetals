@@ -1,8 +1,20 @@
+/*//////////////DEFINE COLORS///////////////*/
+/* Fonts */
+@font-face {
+  font-family: 'SVN-Blenda Script';
+  src: url("../fonts/SVN-BlendaScript.woff2") format("woff2"), url("../fonts/SVN-BlendaScript.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Device Breakpoint */
+/* END */
 .homebanner {
-  background-image: url(/uploads/media/banner-bg.png);
-  min-height: 550px;
+  background-image: url(/uploads/media/banner-bg-3.jpg);
+  height: 100vh;
   box-sizing: content-box;
-  background-color: color(light);
+  background-color: #f8f8f8;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,12 +27,11 @@
 }
 
 .homebanner .overlay {
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
+  padding: 0;
 }
 
 .homebanner div {
@@ -28,5 +39,10 @@
 }
 
 .homebanner_intro-txt {
-  margin-top: 15vh;
+  margin-top: 35vh;
+}
+
+.homebanner_intro-txt h1,
+.homebanner_intro-txt p {
+  color: #f8f8f8;
 }

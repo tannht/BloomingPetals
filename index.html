@@ -15,9 +15,10 @@
 </head>
 
 <body>
-  <section id="header">
+  <section id="header" data-name="home-page">
     <!-- MAIN NAVIGATION -->
-    <nav class="navibar">
+    <!-- nav pc-->
+    <nav class="navibar d-none d-md-flex">
       <div id="main-menu" class="row container navibar_inner">
         <div class="navibar_inner_left col-3">
           <a href="index.html">
@@ -74,7 +75,61 @@
       </div>
 
     </nav>
+    <!-- nav mobile-->
+    <nav class="mobile-menu d-block d-md-none">
+      
+      <div class="row container mobile-menu_inner ">
+        <div class="mobile-menu_inner_left col-3">
+          <a href="index.html">
+            <img src="statics/images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="mobile-menu_inner_center col-6 ">
+          <ul>
+            <li class=""><a href="#">Home</a>
+              
+            </li>
+            <li class=""><a href="#">About us</a></li>
+            <li class="have-sub">
+              <a href="#">Products</a>
+              <!-- maga menu -->
+              <div style="padding-top: 20px; margin-bottom: -20px;">
+              <div class="megamenu">                
+                <ul class="submenu_items">
+                  <li class="cat-title"><a href="#">Flowers by Name</a></li>
+                  <li><a href="#">Rose</a></li>
+                  <li><a href="#">Lily</a></li>
+                  <li><a href="#">Sunflower</a></li>
+                  <li><a href="#">Orchid Kinds</a></li>
+                  <li><a href="#">Phalaenopsis Orchid</a></li>
+                </ul>
+                <ul class="submenu_items">
+                  <li class="cat-title"><a href="#">Flowers by Style</a></li>
+                  <li><a href="#">VIP Flowers</a></li>
+                  <li><a href="#">99 Rose</a></li>
+                  <li><a href="#">Love Flowers</a></li>
+                  <li><a href="#">Basket Arrangements</a></li>
+                  <li><a href="#">Bouquet</a></li>
+                </ul>
+                <ul class="submenu_items">
+                  <li class="cat-title"><a href="#">Occasions</a></li>
+                  <li><a href="#">Wedding</a></li>
+                  <li><a href="#">Valentine's day</a></li>
+                  <li><a href="#">Birthday</a></li>
+                  <li><a href="#">Feast day</a></li>
+                  <li><a href="#">Events</a></li>
+                </ul>
+              </div>
+            </div>
+              <!-- end megamenu -->
+            </li>
+            <li class=""><a href="#">Contact</a></li>
+          </ul>
+        </div>
 
+      </div>
+
+    </nav>
     <!-- BANNER -->
 
     <div class="homebanner">
@@ -262,12 +317,12 @@
       </div>
     </div>
   </footer>
-  <div id="scrollTop">
+  <div id="to-top-btn">
     <a href="#"> <i class="fas fa-angle-up"></i> </a>
   </div>  
 </body>
-<script src="statics/js/bootstrap.min.js"></script>
 <script src="statics/js/jquery.min.js"></script>
+<script src="statics/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
 
 </html>

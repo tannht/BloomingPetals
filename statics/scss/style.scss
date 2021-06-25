@@ -81,14 +81,22 @@ section#header {
 }
 
 /* NAVIGATION BAR */
+
 .navibar {
+
   @include flex-align-items-center;
   position: fixed;
-
   z-index: 999;
   width: 100%;
   justify-content: center;
 
+  a {
+    color: color(light);
+
+    &:hover {
+      color: color(primary-light)
+    }
+  }
 
   &_inner {
     padding: 10px 0;
@@ -117,7 +125,7 @@ section#header {
       /* OPEN MEGA MENU */
       .have-sub:hover .megamenu {
         display: flex !important;
-        animation: fade-in-bottom 0.3s linear both;
+        animation: fade-in-bottom 0.2s linear 0.2s both;
 
       }
 
@@ -136,99 +144,102 @@ section#header {
 
     justify-content: flex-end;
 
-    i {
-      padding-right: 10px;
-    }
   }
 
-
-  /* MEGA MENU */
-  .megamenu {
-
-    display: none;
-    opacity: 0 2s;
-    background-color: color(light);
-    border-radius: 10px;
-    position: absolute;
-    padding-top: 10px;
-    left: -8vw;
-    width: 55vw;
-    justify-content: start;
-    background-image: url(../images/mega-menu-bg.jpg);
-    min-height: 220px;
-    box-sizing: content-box;
-    background-color: color(light);
-    background-position: right center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    @include tablet {
-      width: 85vw;
-      left: -46%;
-    }
-
-    @include tablet-landscape {
-      width: 68vw;
-      left: -28%;
-    }
-
-    @include big-desktop {
-      left: 0;
-      width: 35vw;
-    }
-
-
-
-    .submenu_items {
-
-      padding: 0 20px;
-      min-width: 180px;
-      text-transform: capitalize;
-
-
-
-      li:not(:first-child) a {
-        color: color(dark);
-        line-height: 30px;
-      }
-
-      .cat-title {
-        text-transform: uppercase;
-        color: color(primary);
-        font-weight: 700;
-        margin-bottom: 10px;
-        border-bottom: 1px solid color(primary);
-
-      }
-    }
-
+  i {
+    padding-right: 10px;
+    color: color(light);
   }
 }
 
-#scrollTop {
-  a {
-    
-    font-size: 20px;
-    &:hover {
-      color: color(light);
+
+/* MEGA MENU */
+.megamenu {
+
+  background-color: rgba(255, 255, 255, 0.8)!important;
+  position: absolute;
+  padding-top: 10px;
+  left: -8vw;
+  width: 55vw;
+  justify-content: start;
+  background-image: url(../images/mega-menu-bg.png);
+  min-height: 220px;
+  box-sizing: content-box;
+  background-color: color(light);
+  background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(50px);
+  display: none;
+
+
+  @include tablet {
+    width: 85vw;
+    left: -46%;
+  }
+
+  @include tablet-landscape {
+    width: 68vw;
+    left: -28%;
+  }
+
+  @include big-desktop {
+    left: 0;
+    width: 35vw;
+  }
+
+  .submenu_items {
+
+    padding: 0 20px;
+    min-width: 180px;
+    text-transform: capitalize;
+
+
+
+    li:not(:first-child) a {
+      color: color(dark);
+      line-height: 30px;
     }
-    i {
-     
-     
-      color: color(light)
+
+    .cat-title {
+      text-transform: uppercase;
+      color: color(primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-bottom: 1px solid color(primary);
+      a{
+        color: color(primary);
+        &:hover{
+          color: color(primary-light)
+        }
+      }
     }
   }
- 
-  background: color(primary);
-  border-radius: 50%;
-  display:block;
-  align-items: center;
-  justify-content:center;
-  display: flex;
-  width: 50px;
-  height: 50px;
+
+}
+
+#to-top-btn {
+  a {
+    background: color(primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    i {
+      color: color(light);
+    }
+
+  }
+
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 9999;
+  animation: fade-in-bottom 0.3s linear both;
+
 }

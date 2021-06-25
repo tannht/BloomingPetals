@@ -24,7 +24,7 @@
         position: absolute;
         inset: 0;
         padding: 0;
-        
+
     }
 
     img {
@@ -53,6 +53,7 @@
 
 
 }
+
 // PRODUCT CATEGORIES 
 #product-categories {
     .product-cat {
@@ -60,37 +61,54 @@
             height: 250px;
             align-items: center;
             display: flex;
-            
+
         }
 
         .cat-1 {
             background-image: url(/uploads/media/cat-1.jpg);
             background-size: contain;
             background-repeat: no-repeat;
-           
+
         }
 
         .cat-2 {
             background-image: url(/uploads/media/cat-2.jpg);
             background-size: contain;
             background-repeat: no-repeat;
-            
-            
+
+
         }
 
         .cat-3 {
             background-image: url(/uploads/media/cat-3.jpg);
             background-size: contain;
             background-repeat: no-repeat;
-           
-            
+
+
         }
     }
 }
+
 // WHY CHOOSE US
-#why-us{
-    .whyus_textblock{
+#why-us {
+    .whyus_textblock {
         text-align: center;
     }
-    .whyus-txtbox{}
+
+    &_title {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            width: 30%;
+        }
+    }
+
 }

@@ -1,4 +1,5 @@
 @import 'variables';
+
 // BANNER
 .homebanner {
     background-image: url(/uploads/media/banner-bg-3.jpg);
@@ -22,8 +23,12 @@
         background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         inset: 0;
-        padding:0;
+        padding: 0;
         
+    }
+
+    img {
+        animation: fade-in-bottom 0.6s linear 0.2s both;
     }
 
     div {
@@ -32,11 +37,60 @@
 
     &_intro-txt {
         margin-top: 35vh;
-        h1,
-        p {
-            color:color(light);
+
+        h1 {
+            color: color(light);
+            animation: fade-in-bottom 0.2s linear 0.2s both;
         }
+
+        p {
+            color: color(light);
+            animation: fade-in-bottom 0.4s linear 0.2s both;
+        }
+
     }
 
 
+
+}
+// PRODUCT CATEGORIES 
+#product-categories {
+    .product-cat {
+        .product-cat-item {
+            height: 250px;
+            align-items: center;
+            display: flex;
+            
+        }
+
+        .cat-1 {
+            background-image: url(/uploads/media/cat-1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+           
+        }
+
+        .cat-2 {
+            background-image: url(/uploads/media/cat-2.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+            
+        }
+
+        .cat-3 {
+            background-image: url(/uploads/media/cat-3.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+           
+            
+        }
+    }
+}
+// WHY CHOOSE US
+#why-us{
+    .whyus_textblock{
+        text-align: center;
+    }
+    .whyus-txtbox{}
 }

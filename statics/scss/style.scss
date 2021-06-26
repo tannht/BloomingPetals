@@ -175,8 +175,8 @@ section[data-name="home-page"] .scroll.navibar {
   background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
   padding-top: 10px;
-  left: -8vw;
-  width: 55vw;
+  left: 0;
+  width: 668px;
   justify-content: start;
   background-image: url(../images/mega-menu-bg.png);
   min-height: 220px;
@@ -186,23 +186,7 @@ section[data-name="home-page"] .scroll.navibar {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(50px);
-  display: none;
-
-
-  @include tablet {
-    width: 85vw;
-    left: -46%;
-  }
-
-  @include tablet-landscape {
-    width: 68vw;
-    left: -28%;
-  }
-
-  @include big-desktop {
-    left: 0;
-    width: 35vw;
-  }
+  display: none;  
 
   .submenu_items {
 

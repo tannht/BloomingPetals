@@ -158,8 +158,8 @@ section[data-name="home-page"] .scroll.navibar img {
   background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
   padding-top: 10px;
-  left: -8vw;
-  width: 55vw;
+  left: 0;
+  width: 668px;
   justify-content: start;
   background-image: url(../images/mega-menu-bg.png);
   min-height: 220px;
@@ -170,27 +170,6 @@ section[data-name="home-page"] .scroll.navibar img {
   background-repeat: no-repeat;
   transform: translateY(50px);
   display: none;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .megamenu {
-    width: 85vw;
-    left: -46%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .megamenu {
-    width: 68vw;
-    left: -28%;
-  }
-}
-
-@media (min-width: 1400px) {
-  .megamenu {
-    left: 0;
-    width: 35vw;
-  }
 }
 
 .megamenu .submenu_items {

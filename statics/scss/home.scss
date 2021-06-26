@@ -1,4 +1,5 @@
 @import 'variables';
+
 // BANNER
 .homebanner {
     background-image: url(/uploads/media/banner-bg-3.jpg);
@@ -90,13 +91,43 @@
 
 // WHY CHOOSE US
 #why-us {
+    background-image: url(../images/section-bg.svg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: contain;
+    text-align: center;
+    margin-top: 60px;
+
+    @include tablet {
+        background-size: cover;
+        margin-top: -5%;
+    }
+
+
     .whyus_textblock {
+        color: color(primary);
+        padding: 100px 0 20px 0;
+        height: 300px;
+        font-family: 'SVN-Blenda Script';
+        margin: 0 auto;
+        max-width: 650px;
+
+        span {
+            color: color(dark);
+        }
+
+        p {
+            color: color(body-color)
+        }
+    }
+
+    .whyus-txtbox {
         text-align: center;
-        align-items: center;
+        justify-content: space-between;
 
         &_title {
             font-weight: 700;
-            font-size: 1.5rem;
+            color: color(primary);
         }
 
         img {
@@ -104,15 +135,14 @@
             height: 76px;
         }
 
-
-
         >div {
-            // display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            background: color(light);
+            padding: 50px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
 
         }
+
 
     }
 }

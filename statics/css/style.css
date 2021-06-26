@@ -30,6 +30,8 @@ html {
 body {
   background: url(../images/bg-img.png);
   background-repeat: repeat;
+  color: #0e0e0e;
+  font-size: 1em;
 }
 
 li {

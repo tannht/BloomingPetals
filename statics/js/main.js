@@ -16,3 +16,10 @@ $(window).scroll(function() {
         $('.navibar').addClass("scroll");
     } else $('.navibar').removeClass("scroll");
 });
+
+//Add JSON file
+var products = fetch('../statics/js/products-data.json')
+  .then(response => response.json())
+  .then(products => console.log(products))
+
+

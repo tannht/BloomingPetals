@@ -154,7 +154,11 @@
         text-align: center;
     }
 }
-
+.product-block {
+    img{
+        width: 100%;
+    }
+}
 .clients-logo {
     .logo-items {
         display: flex;

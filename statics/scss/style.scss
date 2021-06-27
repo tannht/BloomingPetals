@@ -172,7 +172,7 @@ section[data-name="home-page"] .scroll.navibar {
 }
 
 
-/* MEGA MENU */
+// /* MEGA MENU */
 .megamenu {
 
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -222,7 +222,7 @@ section[data-name="home-page"] .scroll.navibar {
     }
 
 }
-
+// SCROLLTOP BUTTON
 #to-top-btn {
     a {
         background: color(primary);
@@ -248,7 +248,7 @@ section[data-name="home-page"] .scroll.navibar {
     animation: fade-in-bottom 0.3s linear both;
 
 }
-
+// FOOTER
 #footer {
     background: #F7EBE3;
     background-image: url(../images/footer-bg.svg);
@@ -262,6 +262,7 @@ section[data-name="home-page"] .scroll.navibar {
 
         &_logo {
             margin-bottom: 5vh;
+            padding-top: 20px;
 
             @include mobile {
                 padding-left: 25%;
@@ -269,7 +270,12 @@ section[data-name="home-page"] .scroll.navibar {
             }
 
             img {
+
                 width: 200px;
+
+                @include tablet {
+                    width: 100px;
+                }
             }
         }
 
@@ -293,7 +299,7 @@ section[data-name="home-page"] .scroll.navibar {
             i {
                 border: 1px solid color(light);
                 border-radius: 50%;
-                padding: 10px;
+                padding: 20px;
                 margin-right: 10px;
                 width: 20px;
                 height: 20px;
@@ -310,9 +316,39 @@ section[data-name="home-page"] .scroll.navibar {
                 }
             }
 
-            .footer_bottom-bar {
-                &_right {
-                    display: flex;
+
+        }
+
+    }
+    //bottom bar//
+    .footer_bottom-bar {
+        align-items: center;
+        padding: 10px;
+
+        &_left {
+            @include mobile {
+                text-align: center;
+                padding: 10px 15%;
+            }
+
+            @include tablet {
+                padding-right: 20%;
+            }
+        }
+
+        &_right {
+            display: flex;
+            justify-content: flex-end;
+
+            ul {
+                display: flex;
+
+                li {
+                    margin-right: 10px;
+
+                    i:hover {
+                        color: color(primary);
+                    }
                 }
             }
         }

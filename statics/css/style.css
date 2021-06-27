@@ -225,3 +225,14 @@ section[data-name="home-page"] .scroll.navibar img {
 #to-top-btn a i {
   color: #f8f8f8;
 }
+
+#footer {
+  background: #F7EBE3;
+  background-image: url(../images/footer-bg.svg);
+  background-position: top center;
+  background-size: cover;
+}
+
+#footer .footer_bottom-bar_right {
+  display: flex;
+}

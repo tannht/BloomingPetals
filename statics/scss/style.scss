@@ -248,3 +248,16 @@ section[data-name="home-page"] .scroll.navibar {
   animation: fade-in-bottom 0.3s linear both;
 
 }
+#footer {
+  background:#F7EBE3;
+  background-image: url(../images/footer-bg.svg);
+  background-position: top center;
+  background-size: cover;
+
+  .footer_bottom-bar{
+    &_right{
+      display: flex;
+      
+    }
+  }
+}

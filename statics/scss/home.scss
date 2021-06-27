@@ -123,7 +123,8 @@
 
     .whyus-txtbox {
         text-align: center;
-        justify-content: space-between;
+        padding: 15px;
+        margin: 0 auto;
 
         &_title {
             font-weight: 700;
@@ -135,13 +136,13 @@
             height: 76px;
         }
 
-        >div {
+        >div>div {
             background: color(light);
-            padding: 50px 20px;
-            margin: 0 5px;
-            border-radius: 20px;
-
+            padding: 40px 5px;
+            margin-bottom: 10px;
         }
+
+
 
 
     }
@@ -154,14 +155,30 @@
         text-align: center;
     }
 }
+
 .product-block {
-    img{
+    img {
         width: 100%;
     }
 }
+
 .clients-logo {
-    .logo-items {
-        display: flex;
-        justify-content: space-between
+
+    img {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+
+        @include mobile {
+            width: 100%;
+        }
     }
+
+}
+
+#newsletters {
+    background: #F7EBE3;
+    min-height: 300px;
+
+
 }

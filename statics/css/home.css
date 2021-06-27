@@ -97,7 +97,7 @@
 }
 
 #why-us .whyus_textblock {
-  color: #A9780B;
+  color: #F98404;
   padding: 100px 0 20px 0;
   height: 300px;
   font-family: 'SVN-Blenda Script';
@@ -106,7 +106,7 @@
 }
 
 #why-us .whyus_textblock span {
-  color: #580101;
+  color: #5E454B;
 }
 
 #why-us .whyus_textblock p {
@@ -121,7 +121,7 @@
 
 #why-us .whyus-txtbox_title {
   font-weight: 700;
-  color: #A9780B;
+  color: #F98404;
 }
 
 #why-us .whyus-txtbox img {
@@ -135,14 +135,28 @@
   margin-bottom: 10px;
 }
 
+.prd-slider,
+.clients-logo {
+  margin-top: 10vh;
+}
+
 .prd-slider h1,
 .clients-logo h1 {
-  color: #A9780B;
+  color: #F98404;
   text-align: center;
+  font-family: 'SVN-Blenda Script';
+  padding-bottom: 5vh;
 }
 
 .product-block img {
   width: 100%;
+  margin-bottom: 10px;
+}
+
+.product-block h4, .product-block p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 700;
 }
 
 .clients-logo img {
@@ -158,6 +172,69 @@
 }
 
 #newsletters {
-  background: #F7EBE3;
-  min-height: 300px;
+  background-color: #e9bc32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+#newsletters .box {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 15px;
+}
+
+#newsletters .box h2 {
+  margin: 10px 0 0;
+}
+
+#newsletters .box p {
+  color: #312940;
+  margin: 10px;
+}
+
+#newsletters .box img {
+  max-width: 100%;
+  width: 400px;
+}
+
+#newsletters .form-control {
+  position: relative;
+  margin: 30px 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+#newsletters .input {
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  display: block;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  height: 42px;
+  padding: 12px 25px;
+  width: 100%;
+}
+
+#newsletters .btn {
+  background-color: #312940;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  height: 42px;
+  padding: 12px 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#newsletters .input:focus, #newsletters .btn:focus {
+  outline: 0;
 }

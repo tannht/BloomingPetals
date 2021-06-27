@@ -94,13 +94,11 @@ section#header {
     width: 100%;
     justify-content: center;
 
-
-
     a {
         color: color(light);
 
         &:hover {
-            color: color(primary-light)
+            color: color(primary)!important;
         }
     }
 
@@ -117,9 +115,19 @@ section#header {
 
         &_left {
 
-            img {
+            height: 90px;
+            transition: all 0.5s 0s ease-out;
+
+            .logo {
+                background-image: url(../images/logo.svg);
+                content: '';
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                box-sizing: border-box;
+                transition: all 0.5s 0s ease-out;
+                width: 90px;
                 height: 90px;
-                transition: all 0.2s linear;
             }
         }
 
@@ -161,14 +169,23 @@ section#header {
 
 /* NAVIGATION BAR WHEN SCROLL */
 section[data-name="home-page"] .scroll.navibar {
-    background: rgba(63, 2, 2, 0.8);
+    background: color(light);
     height: 70px;
+    transition: all 0.5s 0s ease-out;
+    color: color(dark);
 
-
-    img {
-        height: 60px;
-        transition: all 0.2s linear;
+    .logo {
+        background-image: url(../images/logo-dark.svg);
+        transition: all 0.5s 0s ease-out;
+        height: 68px;
+        width: 68px;
     }
+
+    a,
+    i:before {
+        color: color(dark);
+    }
+
 }
 
 
@@ -222,6 +239,7 @@ section[data-name="home-page"] .scroll.navibar {
     }
 
 }
+
 // SCROLLTOP BUTTON
 #to-top-btn {
     a {
@@ -248,9 +266,10 @@ section[data-name="home-page"] .scroll.navibar {
     animation: fade-in-bottom 0.3s linear both;
 
 }
+
 // FOOTER
 #footer {
-    background: #F7EBE3;
+    background: #E9BC32;
     background-image: url(../images/footer-bg.svg);
     background-position: top center;
     background-size: cover;
@@ -320,12 +339,15 @@ section[data-name="home-page"] .scroll.navibar {
         }
 
     }
+
     //bottom bar//
     .footer_bottom-bar {
         align-items: center;
         padding: 10px;
 
         &_left {
+            color: color(light);
+
             @include mobile {
                 text-align: center;
                 padding: 10px 15%;
@@ -346,8 +368,21 @@ section[data-name="home-page"] .scroll.navibar {
                 li {
                     margin-right: 10px;
 
-                    i:hover {
-                        color: color(primary);
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 10px;
+                        height: 10px;
+                        padding: 15px;
+                        border-radius: 50%;
+
+                        &:hover {
+                            color: color(primary);
+                            background: color(light);
+                            transition: background 0.5s 0s ease-out;
+                        }
+
                     }
                 }
             }

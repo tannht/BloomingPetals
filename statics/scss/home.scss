@@ -147,15 +147,24 @@
 
 .prd-slider,
 .clients-logo {
+    margin-top: 10vh;
     h1 {
         color: color(primary);
         text-align: center;
+        font-family: 'SVN-Blenda Script';
+        padding-bottom: 5vh;
     }
 }
 
 .product-block {
     img {
         width: 100%;
+        margin-bottom: 10px;
+    }
+    h4, p  {
+        font-size: 1.2rem;        
+        text-align: center;
+        font-weight: 700;
     }
 }
 
@@ -174,8 +183,74 @@
 }
 
 #newsletters {
-    background: #F7EBE3;
-    min-height: 300px;
+    
+    background-color: #e9bc32;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70vh;
+    
+	
 
-
+    .box {
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 15px;
+    }
+    
+    .box h2 {
+        margin: 10px 0 0;
+    }
+    
+    .box p {
+        color: #312940;
+        margin: 10px;
+    }
+    
+    .box img {
+        max-width: 100%;
+        width: 400px;
+    }
+    
+    .form-control {
+        position: relative;
+        margin: 30px 0 20px;
+        padding:0;
+        border:0;
+    }
+    
+    .input {
+        border: 0;
+        border-radius: 50px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        display: block;
+        font-family: 'Muli', sans-serif;
+        font-size: 14px;
+        height: 42px;
+        padding: 12px 25px;
+        width: 100%;
+    }
+    
+    .btn {
+        background-color: #312940;
+        border: 0;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 14px;
+        height: 42px;
+        padding: 12px 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .input:focus, .btn:focus {
+        outline: 0;
+    }
+    
 }

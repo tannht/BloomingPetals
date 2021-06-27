@@ -146,3 +146,18 @@
 
     }
 }
+
+.prd-slider,
+.clients-logo {
+    h1 {
+        color: color(primary);
+        text-align: center;
+    }
+}
+
+.clients-logo {
+    .logo-items {
+        display: flex;
+        justify-content: space-between
+    }
+}

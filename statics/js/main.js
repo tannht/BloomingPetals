@@ -18,8 +18,20 @@ $(window).scroll(function() {
 });
 
 //Add JSON file
-var products = fetch('../statics/js/products-data.json')
+var api_ulr = '../statics/js/products-data.json'
+var productsArray = fetch(api_ulr)
   .then(response => response.json())
-  .then(products => console.log(products))
+  .then(function(productsList) {
+    //GET DATA FORM PRODUCTS ARRAY
+    productsList.map(function(product){
 
-
+        var productName = product.name
+        var categoryName = product.catName
+        var productPrice = product.price
+        var productDesc = product.desc
+        $("#popular-product").innerHTML = '<div>${productName}</div>'
+    })
+    
+  })
+  .catch(err => setTimeout(console.log("Data Error"),5000))
+ 

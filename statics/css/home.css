@@ -134,3 +134,14 @@
   margin: 0 5px;
   border-radius: 20px;
 }
+
+.prd-slider h1,
+.clients-logo h1 {
+  color: #A9780B;
+  text-align: center;
+}
+
+.clients-logo .logo-items {
+  display: flex;
+  justify-content: space-between;
+}

@@ -370,7 +370,9 @@ section[data-name="home-page"] .scroll.navibar {
     .footer_bottom-bar {
         align-items: center;
         padding: 10px;
-
+        .container-md{
+            margin: 0 auto;
+        }
         &_left {
             color: color(light);
 

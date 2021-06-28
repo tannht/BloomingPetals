@@ -347,6 +347,10 @@ section[data-name="home-page"] .scroll.navibar i:before {
   padding: 10px;
 }
 
+#footer .footer_bottom-bar .container-md {
+  margin: 0 auto;
+}
+
 #footer .footer_bottom-bar_left {
   color: #f8f8f8;
 }

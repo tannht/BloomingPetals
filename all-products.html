@@ -136,23 +136,14 @@
     </nav>
   </section>
   <!-- MAIN CONTAIN -->
-
-
-  <!-- 3. Popular Products-->
   <section>
-    <!-- |Products Slide-->
     <div class="prd-slider container-md">
-      <h1>Popular Products</h1>
-      <!-- ||Database query -->
       <div id="all-products" class="prd-slider_item row">
-
-
+        <!-- ||Database query -->
       </div>
-
     </div>
     </div>
   </section>
-
   <!-- FOOTER -->
   <footer id="footer">
     <!-- |Footer Main Content-->
@@ -228,22 +219,23 @@
     <a href="#"> <i class="fas fa-angle-up"></i> </a>
   </div>
 </body>
+<!-- get all product script -->
 <script>
   var api_ulr = '../statics/js/products-data.json';
   fetch(api_ulr)
     .then(response => response.json())
-    .then( productData => {
-    function dataArray(product) {    
-      return `
+    .then(productData => {
+      function dataArray(product) {
+        return `
+      <div class="product-block col-6 col-md-3">
       <img src="${product.img}" alt="" />
-      <h1>${product.name}</h2>
+      <p>${product.name}<p>
       <p>${product.price}</p>    
-        
+      </div>
         `;
-           
-    };    
-    var products = productData.map(dataArray)
-    $('#all-products').html(products.join(''));
+      };
+      var products = productData.map(dataArray)
+      $('#all-products').html(products.join(''));
     })
     .catch(err => console.log("Data Error"));
 </script>

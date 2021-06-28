@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Blooming Petals</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+  <link rel="stylesheet" href="statics/css/animate.css">
+  <link rel="stylesheet" href="statics/css/style.css" />
+  <link rel="stylesheet" href="statics/css/home.css" />
+
+</head>
+
+<body>
+  <section id="header" data-name="home-page">
+    <!-- MAIN NAVIGATION -->
+    <!-- nav pc-->
+    <nav class="navibar d-none d-md-flex">
+      <div id="main-menu" class="row container navibar_inner">
+        <div class="navibar_inner_left col-3">
+          <a href="index.html">
+            <div class="logo">
+             
+              <!-- <img src="statics/images/logo.svg" alt=""> -->
+            </div>
+          </a>
+        </div>
+        <div class="navibar_inner_center col-6 ">
+          <ul>
+            <li class=""><a href="#">Home</a>
+
+            </li>
+            <li class=""><a href="#">About us</a></li>
+            <li class="have-sub">
+              <a href="#">Products</a>
+              <!-- maga menu -->
+              <div style="padding-top: 20px; margin-bottom: -20px;">
+                <div class="megamenu">
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Flowers by Name</a></li>
+                    <li><a href="#">Rose</a></li>
+                    <li><a href="#">Lily</a></li>
+                    <li><a href="#">Sunflower</a></li>
+                    <li><a href="#">Orchid Kinds</a></li>
+                    <li><a href="#">Phalaenopsis Orchid</a></li>
+                  </ul>
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Flowers by Style</a></li>
+                    <li><a href="#">VIP Flowers</a></li>
+                    <li><a href="#">99 Rose</a></li>
+                    <li><a href="#">Love Flowers</a></li>
+                    <li><a href="#">Basket Arrangements</a></li>
+                    <li><a href="#">Bouquet</a></li>
+                  </ul>
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Occasions</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Valentine's day</a></li>
+                    <li><a href="#">Birthday</a></li>
+                    <li><a href="#">Feast day</a></li>
+                    <li><a href="#">Events</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end megamenu -->
+            </li>
+            <li class=""><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navibar_inner_right col-3 justify-content-end">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="ml-3"><a href="#">Login/Register</a></span>
+        </div>
+
+      </div>
+
+    </nav>
+    <!-- nav mobile-->
+    <nav class="mobile-menu d-block d-md-none">
+
+      <div class="row container mobile-menu_inner ">
+        <div class="mobile-menu_inner_left col-3">
+          <a href="index.html">
+            <img src="statics/images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="mobile-menu_inner_center col-6 ">
+          <ul>
+            <li class=""><a href="#">Home</a>
+
+            </li>
+            <li class=""><a href="#">About us</a></li>
+            <li class="have-sub">
+              <a href="#">Products</a>
+              <!-- maga menu -->
+              <div style="padding-top: 20px; margin-bottom: -20px;">
+                <div class="megamenu">
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Flowers by Name</a></li>
+                    <li><a href="#">Rose</a></li>
+                    <li><a href="#">Lily</a></li>
+                    <li><a href="#">Sunflower</a></li>
+                    <li><a href="#">Orchid Kinds</a></li>
+                    <li><a href="#">Phalaenopsis Orchid</a></li>
+                  </ul>
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Flowers by Style</a></li>
+                    <li><a href="#">VIP Flowers</a></li>
+                    <li><a href="#">99 Rose</a></li>
+                    <li><a href="#">Love Flowers</a></li>
+                    <li><a href="#">Basket Arrangements</a></li>
+                    <li><a href="#">Bouquet</a></li>
+                  </ul>
+                  <ul class="submenu_items">
+                    <li class="cat-title"><a href="#">Occasions</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Valentine's day</a></li>
+                    <li><a href="#">Birthday</a></li>
+                    <li><a href="#">Feast day</a></li>
+                    <li><a href="#">Events</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end megamenu -->
+            </li>
+            <li class=""><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </nav>
+    <!-- BANNER -->
+
+    <div class="homebanner">
+      <div class="overlay">
+        <div class="homebanner_intro-txt">
+          <h1>Welcome to Blooming Petals</h1>
+          <p>
+            We specialize in providing fresh flowers, wedding flowers, event
+            flowers with a variety of designs
+          </p>
+        </div>
+        <div class="homebanner_hotline">
+          <img src="./statics/images/hotline.svg" alt="hotline" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- MAIN CONTAIN --> 
+  <!-- 1. Popular Products -->
+  <section>
+    <!-- |Products Slide-->
+    <div class="prd-slider container-md">
+      <h1>Popular Products</h1>
+      <!-- ||Database query -->
+      <div id="popular-product" class="prd-slider_item row">
+        <div class="product-block col-6  col-md-3">
+          <img src="/uploads/img/rose/BP-ROSE001.jpg" alt="">
+          <h4 class="product-title"> Vip flower bouquet in Hochiminh online </h4>
+          <p>$80</p>
+        </div>
+        <div class="product-block col-6  col-md-3">
+          <img src="/uploads/img/rose/BP-ROSE002.jpg" alt="">
+          <h4 class="product-title"> Vip flower bouquet in Hochiminh online </h4>
+          <p>$80</p>
+        </div>
+        <div class="product-block col-6  col-md-3">
+          <img src="/uploads/img/rose/BP-ROSE003.jpg" alt="">
+          <h4 class="product-title"> Vip flower bouquet in Hochiminh online </h4>
+          <p>$80</p>
+        </div>
+        <div class="product-block col-6  col-md-3">
+          <img src="/uploads/img/rose/BP-ROSE004.jpg" alt="">
+          <h4 class="product-title"> Vip flower bouquet in Hochiminh online </h4>
+          <p>$80</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer id="footer">
+    <!-- |Footer Main Content-->
+
+    <div class="footer_main container-md d-flex align-items-start">
+      <!-- <div class="row justify-content-between"> -->
+      <!-- ||Logo -->
+      <div class="footer_main_logo col-md-3 col">
+        <img src="statics/images/logo-gold.svg" />
+      </div>
+      <!-- ||Contact Info -->
+      <div class="footer_main_info col-md-6 col">
+        <h4>Contact</h4>
+        <ul>
+          <li>
+            <i class="fas fa-location-arrow"></i>
+            <p>351 Hoang Sa Street, Tan Dinh Ward, District 1, HCMC.</p>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:19008899">1900 88 99</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:contact@bloomingpetals.com">contact@bloomingpetals.com</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ||Helps -->
+      <div class="footer_main_links col-md-3 col">
+        <h4>Helps</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">How to order</a></li>
+          <li><a href="#">Return and Refund Policy</a></li>
+          <li><a href="#">Delivery Information</a></li>
+        </ul>
+      </div>
+      <!-- </div> -->
+    </div>
+    <!-- |Bottom Bar -->
+    <div class="footer_bottom-bar dark-skin">
+      <div class="container-md">
+        <div class="row align-items-center">
+          <div class="footer_bottom-bar_left col-sm">
+            <p>Copyright © 2021 Blooming Petals. All Rights Reserved</p>
+          </div>
+          <div class="footer_bottom-bar_right col-sm">
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="to-top-btn">
+    <a href="#"> <i class="fas fa-angle-up"></i> </a>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="statics/js/main.js"></script>
+
+</html>

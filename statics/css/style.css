@@ -157,6 +157,31 @@ section#header {
   color: #f8f8f8;
 }
 
+.mobile-menu {
+  background-color: #f8f8f8;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+}
+
+.mobile-menu_inner {
+  display: flex;
+}
+
+.mobile-menu_inner_center > ul {
+  display: flex;
+}
+
+.mobile-menu_inner_center > ul li > {
+  align-items: center;
+}
+
+.mobile-menu_sidebar-menu {
+  position: absolute;
+  background-color: #E9BC32;
+  top: 0;
+}
+
 /* NAVIGATION BAR WHEN SCROLL */
 section[data-name="home-page"] .scroll.navibar {
   background: #f8f8f8;

@@ -98,7 +98,7 @@ section#header {
         color: color(light);
 
         &:hover {
-            color: color(primary)!important;
+            color: color(primary) !important;
         }
     }
 
@@ -164,6 +164,30 @@ section#header {
     i {
         padding-right: 10px;
         color: color(light);
+    }
+}
+
+.mobile-menu {
+    background-color: color(light);
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+
+    &_inner {
+        display: flex;
+
+        &_center {
+            >ul {
+                display: flex;
+                li> {align-items: center;
+                }
+            }
+        }
+    }
+    &_sidebar-menu {
+        position: absolute;
+        background-color: #E9BC32;
+        top: 0;
     }
 }
 
@@ -239,6 +263,8 @@ section[data-name="home-page"] .scroll.navibar {
     }
 
 }
+
+// MOBILE MENU
 
 // SCROLLTOP BUTTON
 #to-top-btn {

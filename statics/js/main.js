@@ -18,15 +18,3 @@ $(window).scroll(function () {
 });
 
 //Add JSON file
-
-var api_ulr = '../statics/js/products-data.json'
-fetch(api_ulr)
-    .then(response => response.json())
-    .then(function(product) {
-        // var popularProducts = product.map( function(product){
-        //     console.log(product.name)
-        //     return ;
-        // });
-        
-    })
-    .catch(err => console.log("Data Error"))

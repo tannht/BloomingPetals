@@ -225,7 +225,9 @@
   fetch(api_ulr)
     .then(response => response.json())
     .then(productData => {
-      function dataArray(product) {
+
+      // RENDER ALL PRODUCTS
+      function productsArray(product) {
         return `
       <div class="product-block col-6 col-md-3">
       <img src="${product.img}" alt="" />
@@ -234,8 +236,10 @@
       </div>
         `;
       };
-      var products = productData.map(dataArray)
-      $('#all-products').html(products.join(''));
+      var allProducts = productData.map(productsArray)
+      $('#all-products').html(allProducts.join(''));
+
+
     })
     .catch(err => console.log("Data Error"));
 </script>

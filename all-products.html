@@ -227,13 +227,16 @@
     .then(productData => {
 
       // RENDER ALL PRODUCTS
-      function productsArray(product) {
+      function productsArray(pro) {
         return `
-      <div class="product-block col-6 col-md-3">
-      <img src="${product.img}" alt="" />
-      <p>${product.name}<p>
-      <p>${product.price}</p>    
-      </div>
+        <div class="product-block col-6 col-md-3">
+                        <a href="${pro.proSlug}">                    
+                            <div class="img-wrapper">
+                            <img src="/${pro.img}" alt="${pro.name}" />
+                            </div>
+                        <p>${pro.name}<p>
+                        <span>$${pro.price}</span></a>
+                        </div>
         `;
       };
       var allProducts = productData.map(productsArray)

@@ -236,14 +236,29 @@
 
             // FILTER PRODUCTS BY CATEGORY
             function Cat(products) {
-            return products.catID == "cat01";
-            }            
-            var productsList = productData.filter(Cat);
-            function items(pro){
-                return 123;
+                return products.catID == "cat01";
             }
+            var productsList = productData.filter(Cat);
+
+            function items(pro) {
+
+                return `<div class="product-block col-6 col-md-3">
+                        <a href="${pro.proSlug}">                    
+                            <div class="img-wrapper">
+                            <img src="/${pro.img}" alt="${pro.name}" />
+                            </div>
+                        <p>${pro.name}<p>
+                        <span>$${pro.price}</span></a>
+                        </div>`;
+            }
+
             var a = productsList.map(items);
-            console.log(a)
+            $('#products').html(a.join(''))
+            // GET CATEGORY NAME            
+            function getTitle() {
+
+            }
+
         })
 
         .catch(err => console.log("Data Error"));

@@ -227,29 +227,72 @@ section[data-name="home-page"] .scroll.navibar i:before {
   z-index: 9999;
   position: absolute;
   width: 100%;
+  position: fixed;
 }
 
 .mobile-menu_inner {
   display: flex;
-  width: 100%;
+  height: 80px;
+  justify-content: space-around;
 }
 
-.mobile-menu_inner_center > ul {
+.mobile-menu_inner_left {
   display: flex;
+  align-items: center;
 }
 
-.mobile-menu_inner_center > ul li > {
+.mobile-menu_inner_left .logo {
+  height: 70px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.mobile-menu_inner_center {
+  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.mobile-menu_inner_center a {
+  font-weight: 700;
+  align-items: center;
+}
+
+.mobile-menu_inner_right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mobile-menu_inner_right .home-button {
+  font-size: 28px;
+  color: #F98404;
+  margin-left: 15px;
 }
 
 .mobile-menu_sidebar-menu {
   position: fixed;
-  background-color: rgba(233, 187, 47, 0.8);
-  right: 0;
-  left: 0;
+  background-color: rgba(83, 83, 83, 0.5);
+  inset: 0;
+  display: none;
+}
+
+.mobile-menu_sidebar-menu_content {
+  position: absolute;
+  width: 70vw;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  background: white;
+  padding: 20px;
+}
+
+.mobile-menu_sidebar-menu_content .submenu_items {
+  margin-bottom: 20px;
+}
+
+.mobile-menu_sidebar-menu_content .logo_sidebar {
+  max-width: 20%;
+  margin-bottom: 20px;
 }
 
 .img-wrapper {

@@ -31,32 +31,7 @@
   <section include-footer="/footer.html"></section>
 </body>
 <!-- get all product script -->
-<script>  
-  var api_ulr = '../statics/js/products-data.json';
-   fetch(api_ulr)
-    .then(response => response.json())
-    .then(productData => {
 
-      // RENDER ALL PRODUCTS
-      function productsArray(pro) {
-        return `
-        <div class="product-block col-6 col-md-3">
-                        <a href="${pro.proSlug}">                    
-                            <div class="img-wrapper">
-                            <img src="/${pro.img}" alt="${pro.name}" />
-                            </div>
-                        <p>${pro.name}<p>
-                        <span>$${pro.price}</span></a>
-                        </div>
-        `;
-      };
-      var allProducts = productData.map(productsArray)
-      $('#all-products').html(allProducts.join(''));
-
-
-    })
-    .catch(err => console.log("Data Error"));      
-</script>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

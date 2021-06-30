@@ -82,3 +82,50 @@ function includeFooter() {
     }
 };
 includeFooter();
+// Declare api urls
+var api_ulr = '/statics/js/products-data.json';
+
+ // GET PRODUCT BY ID  
+function getProduct(proID){      
+    fetch(api_ulr)
+        .then(response => response.json())
+        .then(productData => {      
+            var productSingle = `            
+                <h1>${productData[proID].name}</h1>
+                <p>${productData[proID].price}</p>
+                <p>${productData[proID].img}</p>
+                <p>${productData[proID].catName}</p>
+                <p>${productData[proID].sku}</p>
+                <p>${productData[proID].desc}</p>
+                <p>${productData[proID].catSlug}</p>
+                <p>${productData[proID].proSlug}</p> `;                
+                $('#product').html(productSingle);
+                $('title').append(productData[proID].name + " | Blooming Petals")                      
+        })
+        .catch(err => console.log("Data Error"));
+}
+// RENDER ALL PRODUCTS
+fetch(api_ulr)
+    .then(response => response.json())
+    .then(productData => {
+
+      
+      function productsArray(pro) {
+        return `
+        <div class="product-block col-6 col-md-3">
+                        <a href="${pro.proSlug}">                    
+                            <div class="img-wrapper">
+                            <img src="/${pro.img}" alt="${pro.name}" />
+                            </div>
+                        <p>${pro.name}<p>
+                        <span>$${pro.price}</span></a>
+                        </div>
+        `;
+      };
+      var allProducts = productData.map(productsArray)
+      $('#all-products').html(allProducts.join(''));
+
+
+    })
+    .catch(err => console.log("Data Error"));
+   

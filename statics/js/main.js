@@ -2,19 +2,18 @@
 //     console.log( "ready!" );
 // });
 
-/* ScrollTop Button */
-$(document).scroll(function () {
-    if ($(this).scrollTop() > 500) {
-        $('#to-top-btn').show()
-    } else $('#to-top-btn').hide();
 
-});
+
 $(window).scroll(function () {
     var scrollHeight = $(window).scrollTop();
-
     if (scrollHeight > 0) {
         $('.navibar').addClass("scroll");
     } else $('.navibar').removeClass("scroll");
+
+    /* ScrollTop Button */
+    if (scrollHeight > 500) {
+        $('#to-top-btn').show();
+    } else $('#to-top-btn').hide();
 });
 // define Header
 function includeHeader() {
@@ -38,7 +37,7 @@ function includeHeader() {
                     }
                     /*remove the attribute, and call this function once more:*/
                     elmnt.removeAttribute("include-header");
-                 includeHeader();
+                    includeHeader();
                 }
             }
             xhttp.open("GET", file, true);
@@ -71,7 +70,7 @@ function includeFooter() {
                     }
                     /*remove the attribute, and call this function once more:*/
                     elmnt.removeAttribute("include-footer");
-                 includeFooter();
+                    includeFooter();
                 }
             }
             xhttp.open("GET", file, true);
@@ -85,11 +84,11 @@ includeFooter();
 // Declare api urls
 var api_ulr = '/statics/js/products-data.json';
 
- // GET PRODUCT BY ID  
-function getProduct(proID){      
+// GET PRODUCT BY ID  
+function getProduct(proID) {
     fetch(api_ulr)
         .then(response => response.json())
-        .then(productData => {      
+        .then(productData => {
             var productSingle = `            
                 <h1>${productData[proID].name}</h1>
                 <p>${productData[proID].price}</p>
@@ -98,9 +97,9 @@ function getProduct(proID){
                 <p>${productData[proID].sku}</p>
                 <p>${productData[proID].desc}</p>
                 <p>${productData[proID].catSlug}</p>
-                <p>${productData[proID].proSlug}</p> `;                
-                $('#product').html(productSingle);
-                $('title').append(productData[proID].name + " | Blooming Petals")                      
+                <p>${productData[proID].proSlug}</p> `;
+            $('#product').html(productSingle);
+            $('title').append(productData[proID].name + " | Blooming Petals")
         })
         .catch(err => console.log("Data Error"));
 }
@@ -109,9 +108,9 @@ fetch(api_ulr)
     .then(response => response.json())
     .then(productData => {
 
-      
-      function productsArray(pro) {
-        return `
+
+        function productsArray(pro) {
+            return `
         <div class="product-block col-6 col-md-3">
                         <a href="${pro.proSlug}">                    
                             <div class="img-wrapper">
@@ -121,11 +120,10 @@ fetch(api_ulr)
                         <span>$${pro.price}</span></a>
                         </div>
         `;
-      };
-      var allProducts = productData.map(productsArray)
-      $('#all-products').html(allProducts.join(''));
+        };
+        var allProducts = productData.map(productsArray)
+        $('#all-products').html(allProducts.join(''));
 
 
     })
     .catch(err => console.log("Data Error"));
-   

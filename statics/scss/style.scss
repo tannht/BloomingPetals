@@ -251,7 +251,7 @@ section[data-name="home-page"] .scroll.navibar {
     width: 100%;
     position: fixed;
 
-
+   
     &_inner {
         display: flex;
         height: 80px;
@@ -293,6 +293,15 @@ section[data-name="home-page"] .scroll.navibar {
         }
 
 
+    }
+    // WHEN SCROLL DOWN
+    &_inner.scrolldown{
+        height: 80px;
+        &_left {            
+            .logo {
+                height: 60px;               
+            }
+        }
     }
 
     &_sidebar-menu {

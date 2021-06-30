@@ -3,7 +3,6 @@
 // });
 
 
-
 $(window).scroll(function () {
     var scrollHeight = $(window).scrollTop();
     /* change Navbar style when scroll */
@@ -87,7 +86,7 @@ function includeFooter() {
 };
 includeFooter();
 // Declare api urls
-var api_ulr = 'statics/js/products-data.json';
+var api_ulr = '/statics/js/products-data.json';
 
 // GET PRODUCT BY ID  
 function getProduct(proID) {

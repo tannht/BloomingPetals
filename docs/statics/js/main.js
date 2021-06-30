@@ -87,7 +87,7 @@ function includeFooter() {
 };
 includeFooter();
 // Declare api urls
-var api_ulr = '/statics/js/products-data.json';
+var api_ulr = 'statics/js/products-data.json';
 
 // GET PRODUCT BY ID  
 function getProduct(proID) {

@@ -105,6 +105,7 @@ section[data-name="home-page"] .scroll.navibar i:before {
   color: #5E454B;
 }
 
+/* PC NAVIGATION */
 .navibar {
   display: flex;
   align-items: center;
@@ -177,6 +178,7 @@ section[data-name="home-page"] .scroll.navibar i:before {
   color: #f8f8f8;
 }
 
+/* MEGA MENU */
 .megamenu {
   background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
@@ -222,18 +224,22 @@ section[data-name="home-page"] .scroll.navibar i:before {
   color: #fdb566;
 }
 
+/* MOBILE MENU */
 .mobile-menu {
   background-color: #f8f8f8;
   z-index: 9999;
   position: absolute;
   width: 100%;
   position: fixed;
+  /* WHEN SCROLL DOWN */
+  /* SIDEBAR MENU */
 }
 
 .mobile-menu_inner {
   display: flex;
   height: 80px;
   justify-content: space-around;
+  transition: all 0.5s 0s ease-out;
 }
 
 .mobile-menu_inner_left {
@@ -245,6 +251,7 @@ section[data-name="home-page"] .scroll.navibar i:before {
   height: 70px;
   display: flex;
   margin: 0 auto;
+  transition: all 0.5s 0s ease-out;
 }
 
 .mobile-menu_inner_center {
@@ -270,12 +277,14 @@ section[data-name="home-page"] .scroll.navibar i:before {
   margin-left: 15px;
 }
 
-.mobile-menu_inner.scrolldown {
-  height: 80px;
+.mobile-menu .scrolldown {
+  height: 60px;
+  transition: all 0.5s 0s ease-out;
 }
 
-.mobile-menu_inner.scrolldown_left .logo {
-  height: 60px;
+.mobile-menu .scrolldown img {
+  height: 50px;
+  transition: all 0.5s 0s ease-out;
 }
 
 .mobile-menu_sidebar-menu {
@@ -304,7 +313,6 @@ section[data-name="home-page"] .scroll.navibar i:before {
 }
 
 .img-wrapper {
-  background-size: cover;
   overflow: hidden;
   width: 100%;
   height: 250px;
@@ -345,6 +353,13 @@ section[data-name="home-page"] .scroll.navibar i:before {
 #to-top-btn a:hover,
 #to-top-btn a i {
   color: #f8f8f8;
+}
+
+@media (max-width: 576px) {
+  #to-top-btn {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 #footer {
@@ -396,6 +411,7 @@ section[data-name="home-page"] .scroll.navibar i:before {
 #footer .footer_main_info li, #footer .footer_main_links li {
   display: flex;
   padding-bottom: 10px;
+  align-items: center;
 }
 
 #footer .footer_main_info i, #footer .footer_main_links i {
@@ -451,6 +467,12 @@ section[data-name="home-page"] .scroll.navibar i:before {
 
 #footer .footer_bottom-bar_right ul {
   display: flex;
+}
+
+@media (max-width: 576px) {
+  #footer .footer_bottom-bar_right ul {
+    margin: 0 auto;
+  }
 }
 
 #footer .footer_bottom-bar_right ul li {

@@ -108,7 +108,7 @@ section[data-name="home-page"] .scroll.navibar {
 
 }
 
-// PC NAVIGATION 
+/* PC NAVIGATION */
 .navibar {
 
     @include flex-align-items-center;
@@ -190,7 +190,7 @@ section[data-name="home-page"] .scroll.navibar {
     }
 }
 
-// /* MEGA MENU */
+/* MEGA MENU */
 .megamenu {
 
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -242,7 +242,7 @@ section[data-name="home-page"] .scroll.navibar {
 
 }
 
-// MOBILE MENU
+/* MOBILE MENU */
 
 .mobile-menu {
     background-color: color(light);
@@ -251,20 +251,23 @@ section[data-name="home-page"] .scroll.navibar {
     width: 100%;
     position: fixed;
 
-   
+
     &_inner {
         display: flex;
         height: 80px;
         justify-content: space-around;
+        transition: all 0.5s 0s ease-out;
 
         &_left {
             display: flex;
             align-items: center;
+
             .logo {
                 height: 70px;
                 display: flex;
                 margin: 0 auto;
-                
+                transition: all 0.5s 0s ease-out;
+
             }
         }
 
@@ -272,21 +275,22 @@ section[data-name="home-page"] .scroll.navibar {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             a {
                 font-weight: 700;
                 align-items: center;
             }
-            
+
         }
 
         &_right {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            .home-button{                
-                font-size: 28px;          
-                color: color(primary);      
+
+            .home-button {
+                font-size: 28px;
+                color: color(primary);
                 margin-left: 15px;
             }
 
@@ -294,15 +298,20 @@ section[data-name="home-page"] .scroll.navibar {
 
 
     }
-    // WHEN SCROLL DOWN
-    &_inner.scrolldown{
-        height: 80px;
-        &_left {            
-            .logo {
-                height: 60px;               
-            }
-        }
+
+    /* WHEN SCROLL DOWN */
+    .scrolldown {
+        height: 60px;
+        transition: all 0.5s 0s ease-out;
     }
+
+    .scrolldown img {
+        height: 50px;
+        transition: all 0.5s 0s ease-out;
+    }
+
+
+    /* SIDEBAR MENU */
 
     &_sidebar-menu {
         position: fixed;
@@ -336,7 +345,7 @@ section[data-name="home-page"] .scroll.navibar {
 // PRODUCTS ITEMS STYLE    
 .img-wrapper {
 
-    background-size: cover;
+    
     overflow: hidden;
     width: 100%;
     height: 250px;
@@ -383,6 +392,11 @@ section[data-name="home-page"] .scroll.navibar {
     right: 50px;
     z-index: 9999;
     animation: fade-in-bottom 0.3s linear both;
+
+    @include mobile {
+        bottom: 20px;
+        right: 20px;
+    }
 
 }
 
@@ -432,6 +446,7 @@ section[data-name="home-page"] .scroll.navibar {
             li {
                 display: flex;
                 padding-bottom: 10px;
+                align-items: center;
             }
 
             i {
@@ -484,31 +499,35 @@ section[data-name="home-page"] .scroll.navibar {
         &_right {
             display: flex;
             justify-content: flex-end;
+        }
 
-            ul {
-                display: flex;
+        &_right ul {
+            display: flex;
 
-                li {
-                    margin-right: 10px;
-
-                    i {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 10px;
-                        height: 10px;
-                        padding: 15px;
-                        border-radius: 50%;
-
-                        &:hover {
-                            color: color(primary);
-                            background: color(light);
-                            transition: background 0.5s 0s ease-out;
-                        }
-
-                    }
-                }
+            @include mobile {
+                margin: 0 auto;
             }
         }
+
+        &_right ul li {
+            margin-right: 10px;
+        }
+
+        &_right ul li i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10px;
+            height: 10px;
+            padding: 15px;
+            border-radius: 50%;
+
+            &:hover {
+                color: color(primary);
+                background: color(light);
+                transition: background 0.5s 0s ease-out;
+            }
+        }
+
     }
 }

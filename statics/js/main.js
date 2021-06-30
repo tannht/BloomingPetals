@@ -6,9 +6,14 @@
 
 $(window).scroll(function () {
     var scrollHeight = $(window).scrollTop();
+    /* change Navbar style when scroll */
     if (scrollHeight > 0) {
         $('.navibar').addClass("scroll");
-    } else $('.navibar').removeClass("scroll");
+        $('#navmobie').addClass("scrolldown");
+    } else {
+        $('.navibar').removeClass("scroll");
+        $('#navmobie').removeClass("scrolldown")
+    };
 
     /* ScrollTop Button */
     if (scrollHeight > 500) {

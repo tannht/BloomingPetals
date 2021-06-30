@@ -2,7 +2,7 @@
 
 // BANNER
 .homebanner {
-    background-image: url(/uploads/media/banner-bg-3.jpg);
+    background-image: url(uploads/media/banner-bg-3.jpg);
 
 
     height: $banner-height;
@@ -65,14 +65,14 @@
         }
 
         .cat-1 {
-            background-image: url(/uploads/media/cat-1.jpg);
+            background-image: url(uploads/media/cat-1.jpg);
             background-size: contain;
             background-repeat: no-repeat;
 
         }
 
         .cat-2 {
-            background-image: url(/uploads/media/cat-2.jpg);
+            background-image: url(uploads/media/cat-2.jpg);
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -80,7 +80,7 @@
         }
 
         .cat-3 {
-            background-image: url(/uploads/media/cat-3.jpg);
+            background-image: url(uploads/media/cat-3.jpg);
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -148,6 +148,7 @@
 .prd-slider,
 .clients-logo {
     margin-top: 10vh;
+
     h1 {
         color: color(primary);
         text-align: center;
@@ -161,8 +162,10 @@
         width: 100%;
         margin-bottom: 10px;
     }
-    h4, p  {
-        font-size: 1.2rem;        
+
+    h4,
+    p {
+        font-size: 1.2rem;
         text-align: center;
         font-weight: 700;
     }
@@ -183,15 +186,15 @@
 }
 
 #newsletters {
-    
+
     background-color: #e9bc32;
-	
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 70vh;
-    
-	
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+
+
 
     .box {
         background-color: #fff;
@@ -202,28 +205,28 @@
         max-width: 500px;
         margin: 0 15px;
     }
-    
+
     .box h2 {
         margin: 10px 0 0;
     }
-    
+
     .box p {
         color: #312940;
         margin: 10px;
     }
-    
+
     .box img {
         max-width: 100%;
         width: 400px;
     }
-    
+
     .form-control {
         position: relative;
         margin: 30px 0 20px;
-        padding:0;
-        border:0;
+        padding: 0;
+        border: 0;
     }
-    
+
     .input {
         border: 0;
         border-radius: 50px;
@@ -235,7 +238,7 @@
         padding: 12px 25px;
         width: 100%;
     }
-    
+
     .btn {
         background-color: #312940;
         border: 0;
@@ -248,9 +251,10 @@
         top: 0;
         right: 0;
     }
-    
-    .input:focus, .btn:focus {
+
+    .input:focus,
+    .btn:focus {
         outline: 0;
     }
-    
+
 }

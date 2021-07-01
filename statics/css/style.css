@@ -257,6 +257,10 @@ section#header {
   color: #5E454B !important;
 }
 
+.home-page-menu .megamenu .submenu_items li a:hover {
+  color: #fdb566 !important;
+}
+
 .home-page-menu .megamenu .submenu_items .cat-title {
   color: #F98404 !important;
   border-bottom: 1px solid #F98404 !important;

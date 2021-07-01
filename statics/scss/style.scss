@@ -214,12 +214,15 @@ section#header {
 // HOME PAGE MENU STYLE
 .home-page-menu {
     .megamenu {
-
+        
         .submenu_items {
 
             li:not(:first-child) a {
                 color: color(dark) !important;
 
+            }
+            li a:hover{
+                color: color(primary-light)!important
             }
 
             .cat-title {

@@ -36,6 +36,7 @@ i {
     margin: 0;
     padding: 0;
 }
+
 *:focus {
     outline: none;
 }
@@ -93,8 +94,8 @@ section#header {
 
 /* --- SECTION NORMAL MENU --- */
 
-    /* NAVIGATION BAR WHEN SCROLL */
-    .scroll.navibar{
+/* NAVIGATION BAR WHEN SCROLL */
+.scroll.navibar {
     background: color(light);
     height: 70px;
     transition: all 0.5s 0s ease-out;
@@ -194,21 +195,24 @@ section#header {
         color: color(dark);
     }
 }
+
 .scroll {
-    .logo{
+    .logo {
         background-image: url(../images/logo-dark.svg);
     }
-   
+
     .navibar_inner_center,
     .navibar_inner_right {
-        i,a {
+
+        i,
+        a {
             color: color(dark);
         }
-    }   
+    }
 }
 
 // HOME PAGE MENU STYLE
-.home-page-menu{
+.home-page-menu {
     .megamenu {
 
         .submenu_items {
@@ -235,37 +239,48 @@ section#header {
         }
 
     }
+
     .navibar {
-        .logo{
-            background-image: url(../images/logo.svg)!important;
+        .logo {
+            background-image: url(../images/logo.svg) !important;
         }
-        &_inner_center a{
-            color: color(light)!important;
+
+        &_inner_center a {
+            color: color(light) !important;
+
             &:hover {
-                color: color(primary-light)!important;
-            }            
-            
+                color: color(primary-light) !important;
+            }
+
         }
+
         &_inner_right {
-            i,a {
-                color: color(light)!important;
+
+            i,
+            a {
+                color: color(light) !important;
             }
         }
     }
+
     .scroll {
-        .logo{
-            background-image: url(../images/logo-dark.svg)!important;
+        .logo {
+            background-image: url(../images/logo-dark.svg) !important;
         }
-        .navibar_inner_center a{
-            color: color(dark)!important;
+
+        .navibar_inner_center a {
+            color: color(dark) !important;
         }
+
         .navibar_inner_right {
-            i,a {
-                color: color(dark)!important;
+
+            i,
+            a {
+                color: color(dark) !important;
             }
-        }   
+        }
     }
-    
+
 }
 
 
@@ -427,23 +442,25 @@ section#header {
             height: 100vh;
             overflow-y: scroll;
             box-shadow: none;
-            
+
             &::-webkit-scrollbar {
                 box-shadow: none;
-                background:transparent;
-               
+                background: transparent;
+
             }
-            
-            .search{
+
+            .search {
                 margin-bottom: 15px;
+
                 input {
                     margin-right: 5px;
                     border-radius: 20px;
                     border: 1px solid #bdbdbd;
                     padding-left: 10px;
-                    
+
                 }
             }
+
             .submenu_items {
                 margin-bottom: 10px;
                 font-size: 20px;
@@ -454,6 +471,7 @@ section#header {
                     color: color(dark);
                     border-bottom: 0.5px dashed #bdbdbd;
                 }
+
                 li:hover {
                     text-indent: 5px;
                 }
@@ -667,7 +685,7 @@ section#header {
             &:hover {
                 color: color(primary);
                 background: color(light);
-                transition: background 0.5s 0s ease-out;
+                transition: all 0.5s 0s ease-out;
             }
         }
 

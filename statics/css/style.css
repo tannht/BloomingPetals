@@ -246,7 +246,8 @@ section#header {
   background-image: url(../images/logo-dark.svg);
 }
 
-.scroll .navibar_inner_center i, .scroll .navibar_inner_center a,
+.scroll .navibar_inner_center i,
+.scroll .navibar_inner_center a,
 .scroll .navibar_inner_right i,
 .scroll .navibar_inner_right a {
   color: #5E454B;
@@ -281,7 +282,8 @@ section#header {
   color: #fdb566 !important;
 }
 
-.home-page-menu .navibar_inner_right i, .home-page-menu .navibar_inner_right a {
+.home-page-menu .navibar_inner_right i,
+.home-page-menu .navibar_inner_right a {
   color: #f8f8f8 !important;
 }
 
@@ -293,7 +295,8 @@ section#header {
   color: #5E454B !important;
 }
 
-.home-page-menu .scroll .navibar_inner_right i, .home-page-menu .scroll .navibar_inner_right a {
+.home-page-menu .scroll .navibar_inner_right i,
+.home-page-menu .scroll .navibar_inner_right a {
   color: #5E454B !important;
 }
 
@@ -672,5 +675,5 @@ section#header {
 #footer .footer_bottom-bar_right ul li i:hover {
   color: #F98404;
   background: #f8f8f8;
-  transition: background 0.5s 0s ease-out;
+  transition: all 0.5s 0s ease-out;
 }

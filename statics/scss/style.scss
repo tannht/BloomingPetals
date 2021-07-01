@@ -6,15 +6,15 @@
     background-color: white;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: color(primary);
+}
+
 /* Device::-webkit-scrollbar-track {
   background-color: color(second-color);
 }*/
 html {
     scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: color(primary);
 }
 
 body {
@@ -86,9 +86,12 @@ section#header {
 
 /* NAVIGATION BAR */
 
-/* NAVIGATION BAR WHEN SCROLL */
 
-section[data-name="home-page"] .scroll.navibar {
+
+/* --- SECTION NORMAL MENU --- */
+
+    /* NAVIGATION BAR WHEN SCROLL */
+    .scroll.navibar{
     background: color(light);
     height: 70px;
     transition: all 0.5s 0s ease-out;
@@ -105,7 +108,6 @@ section[data-name="home-page"] .scroll.navibar {
     i:before {
         color: color(dark);
     }
-
 }
 
 /* PC NAVIGATION */
@@ -118,7 +120,7 @@ section[data-name="home-page"] .scroll.navibar {
     justify-content: center;
 
     a {
-        color: color(light);
+        color: color(dark);
 
         &:hover {
             color: color(primary) !important;
@@ -142,7 +144,7 @@ section[data-name="home-page"] .scroll.navibar {
             transition: all 0.5s 0s ease-out;
 
             .logo {
-                background-image: url(../images/logo.svg);
+                background-image: url(../images/logo-dark.svg);
                 content: '';
                 background-position: center;
                 background-repeat: no-repeat;
@@ -186,9 +188,53 @@ section[data-name="home-page"] .scroll.navibar {
 
     i {
         padding-right: 10px;
-        color: color(light);
+        color: color(dark);
     }
 }
+.scroll {
+    .logo{
+        background-image: url(../images/logo-dark.svg)!important;
+    }
+   
+    .navibar_inner_center,
+    .navibar_inner_right {
+        i,a {
+            color: color(dark)!important;
+        }
+    }   
+}
+
+// HOME PAGE MENU STYLE
+.home-page-menu{
+    .navibar {
+        .logo{
+            background-image: url(../images/logo.svg);
+        }
+        &_inner_center a{
+            color: color(light);
+        }
+        &_inner_right {
+            i,a {
+                color: color(light)
+            }
+        }
+    }
+    // .scroll {
+    //     .logo{
+    //         background-image: url(../images/logo-dark.svg);
+    //     }
+    //     .navibar_inner_center a{
+    //         color: color(dark)!important;
+    //     }
+    //     .navibar_inner_right {
+    //         i,a {
+    //             color: color(dark)!important;
+    //         }
+    //     }   
+    // }
+    
+}
+
 
 /* MEGA MENU */
 .megamenu {
@@ -288,10 +334,11 @@ section[data-name="home-page"] .scroll.navibar {
             justify-content: space-evenly;
             align-items: center;
 
-            .home-button {
+            .nav-btn {
                 font-size: 28px;
                 color: color(primary);
                 margin-left: 15px;
+                margin-top: -7.5px
             }
 
         }
@@ -312,12 +359,27 @@ section[data-name="home-page"] .scroll.navibar {
 
 
     /* SIDEBAR MENU */
+    .show {
+        animation: fadeIn 0.5s;
+        visibility: visible;
+
+        .mobile-menu_sidebar-menu_content {
+            left: 0;
+        }
+
+        .close-btn {
+            animation: rotateIn 0.5s;
+        }
+
+
+    }
+
 
     &_sidebar-menu {
         position: fixed;
         background-color: rgba(83, 83, 83, 0.5);
         inset: 0;
-        display: none;
+        visibility: hidden;
 
         &_content {
 
@@ -325,17 +387,48 @@ section[data-name="home-page"] .scroll.navibar {
             width: 70vw;
             top: 0;
             bottom: 0;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
+            transition: all 0.5s;
+            left: -75vw;
+            height: 100vh;
+            overflow-y: scroll;
+            box-shadow: none;
+            &::-webkit-scrollbar {
+                box-shadow: none;
+                background:transparent;
+            }
+            
 
             .submenu_items {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+
+                .cat-title {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: color(dark);
+                }
+
             }
 
             .logo_sidebar {
                 max-width: 20%;
                 margin-bottom: 20px;
             }
+
+        }
+
+        .close-btn {
+            font-size: 40px;
+            color: color(light);
+            position: absolute;
+            right: 4%;
+            z-index: 999;
+
+            @include tablet {
+                right: 10%;
+            }
+
         }
 
     }
@@ -345,7 +438,7 @@ section[data-name="home-page"] .scroll.navibar {
 // PRODUCTS ITEMS STYLE    
 .img-wrapper {
 
-    
+
     overflow: hidden;
     width: 100%;
     height: 250px;

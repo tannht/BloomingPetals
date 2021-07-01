@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
     <link rel="stylesheet" href="/statics/css/animate.css">
@@ -13,14 +14,27 @@
     <link rel="stylesheet" href="/statics/css/home.css" />
 
 </head>
+
 <body>
-    <section include-header="/header.html" id="header"></section>      
-    
+    <section include-header="/header.html" id="header"></section>
+
     <!-- MAIN CONTAIN -->
     <section>
         <div class="prd-slider container-md">
-            <div id="products" class="prd-slider_item row">
+            <div style="margin-bottom: 100px;"></div>
+            <ul>
+                <li id="cat01" class="catItems"><a href="#?=cat01" onlclick="setAttr()">CAT 01</a></li>
+                <li id="cat02" class="catItems"><a href="#?=cat02" onlclick="setAttr()">CAT 02</a></li>
+                <li id="cat03" class="catItems"><a href="#?=cat03" onlclick="setAttr()">CAT 03</a></li>
+            </ul>
+            <div id="products" class="prd-slider_item row" catdata="cat01">
                 <!-- ||Database query -->
+                <script>
+                    $('document').ready(() => {
+                        
+                        getProductsByCat($("#products").attr("catdata"));
+                    });
+                </script>
             </div>
         </div>
         </div>
@@ -28,41 +42,7 @@
     <!-- FOOTER -->
     <section include-footer="/footer.html"></section>
 </body>
-
-<script>
-    var api_ulr = '/statics/js/products-data.json';
-    fetch(api_ulr)
-        .then(response => response.json())
-        .then(productData => {
-
-            // FILTER PRODUCTS BY CATEGORY
-            function Cat(products) {
-                return products.catID == "cat01";
-            }
-            var productsList = productData.filter(Cat);
-
-            function items(pro) {
-
-                return `<div class="product-block col-6 col-md-3">
-                        <a href="${pro.proSlug}">                    
-                            <div class="img-wrapper">
-                            <img src="/${pro.img}" alt="${pro.name}" />
-                            </div>
-                        <p>${pro.name}<p>
-                        <span>$${pro.price}</span></a>
-                        </div>`;
-            }
-
-            var a = productsList.map(items);
-            $('#products').html(a.join(''))
-            // GET CATEGORY NAME            
-           var pageTitle = (productsList[1].catName)
-           $("title").append(pageTitle + " Category | Blooming Petals")
-        })
-        .catch(err => console.log("Data Error"));
-</script>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/statics/js/main.js"></script>
 

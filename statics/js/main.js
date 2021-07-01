@@ -87,7 +87,7 @@ function includeFooter() {
 includeFooter();
 // SHOW / HIDE MOBILE MENU
 function openMenu() {
-    $('.mobile-menu_sidebar-menu').toggleClass("show");
+    $('.mobile-menu_sidebar-menu').addClass("show");
     $('.nav-btn').css("opacity", 0);
 }
 function closeMenu() {
@@ -118,6 +118,38 @@ function getProduct(proID) {
         })
         .catch(err => console.log("Data Error"));
 }
+// GET PRODUCT BY CATEGORY 
+function getProductsByCat(CatData) {
+    fetch(api_ulr)
+        .then(response => response.json())
+        .then(productData => {
+            // FILTER PRODUCTS BY CATEGORY
+            
+            function Cat(products) {
+                return products.catID == CatData;
+            }
+            var productsList = productData.filter(Cat);
+
+            function items(pro) {
+
+                return `<div class="product-block col-6 col-md-3">
+                    <a href="${pro.proSlug}">                    
+                        <div class="img-wrapper">
+                        <img src="/${pro.img}" alt="${pro.name}" />
+                        </div>
+                    <p>${pro.name}<p>
+                    <span>$${pro.price}</span></a>
+                    </div>`;
+            }
+
+            var a = productsList.map(items);
+            $('#products').html(a.join(''))
+            // GET CATEGORY NAME            
+            // var pageTitle = (productsList[1].catName)
+            // $("title").append(pageTitle + " Category | Blooming Petals")
+        })
+        .catch(err => console.log("Data Error"));
+};
 // RENDER ALL PRODUCTS
 fetch(api_ulr)
     .then(response => response.json())
@@ -126,10 +158,10 @@ fetch(api_ulr)
 
         function productsArray(pro) {
             return `
-        <div class="product-block col-6 col-md-3">
+        <div class="product-block col-6 col-md-4">
                         <a href="${pro.proSlug}">                    
                             <div class="img-wrapper">
-                            <img src="/${pro.img}" alt="${pro.name}" />
+                            <img src="/${pro.img}" alt="${pro.name}" width="300" />
                             </div>
                         <p>${pro.name}<p>
                         <span>$${pro.price}</span></a>

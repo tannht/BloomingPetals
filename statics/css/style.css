@@ -253,54 +253,54 @@ section#header {
   color: #5E454B;
 }
 
-.home-page-menu .megamenu .submenu_items li:not(:first-child) a {
+.light-menu .megamenu .submenu_items li:not(:first-child) a {
   color: #5E454B !important;
 }
 
-.home-page-menu .megamenu .submenu_items li a:hover {
+.light-menu .megamenu .submenu_items li a:hover {
   color: #fdb566 !important;
 }
 
-.home-page-menu .megamenu .submenu_items .cat-title {
+.light-menu .megamenu .submenu_items .cat-title {
   color: #F98404 !important;
   border-bottom: 1px solid #F98404 !important;
 }
 
-.home-page-menu .megamenu .submenu_items .cat-title a {
+.light-menu .megamenu .submenu_items .cat-title a {
   color: #F98404 !important;
 }
 
-.home-page-menu .megamenu .submenu_items .cat-title a:hover {
+.light-menu .megamenu .submenu_items .cat-title a:hover {
   color: #fdb566 !important;
 }
 
-.home-page-menu .navibar .logo {
+.light-menu .navibar .logo {
   background-image: url(../images/logo.svg) !important;
 }
 
-.home-page-menu .navibar_inner_center a {
+.light-menu .navibar_inner_center a {
   color: #f8f8f8 !important;
 }
 
-.home-page-menu .navibar_inner_center a:hover {
+.light-menu .navibar_inner_center a:hover {
   color: #fdb566 !important;
 }
 
-.home-page-menu .navibar_inner_right i,
-.home-page-menu .navibar_inner_right a {
+.light-menu .navibar_inner_right i,
+.light-menu .navibar_inner_right a {
   color: #f8f8f8 !important;
 }
 
-.home-page-menu .scroll .logo {
+.light-menu .scroll .logo {
   background-image: url(../images/logo-dark.svg) !important;
 }
 
-.home-page-menu .scroll .navibar_inner_center a {
+.light-menu .scroll .navibar_inner_center a {
   color: #5E454B !important;
 }
 
-.home-page-menu .scroll .navibar_inner_right i,
-.home-page-menu .scroll .navibar_inner_right a {
+.light-menu .scroll .navibar_inner_right i,
+.light-menu .scroll .navibar_inner_right a {
   color: #5E454B !important;
 }
 
@@ -497,6 +497,55 @@ section#header {
   .mobile-menu_sidebar-menu .close-btn {
     right: 10%;
   }
+}
+
+.pagetitlebanner {
+  height: 400px;
+  box-sizing: content-box;
+  background-color: #f8f8f8;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pagetitlebanner .overlay {
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  padding: 0;
+}
+
+.pagetitlebanner img {
+  animation: fade-in-bottom 0.6s linear 0.2s both;
+}
+
+.pagetitlebanner div {
+  padding: 20px;
+}
+
+.pagetitlebanner_intro-txt {
+  margin-top: 25vh;
+}
+
+.pagetitlebanner_intro-txt h1 {
+  color: #f8f8f8;
+  animation: fade-in-bottom 0.2s linear 0.2s both;
+}
+
+.pagetitlebanner_intro-txt p {
+  color: #f8f8f8;
+  animation: fade-in-bottom 0.4s linear 0.2s both;
+}
+
+.product-block img {
+  width: 100%;
 }
 
 .img-wrapper {

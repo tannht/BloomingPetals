@@ -86,14 +86,14 @@ function includeFooter() {
 };
 includeFooter();
 // SHOW / HIDE MOBILE MENU
-$('.nav-btn').click(() => {
+function openMenu() {
     $('.mobile-menu_sidebar-menu').toggleClass("show");
     $('.nav-btn').css("opacity", 0);
-})
-$('.close-btn').click(() => {
+}
+function closeMenu() {
     $('.mobile-menu_sidebar-menu').removeClass("show")
     $('.nav-btn').css("opacity", 1);
-})
+}
 
 
 // Declare api urls

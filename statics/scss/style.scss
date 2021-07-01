@@ -211,30 +211,30 @@ section#header {
 .home-page-menu{
     .navibar {
         .logo{
-            background-image: url(../images/logo.svg);
+            background-image: url(../images/logo.svg)!important;
         }
         &_inner_center a{
-            color: color(light);
+            color: color(light)!important;
         }
         &_inner_right {
             i,a {
-                color: color(light)
+                color: color(light)!important;
             }
         }
     }
-    // .scroll {
-    //     .logo{
-    //         background-image: url(../images/logo-dark.svg);
-    //     }
-    //     .navibar_inner_center a{
-    //         color: color(dark)!important;
-    //     }
-    //     .navibar_inner_right {
-    //         i,a {
-    //             color: color(dark)!important;
-    //         }
-    //     }   
-    // }
+    .scroll {
+        .logo{
+            background-image: url(../images/logo-dark.svg)!important;
+        }
+        .navibar_inner_center a{
+            color: color(dark)!important;
+        }
+        .navibar_inner_right {
+            i,a {
+                color: color(dark)!important;
+            }
+        }   
+    }
     
 }
 

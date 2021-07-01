@@ -194,15 +194,27 @@ section#header {
 }
 
 .home-page-menu .navibar .logo {
-  background-image: url(../images/logo.svg);
+  background-image: url(../images/logo.svg) !important;
 }
 
 .home-page-menu .navibar_inner_center a {
-  color: #f8f8f8;
+  color: #f8f8f8 !important;
 }
 
 .home-page-menu .navibar_inner_right i, .home-page-menu .navibar_inner_right a {
-  color: #f8f8f8;
+  color: #f8f8f8 !important;
+}
+
+.home-page-menu .scroll .logo {
+  background-image: url(../images/logo-dark.svg) !important;
+}
+
+.home-page-menu .scroll .navibar_inner_center a {
+  color: #5E454B !important;
+}
+
+.home-page-menu .scroll .navibar_inner_right i, .home-page-menu .scroll .navibar_inner_right a {
+  color: #5E454B !important;
 }
 
 /* MEGA MENU */

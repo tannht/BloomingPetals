@@ -209,6 +209,32 @@ section#header {
 
 // HOME PAGE MENU STYLE
 .home-page-menu{
+    .megamenu {
+
+        .submenu_items {
+
+            li:not(:first-child) a {
+                color: color(dark) !important;
+
+            }
+
+            .cat-title {
+
+                color: color(primary) !important;
+
+                border-bottom: 1px solid color(primary) !important;
+
+                a {
+                    color: color(primary) !important;
+
+                    &:hover {
+                        color: color(primary-light) !important;
+                    }
+                }
+            }
+        }
+
+    }
     .navibar {
         .logo{
             background-image: url(../images/logo.svg)!important;

@@ -241,6 +241,10 @@ section#header {
         }
         &_inner_center a{
             color: color(light)!important;
+            &:hover {
+                color: color(primary-light)!important;
+            }            
+            
         }
         &_inner_right {
             i,a {

@@ -87,16 +87,14 @@ function includeFooter() {
 includeFooter();
 // SHOW / HIDE MOBILE MENU
 $('.nav-btn').click(() => {
-        $('.mobile-menu_sidebar-menu').toggleClass("show");
-        $('.nav-btn').css("opacity" , 0);
+    $('.mobile-menu_sidebar-menu').toggleClass("show");
+    $('.nav-btn').css("opacity", 0);
 })
-// $('.close-btn').click(() => {
-//     $('.mobile-menu_sidebar-menu').removeClass("show") 
-// })
-$('.mobile-menu_sidebar-menu').click(() => {
-    $('.mobile-menu_sidebar-menu').removeClass("show") 
-    $('.nav-btn').css("opacity" , 1);
+$('.close-btn').click(() => {
+    $('.mobile-menu_sidebar-menu').removeClass("show")
+    $('.nav-btn').css("opacity", 1);
 })
+
 
 // Declare api urls
 var api_ulr = '/statics/js/products-data.json';

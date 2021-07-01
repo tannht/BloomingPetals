@@ -36,6 +36,9 @@ i {
     margin: 0;
     padding: 0;
 }
+*:focus {
+    outline: none;
+}
 
 a {
     color: color(primary);
@@ -193,13 +196,13 @@ section#header {
 }
 .scroll {
     .logo{
-        background-image: url(../images/logo-dark.svg)!important;
+        background-image: url(../images/logo-dark.svg);
     }
    
     .navibar_inner_center,
     .navibar_inner_right {
         i,a {
-            color: color(dark)!important;
+            color: color(dark);
         }
     }   
 }
@@ -394,19 +397,35 @@ section#header {
             height: 100vh;
             overflow-y: scroll;
             box-shadow: none;
+            
             &::-webkit-scrollbar {
                 box-shadow: none;
                 background:transparent;
+               
             }
             
-
+            .search{
+                margin-bottom: 15px;
+                input {
+                    margin-right: 5px;
+                    border-radius: 20px;
+                    border: 1px solid #bdbdbd;
+                    padding-left: 10px;
+                    
+                }
+            }
             .submenu_items {
                 margin-bottom: 10px;
+                font-size: 20px;
 
                 .cat-title {
                     font-weight: 500;
                     text-transform: uppercase;
                     color: color(dark);
+                    border-bottom: 0.5px dashed #bdbdbd;
+                }
+                li:hover {
+                    text-indent: 5px;
                 }
 
             }

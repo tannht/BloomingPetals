@@ -504,59 +504,8 @@ section#header {
     }
 
 }
-// PAGE TITLE STYLE
-.pagetitlebanner {
-    // background-image: url(/uploads/media/about-banner.jpg);
-    height: 400px;
-    box-sizing: content-box;
-    background-color: color(light);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 
-    .overlay {
-        height: 400px;
-        background-color: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        inset: 0;
-        padding: 0;
-        
-
-    }
-
-    img {
-        animation: fade-in-bottom 0.6s linear 0.2s both;
-    }
-
-    div {
-        padding: 20px;
-    }
-
-    &_intro-txt {
-        margin-top: 25vh;
-
-        h1 {
-            color: color(light);
-            animation: fade-in-bottom 0.2s linear 0.2s both;
-        }
-
-        p {
-            color: color(light);
-            animation: fade-in-bottom 0.4s linear 0.2s both;
-        }
-
-    }
-}
-// PRODUCTS ITEMS STYLE 
-.product-block img {
-    width: 100%;
-} 
+// PRODUCTS ITEMS STYLE    
 .img-wrapper {
 
 

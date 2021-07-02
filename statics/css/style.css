@@ -788,3 +788,59 @@ section#header {
 }
 
 /*# sourceMappingURL=style.css.map */
+  /* line 700, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+  #footer .footer_bottom-bar_left {
+    text-align: center;
+    padding: 10px 15%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 700, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+  #footer .footer_bottom-bar_left {
+    padding-right: 20%;
+  }
+}
+
+/* line 713, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+#footer .footer_bottom-bar_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 718, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+#footer .footer_bottom-bar_right ul {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  /* line 718, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+  #footer .footer_bottom-bar_right ul {
+    margin: 0 auto;
+  }
+}
+
+/* line 726, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+#footer .footer_bottom-bar_right ul li {
+  margin-right: 10px;
+}
+
+/* line 730, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+#footer .footer_bottom-bar_right ul li i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* line 739, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
+#footer .footer_bottom-bar_right ul li i:hover {
+  color: #F98404;
+  background: #f8f8f8;
+  transition: all 0.5s 0s ease-out;
+}
+
+/*# sourceMappingURL=style.css.map */

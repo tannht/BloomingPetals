@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Blooming Petals</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
   <link rel="stylesheet" href="statics/css/animate.css">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-  <section id="header" data-name="home-page" include-header="/header.html"></section>
+  <section id="header" data-name="home-page" include-header="/header.html" class="light-menu"></section>
   <div class="pagetitlebanner">
     <div class="overlay">
       <div class="pagetitlebanner_intro-txt">
@@ -29,8 +30,9 @@
   </div>
   <!-- MAIN CONTAIN -->
   <section id="main">
-    <div class="row container-md">
+    <div class="row container-md" style="margin: 0 auto;">
       <div class="sidebar col-md-3">
+
         <ul class="submenu_items">
           <li class="cat-title">
             <p>Flowers by Name</p>
@@ -65,11 +67,36 @@
         </ul>
       </div>
       <div class="main-content col-md-9">
-        <div id="all-products" class="prd-slider_item row">
-          <!-- ||Database query -->
+        <script>
+          $('document').ready(() => {
+            var api_ulr = '/statics/js/products-data.jso-n';
+            $("#data").load(api_ulr, function (mydata, status, xhr) {
+              if (status == "success")
+              consol.log(status)
+              if (status == "error")
+                consol.log("Error: " + xhr.status + ": " + xhr.status); 
+                              
+            });          
+          });
+        </script>
+        <div id="data">
+
+        </div>
+        <!---- *
+          *
+          *
+          *
+          *
+          *
+          *
+          *-->
+        <div class="margin-top-150">
+          </d>
+          <div id="all-products" class="prd-slider_item row">
+            <!-- ||Database query -->
+          </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- FOOTER -->
   <section include-footer="/footer.html"></section>
@@ -77,8 +104,8 @@
 <!-- get all product script -->
 
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
+
 
 </html>

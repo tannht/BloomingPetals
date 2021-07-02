@@ -1,0 +1,19 @@
+//Common
+@import 'common/extend.scss';
+@import 'common/fonts.scss';
+@import 'common/minxi.scss';
+@import 'common/variables.scss';
+@import 'common/global.scss';
+
+//layout
+@import 'layouts/main.scss';
+
+// Responsive
+@import 'layouts/responsive.scss';
+@import '../../statics/scss/variables';
+
+.pagetitlebanner{
+    background:url(/uploads/media/about-banner.jpg);
+    background-size: cover;
+    background-position: center;
+}

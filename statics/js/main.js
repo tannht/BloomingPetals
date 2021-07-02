@@ -90,6 +90,7 @@ function openMenu() {
     $('.mobile-menu_sidebar-menu').addClass("show");
     $('.nav-btn').css("opacity", 0);
 }
+
 function closeMenu() {
     $('.mobile-menu_sidebar-menu').removeClass("show")
     $('.nav-btn').css("opacity", 1);
@@ -124,7 +125,7 @@ function getProductsByCat(CatData) {
         .then(response => response.json())
         .then(productData => {
             // FILTER PRODUCTS BY CATEGORY
-            
+
             function Cat(products) {
                 return products.catID == CatData;
             }
@@ -132,7 +133,7 @@ function getProductsByCat(CatData) {
 
             function items(pro) {
 
-                return `<div class="product-block col-6 col-md-3">
+                return `<div class="product-block col-6 col-md-4">
                     <a href="${pro.proSlug}">                    
                         <div class="img-wrapper">
                         <img src="/${pro.img}" alt="${pro.name}" />
@@ -151,13 +152,14 @@ function getProductsByCat(CatData) {
         .catch(err => console.log("Data Error"));
 };
 // RENDER ALL PRODUCTS
-fetch(api_ulr)
-    .then(response => response.json())
-    .then(productData => {
+function allProducts() {
+    fetch(api_ulr)
+        .then(response => response.json())
+        .then(productData => {
 
 
-        function productsArray(pro) {
-            return `
+            function productsArray(pro) {
+                return `
         <div class="product-block col-6 col-md-4">
                         <a href="${pro.proSlug}">                    
                             <div class="img-wrapper">
@@ -167,10 +169,22 @@ fetch(api_ulr)
                         <span>$${pro.price}</span></a>
                         </div>
         `;
-        };
-        var allProducts = productData.map(productsArray)
-        $('#all-products').html(allProducts.join(''));
+            };
+            var allProducts = productData.map(productsArray)
+            $('#products').html(allProducts.join(''));
 
 
-    })
-    .catch(err => console.log("Data Error"));
+        })
+        .catch(err => console.log("Data Error"));
+}
+//FILTER PRODUCTS BY CATEGORY
+
+function getData() {
+
+    var cathref = window.location.href;
+    var catdata = cathref.slice(-5);
+    if (catdata == ".html") {
+        getProductsByCat('cat11')
+    } else
+        getProductsByCat(catdata);
+}

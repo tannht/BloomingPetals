@@ -3,7 +3,6 @@
 @import 'common/fonts.scss';
 @import 'common/minxi.scss';
 @import 'common/variables.scss';
-@import 'common/global.scss';
 
 //layout
 @import 'layouts/main.scss';
@@ -13,7 +12,7 @@
 @import '../../statics/scss/variables';
 
 .pagetitlebanner{
-    background:url(/uploads/media/about-banner.jpg);
+    background:url(../../uploads/media/banner-bg.jpg);
     background-size: cover;
     background-position: center;
 }

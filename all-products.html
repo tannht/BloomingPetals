@@ -30,45 +30,79 @@
   </div>
   <!-- MAIN CONTAIN -->
   <script>
-    $(document).ready(function () {      
-     getData();
-    });    
-    
+    $(document).ready(function () {
+      getData();
+    });
   </script>
 
   <section id="products-main-content">
     <div class="row container-md">
       <div class="sidebar col-md-3">
-        <ul class="submenu_items">
-          <li class="cat-title">
-            <p>Flowers by Name</p>
-          </li>
-          <li><a href="#?cat11" onclick="getData()">Rose</a></li>
-          <li><a href="#?cat12" onclick="getData()">Lily</a></li>
-          <li><a href="#?cat13" onclick="getData()">Sunflower</a></li>
-          <li><a href="#?cat14" onclick="getData()">Orchid Kinds</a></li>
-          <li><a href="#?cat15" onclick="getData()">Phalaenopsis Orchid</a> </li>
-        </ul>
-        <ul class="submenu_items">
-          <li class="cat-title">
-            <p>Flowers by Style</p>
-          </li>
-          <li><a href="#?cat06" onclick="getData()">VIP Flowers</a></li>
-          <li><a href="#?cat07" onclick="getData()">99 Rose</a></li>
-          <li><a href="#?cat08" onclick="getData()">Love Flowers</a></li>
-          <li><a href="#?cat09" onclick="getData()">Basket Arrangements</a></li>
-          <li><a href="#?cat10" onclick="getData()">Bouquet</a></li>
-        </ul>
-        <ul class="submenu_items">
-          <li class="cat-title">
-            <p>Occasions</p>
-          </li>
-          <li><a class="cat01" href="#?cat01" onclick="getData()">Wedding</a></li>
-          <li><a class="cat02" href="#?cat02" onclick="getData()">Valentine's day</a></li>
-          <li><a class="cat03" href="#?cat03" onclick="getData()">Birthday</a></li>
-          <li><a class="cat04" href="#?cat04" onclick="getData()">Feast day</a></li>
-          <li><a class="cat05" href="#?cat05" onclick="getData()">Events</a></li>
-        </ul>
+        -------------------------------
+        <div class="accordion" id="accordion">
+          <div class="card">
+            <ul class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <li class="cat-title btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
+                  Occasions
+                </li>
+              </h2>
+            </ul>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <ul class="submenu_items">
+                <li><a class="cat01" href="#?cat01" onclick="getData()">Wedding</a></li>
+                <li><a class="cat02" href="#?cat02" onclick="getData()">Valentine's day</a></li>
+                <li><a class="cat03" href="#?cat03" onclick="getData()">Birthday</a></li>
+                <li><a class="cat04" href="#?cat04" onclick="getData()">Feast day</a></li>
+                <li><a class="cat05" href="#?cat05" onclick="getData()">Events</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <ul class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <li class=" cat-title btn btn-link collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Flowers by Style
+                </li>
+              </h2>
+            </ul>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <ul class="submenu_items">
+                <li><a href="#?cat06" onclick="getData()">VIP Flowers</a></li>
+                <li><a href="#?cat07" onclick="getData()">99 Rose</a></li>
+                <li><a href="#?cat08" onclick="getData()">Love Flowers</a></li>
+                <li><a href="#?cat09" onclick="getData()">Basket Arrangements</a></li>
+                <li><a href="#?cat10" onclick="getData()">Bouquet</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <ul class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <li class="cat-title btn btn-link collapsed " type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Flowers by Name
+                </li>
+              </h2>
+            </ul>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <ul class="submenu_items">
+                <li><a href="#?cat11" onclick="getData()">Rose</a></li>
+                <li><a href="#?cat12" onclick="getData()">Lily</a></li>
+                <li><a href="#?cat13" onclick="getData()">Sunflower</a></li>
+                <li><a href="#?cat14" onclick="getData()">Orchid Kinds</a></li>
+                <li><a href="#?cat15" onclick="getData()">Phalaenopsis Orchid</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        -------------------------------
+
+
+
       </div>
       <div class="main-content col-md-9">
         <div id="products" class="prd-slider_item row">

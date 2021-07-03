@@ -214,15 +214,16 @@ section#header {
 // HOME PAGE MENU STYLE
 .light-menu {
     .megamenu {
-        
+
         .submenu_items {
 
             li:not(:first-child) a {
                 color: color(dark) !important;
 
             }
-            li a:hover{
-                color: color(primary-light)!important
+
+            li a:hover {
+                color: color(primary-light) !important
             }
 
             .cat-title {
@@ -504,6 +505,7 @@ section#header {
     }
 
 }
+
 // PAGE TITLE STYLE
 .pagetitlebanner {
     // background-image: url(/uploads/media/about-banner.jpg);
@@ -526,7 +528,7 @@ section#header {
         position: absolute;
         inset: 0;
         padding: 0;
-        
+
 
     }
 
@@ -553,10 +555,12 @@ section#header {
 
     }
 }
+
 // PRODUCTS ITEMS STYLE 
 .product-block img {
     width: 100%;
-} 
+}
+
 .img-wrapper {
 
 

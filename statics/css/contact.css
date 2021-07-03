@@ -5,8 +5,7 @@
   src: url("../fonts/SVN-BlendaScript.woff2") format("woff2"), url("../fonts/SVN-BlendaScript.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 /* Device Breakpoint */
 /* CUSTOM ANIMATION */
@@ -18,24 +17,18 @@
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 @keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 /**
  * ----------------------------------------
@@ -46,34 +39,24 @@
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes fade-in-bottom {
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 /* END */
-/* line 3, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/contact.scss */
 .pagetitlebanner {
   background: url(/uploads/media/about-banner.jpg);
   background-size: cover;
-  background-position: center;
-}
-
-/*# sourceMappingURL=contact.css.map */
+  background-position: center; }

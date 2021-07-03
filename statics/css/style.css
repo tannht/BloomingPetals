@@ -5,8 +5,7 @@
   src: url("../fonts/SVN-BlendaScript.woff2") format("woff2"), url("../fonts/SVN-BlendaScript.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 /* Device Breakpoint */
 /* CUSTOM ANIMATION */
@@ -18,24 +17,18 @@
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 @keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 /**
  * ----------------------------------------
@@ -46,310 +39,197 @@
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes fade-in-bottom {
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 /* END */
-/* line 3, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 ::-webkit-scrollbar {
   width: 8px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: white;
-}
+  background-color: white; }
 
-/* line 9, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 ::-webkit-scrollbar-thumb {
-  background-color: #F98404;
-}
+  background-color: #F98404; }
 
 /* Device::-webkit-scrollbar-track {
   background-color: color(second-color);
 }*/
-/* line 16, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
-/* line 20, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 body {
   background: url(../images/bg-img.png);
   background-repeat: repeat;
   color: #0e0e0e;
-  font-size: 1em;
-}
+  font-size: 1em; }
 
-/* line 27, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 li {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 31, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 p,
 ul,
 li,
 span,
 i {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 40, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 *:focus {
-  outline: none;
-}
+  outline: none; }
 
-/* line 44, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 a {
   color: #F98404;
-  text-decoration: none;
-}
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none !important;
+    color: #fdb566; }
 
-/* line 48, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-a:hover {
-  text-decoration: none !important;
-  color: #fdb566;
-}
-
-/* line 54, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .dark-skin {
   background-color: #5E454B !important;
-  color: #c76903 !important;
-}
+  color: #c76903 !important; }
+  .dark-skin a {
+    color: #f8f8f8 !important; }
 
-/* line 58, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.dark-skin a {
-  color: #f8f8f8 !important;
-}
-
-/* line 63, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-skin {
   background-color: #f8f8f8 !important;
-  color: #F98404 !important;
-}
+  color: #F98404 !important; }
 
-/* line 68, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .txt-light, .txt-light a {
-  color: #f8f8f8;
-}
+  color: #f8f8f8; }
 
-/* line 76, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .txt-dark, .txt-dark a {
-  color: #5E454B;
-}
+  color: #5E454B; }
 
-/* line 84, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 section#header {
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 /* NAVIGATION BAR */
 /* --- SECTION NORMAL MENU --- */
 /* NAVIGATION BAR WHEN SCROLL */
-/* line 98, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .scroll.navibar {
   background: #f8f8f8;
   height: 70px;
   transition: all 0.5s 0s ease-out;
-  color: #5E454B;
-}
-
-/* line 104, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.scroll.navibar .logo {
-  background-image: url(../images/logo-dark.svg);
-  transition: all 0.5s 0s ease-out;
-  height: 68px;
-  width: 68px;
-}
-
-/* line 111, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.scroll.navibar a,
-.scroll.navibar i:before {
-  color: #5E454B;
-}
+  color: #5E454B; }
+  .scroll.navibar .logo {
+    background-image: url(../images/logo-dark.svg);
+    transition: all 0.5s 0s ease-out;
+    height: 68px;
+    width: 68px; }
+  .scroll.navibar a,
+  .scroll.navibar i:before {
+    color: #5E454B; }
 
 /* PC NAVIGATION */
-/* line 118, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .navibar {
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 999;
   width: 100%;
-  justify-content: center;
-}
+  justify-content: center; }
+  .navibar a {
+    color: #5E454B; }
+    .navibar a:hover {
+      color: #F98404 !important; }
+  .navibar_inner {
+    padding: 10px 0;
+    width: 100%;
+    justify-content: center; }
+    .navibar_inner_left, .navibar_inner_center, .navibar_inner_right {
+      display: flex;
+      align-items: center; }
+    .navibar_inner_left {
+      height: 90px;
+      transition: all 0.5s 0s ease-out; }
+      .navibar_inner_left .logo {
+        background-image: url(../images/logo-dark.svg);
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        box-sizing: border-box;
+        transition: all 0.5s 0s ease-out;
+        width: 90px;
+        height: 90px; }
+    .navibar_inner_center {
+      text-transform: uppercase;
+      font-weight: 700;
+      /* OPEN MEGA MENU */ }
+      .navibar_inner_center .have-sub:hover .megamenu {
+        display: flex !important;
+        animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+      .navibar_inner_center > ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; }
+  .navibar_right {
+    justify-content: flex-end; }
+  .navibar i {
+    padding-right: 10px;
+    color: #5E454B; }
 
-/* line 126, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar a {
-  color: #5E454B;
-}
-
-/* line 129, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar a:hover {
-  color: #F98404 !important;
-}
-
-/* line 134, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner {
-  padding: 10px 0;
-  width: 100%;
-  justify-content: center;
-}
-
-/* line 139, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_left, .navibar_inner_center, .navibar_inner_right {
-  display: flex;
-  align-items: center;
-}
-
-/* line 145, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_left {
-  height: 90px;
-  transition: all 0.5s 0s ease-out;
-}
-
-/* line 150, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_left .logo {
-  background-image: url(../images/logo-dark.svg);
-  content: '';
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  box-sizing: border-box;
-  transition: all 0.5s 0s ease-out;
-  width: 90px;
-  height: 90px;
-}
-
-/* line 163, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_center {
-  text-transform: uppercase;
-  font-weight: 700;
-  /* OPEN MEGA MENU */
-}
-
-/* line 170, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_center .have-sub:hover .megamenu {
-  display: flex !important;
-  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-/* line 176, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_inner_center > ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/* line 187, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar_right {
-  justify-content: flex-end;
-}
-
-/* line 193, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.navibar i {
-  padding-right: 10px;
-  color: #5E454B;
-}
-
-/* line 200, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .scroll .logo {
-  background-image: url(../images/logo-dark.svg);
-}
+  background-image: url(../images/logo-dark.svg); }
 
-/* line 207, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .scroll .navibar_inner_center i,
 .scroll .navibar_inner_center a,
 .scroll .navibar_inner_right i,
 .scroll .navibar_inner_right a {
-  color: #5E454B;
-}
+  color: #5E454B; }
 
-/* line 220, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .megamenu .submenu_items li:not(:first-child) a {
-  color: #5E454B !important;
-}
+  color: #5E454B !important; }
 
-/* line 224, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .megamenu .submenu_items li a:hover {
-  color: #fdb566 !important;
-}
+  color: #fdb566 !important; }
 
-/* line 228, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .megamenu .submenu_items .cat-title {
   color: #F98404 !important;
-  border-bottom: 1px solid #F98404 !important;
-}
+  border-bottom: 1px solid #F98404 !important; }
+  .light-menu .megamenu .submenu_items .cat-title a {
+    color: #F98404 !important; }
+    .light-menu .megamenu .submenu_items .cat-title a:hover {
+      color: #fdb566 !important; }
 
-/* line 234, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.light-menu .megamenu .submenu_items .cat-title a {
-  color: #F98404 !important;
-}
-
-/* line 237, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.light-menu .megamenu .submenu_items .cat-title a:hover {
-  color: #fdb566 !important;
-}
-
-/* line 247, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .navibar .logo {
-  background-image: url(../images/logo.svg) !important;
-}
+  background-image: url(../images/logo.svg) !important; }
 
-/* line 251, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .navibar_inner_center a {
-  color: #f8f8f8 !important;
-}
+  color: #f8f8f8 !important; }
+  .light-menu .navibar_inner_center a:hover {
+    color: #fdb566 !important; }
 
-/* line 254, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.light-menu .navibar_inner_center a:hover {
-  color: #fdb566 !important;
-}
-
-/* line 262, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .navibar_inner_right i,
 .light-menu .navibar_inner_right a {
-  color: #f8f8f8 !important;
-}
+  color: #f8f8f8 !important; }
 
-/* line 270, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .scroll .logo {
-  background-image: url(../images/logo-dark.svg) !important;
-}
+  background-image: url(../images/logo-dark.svg) !important; }
 
-/* line 274, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .scroll .navibar_inner_center a {
-  color: #5E454B !important;
-}
+  color: #5E454B !important; }
 
-/* line 280, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .light-menu .scroll .navibar_inner_right i,
 .light-menu .scroll .navibar_inner_right a {
-  color: #5E454B !important;
-}
+  color: #5E454B !important; }
 
 /* MEGA MENU */
-/* line 291, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .megamenu {
   background-color: rgba(255, 255, 255, 0.8) !important;
   position: absolute;
@@ -365,43 +245,26 @@ section#header {
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(50px);
-  display: none;
-}
-
-/* line 310, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.megamenu .submenu_items {
-  padding: 0 20px;
-  min-width: 180px;
-  text-transform: capitalize;
-}
-
-/* line 318, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.megamenu .submenu_items li:not(:first-child) a {
-  color: #5E454B;
-  line-height: 30px;
-}
-
-/* line 323, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.megamenu .submenu_items .cat-title {
-  text-transform: uppercase;
-  color: #F98404;
-  font-weight: 700;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #F98404;
-}
-
-/* line 330, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.megamenu .submenu_items .cat-title a {
-  color: #F98404;
-}
-
-/* line 333, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.megamenu .submenu_items .cat-title a:hover {
-  color: #fdb566;
-}
+  display: none; }
+  .megamenu .submenu_items {
+    padding: 0 20px;
+    min-width: 180px;
+    text-transform: capitalize; }
+    .megamenu .submenu_items li:not(:first-child) a {
+      color: #5E454B;
+      line-height: 30px; }
+    .megamenu .submenu_items .cat-title {
+      text-transform: uppercase;
+      color: #F98404;
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #F98404; }
+      .megamenu .submenu_items .cat-title a {
+        color: #F98404; }
+        .megamenu .submenu_items .cat-title a:hover {
+          color: #fdb566; }
 
 /* MOBILE MENU */
-/* line 344, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .mobile-menu {
   background-color: #f8f8f8;
   z-index: 9999;
@@ -409,382 +272,212 @@ section#header {
   width: 100%;
   position: fixed;
   /* WHEN SCROLL DOWN */
-  /* SIDEBAR MENU */
-}
+  /* SIDEBAR MENU */ }
+  .mobile-menu_inner {
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    transition: all 0.5s 0s ease-out; }
+    .mobile-menu_inner_left {
+      display: flex;
+      align-items: center; }
+      .mobile-menu_inner_left .logo {
+        height: 70px;
+        display: flex;
+        margin: 0 auto;
+        transition: all 0.5s 0s ease-out; }
+    .mobile-menu_inner_center {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mobile-menu_inner_center a {
+        font-weight: 700;
+        align-items: center; }
+    .mobile-menu_inner_right {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .mobile-menu_inner_right .nav-btn {
+        font-size: 28px;
+        color: #F98404;
+        margin-left: 15px;
+        margin-top: -7.5px; }
+  .mobile-menu .scrolldown {
+    height: 60px;
+    transition: all 0.5s 0s ease-out; }
+  .mobile-menu .scrolldown img {
+    height: 50px;
+    transition: all 0.5s 0s ease-out; }
+  .mobile-menu .show {
+    animation: fadeIn 0.5s;
+    visibility: visible; }
+    .mobile-menu .show .mobile-menu_sidebar-menu_content {
+      left: 0; }
+    .mobile-menu .show .close-btn {
+      animation: rotateIn 0.5s; }
+  .mobile-menu_sidebar-menu {
+    position: fixed;
+    background-color: rgba(83, 83, 83, 0.5);
+    inset: 0;
+    visibility: hidden; }
+    .mobile-menu_sidebar-menu_content {
+      position: absolute;
+      width: 70vw;
+      top: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      transition: all 0.5s;
+      left: -75vw;
+      height: 100vh;
+      overflow-y: scroll;
+      box-shadow: none; }
+      .mobile-menu_sidebar-menu_content::-webkit-scrollbar {
+        box-shadow: none;
+        background: transparent; }
+      .mobile-menu_sidebar-menu_content .search {
+        margin-bottom: 15px; }
+        .mobile-menu_sidebar-menu_content .search input {
+          margin-right: 5px;
+          border-radius: 20px;
+          border: 1px solid #bdbdbd;
+          padding-left: 10px; }
+      .mobile-menu_sidebar-menu_content .submenu_items {
+        margin-bottom: 10px;
+        font-size: 20px; }
+        .mobile-menu_sidebar-menu_content .submenu_items .cat-title {
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #5E454B;
+          border-bottom: 0.5px dashed #bdbdbd; }
+        .mobile-menu_sidebar-menu_content .submenu_items li:hover {
+          text-indent: 5px; }
+      .mobile-menu_sidebar-menu_content .logo_sidebar {
+        max-width: 20%;
+        margin-bottom: 20px; }
+    .mobile-menu_sidebar-menu .close-btn {
+      font-size: 40px;
+      color: #f8f8f8;
+      position: absolute;
+      right: 4%;
+      z-index: 999; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .mobile-menu_sidebar-menu .close-btn {
+          right: 10%; } }
 
-/* line 352, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner {
-  display: flex;
-  height: 80px;
-  justify-content: space-around;
-  transition: all 0.5s 0s ease-out;
-}
-
-/* line 358, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_left {
-  display: flex;
-  align-items: center;
-}
-
-/* line 362, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_left .logo {
-  height: 70px;
-  display: flex;
-  margin: 0 auto;
-  transition: all 0.5s 0s ease-out;
-}
-
-/* line 371, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* line 376, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_center a {
-  font-weight: 700;
-  align-items: center;
-}
-
-/* line 383, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_right {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* line 388, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_inner_right .nav-btn {
-  font-size: 28px;
-  color: #F98404;
-  margin-left: 15px;
-  margin-top: -7.5px;
-}
-
-/* line 401, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu .scrolldown {
-  height: 60px;
-  transition: all 0.5s 0s ease-out;
-}
-
-/* line 406, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu .scrolldown img {
-  height: 50px;
-  transition: all 0.5s 0s ease-out;
-}
-
-/* line 413, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu .show {
-  animation: fadeIn 0.5s;
-  visibility: visible;
-}
-
-/* line 417, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu .show .mobile-menu_sidebar-menu_content {
-  left: 0;
-}
-
-/* line 421, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu .show .close-btn {
-  animation: rotateIn 0.5s;
-}
-
-/* line 429, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu {
-  position: fixed;
-  background-color: rgba(83, 83, 83, 0.5);
-  inset: 0;
-  visibility: hidden;
-}
-
-/* line 435, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content {
-  position: absolute;
-  width: 70vw;
-  top: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  transition: all 0.5s;
-  left: -75vw;
-  height: 100vh;
-  overflow-y: scroll;
-  box-shadow: none;
-}
-
-/* line 449, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content::-webkit-scrollbar {
-  box-shadow: none;
-  background: transparent;
-}
-
-/* line 455, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .search {
-  margin-bottom: 15px;
-}
-
-/* line 458, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .search input {
-  margin-right: 5px;
-  border-radius: 20px;
-  border: 1px solid #bdbdbd;
-  padding-left: 10px;
-}
-
-/* line 467, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .submenu_items {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-/* line 471, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .submenu_items .cat-title {
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #5E454B;
-  border-bottom: 0.5px dashed #bdbdbd;
-}
-
-/* line 478, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .submenu_items li:hover {
-  text-indent: 5px;
-}
-
-/* line 484, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu_content .logo_sidebar {
-  max-width: 20%;
-  margin-bottom: 20px;
-}
-
-/* line 491, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.mobile-menu_sidebar-menu .close-btn {
-  font-size: 40px;
-  color: #f8f8f8;
-  position: absolute;
-  right: 4%;
-  z-index: 999;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* line 491, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  .mobile-menu_sidebar-menu .close-btn {
-    right: 10%;
-  }
-}
-
-/* line 509, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 .img-wrapper {
   overflow: hidden;
   width: 100%;
-  height: 250px;
-}
+  height: 250px; }
+  .img-wrapper:hover {
+    border-radius: 10px;
+    transition: all 3s; }
+  .img-wrapper img {
+    transition: all 3s; }
+  .img-wrapper img:hover {
+    transform: scale(1.1); }
 
-/* line 516, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.img-wrapper:hover {
-  border-radius: 10px;
-  transition: all 3s;
-}
-
-/* line 522, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.img-wrapper img {
-  transition: all 3s;
-}
-
-/* line 526, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-.img-wrapper img:hover {
-  transform: scale(1.1);
-}
-
-/* line 535, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 #to-top-btn {
   position: fixed;
   bottom: 50px;
   right: 50px;
   z-index: 9999;
-  animation: fade-in-bottom 0.3s linear both;
-}
+  animation: fade-in-bottom 0.3s linear both; }
+  #to-top-btn a {
+    background: #F98404;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #to-top-btn a:hover,
+    #to-top-btn a i {
+      color: #f8f8f8; }
+  @media (max-width: 576px) {
+    #to-top-btn {
+      bottom: 20px;
+      right: 20px; } }
 
-/* line 536, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#to-top-btn a {
-  background: #F98404;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* line 546, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#to-top-btn a:hover,
-#to-top-btn a i {
-  color: #f8f8f8;
-}
-
-@media (max-width: 576px) {
-  /* line 535, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #to-top-btn {
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-/* line 567, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
 #footer {
   background: #E9BC32;
   background-image: url(../images/footer-bg.svg);
   background-position: top center;
-  background-size: cover;
-}
-
-/* line 573, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main {
-  min-height: 300px;
-  padding-top: 10vh;
-  flex-wrap: wrap;
-}
-
-/* line 578, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_logo {
-  margin-bottom: 5vh;
-  padding-top: 20px;
-}
-
-@media (max-width: 576px) {
-  /* line 578, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_main_logo {
-    padding-left: 25%;
-  }
-}
-
-/* line 587, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_logo img {
-  width: 200px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* line 587, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_main_logo img {
-    width: 100px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* line 597, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_main_info {
-    border-bottom: 1px solid #505050;
-  }
-}
-
-/* line 603, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_info, #footer .footer_main_links {
-  padding-bottom: 20px;
-  padding-top: 20px;
-  color: #f8f8f8;
-}
-
-/* line 609, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_info li, #footer .footer_main_links li {
-  display: flex;
-  padding-bottom: 10px;
-  align-items: center;
-}
-
-/* line 615, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_info i, #footer .footer_main_links i {
-  border: 1px solid #f8f8f8;
-  border-radius: 50%;
-  padding: 20px;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* line 627, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_info a, #footer .footer_main_links a {
-  color: #f8f8f8;
-}
-
-/* line 630, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_main_info a:hover, #footer .footer_main_links a:hover {
-  color: #F98404;
-}
-
-/* line 641, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar {
-  align-items: center;
-  padding: 10px;
-}
-
-/* line 645, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar .container-md {
-  margin: 0 auto;
-}
-
-/* line 649, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_left {
-  color: #f8f8f8;
-}
-
-@media (max-width: 576px) {
-  /* line 649, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_bottom-bar_left {
-    text-align: center;
-    padding: 10px 15%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* line 649, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_bottom-bar_left {
-    padding-right: 20%;
-  }
-}
-
-/* line 662, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* line 667, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_right ul {
-  display: flex;
-}
-
-@media (max-width: 576px) {
-  /* line 667, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-  #footer .footer_bottom-bar_right ul {
-    margin: 0 auto;
-  }
-}
-
-/* line 675, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_right ul li {
-  margin-right: 10px;
-}
-
-/* line 679, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_right ul li i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10px;
-  height: 10px;
-  padding: 15px;
-  border-radius: 50%;
-}
-
-/* line 688, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/style.scss */
-#footer .footer_bottom-bar_right ul li i:hover {
-  color: #F98404;
-  background: #f8f8f8;
-  transition: all 0.5s 0s ease-out;
-}
-
-/*# sourceMappingURL=style.css.map */
+  background-size: cover; }
+  #footer .footer_main {
+    min-height: 300px;
+    padding-top: 10vh;
+    flex-wrap: wrap; }
+    #footer .footer_main_logo {
+      margin-bottom: 5vh;
+      padding-top: 20px; }
+      @media (max-width: 576px) {
+        #footer .footer_main_logo {
+          padding-left: 25%; } }
+      #footer .footer_main_logo img {
+        width: 200px; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #footer .footer_main_logo img {
+            width: 100px; } }
+    @media (max-width: 576px) {
+      #footer .footer_main_info {
+        border-bottom: 1px solid #505050; } }
+    #footer .footer_main_info, #footer .footer_main_links {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      color: #f8f8f8; }
+      #footer .footer_main_info li, #footer .footer_main_links li {
+        display: flex;
+        padding-bottom: 10px;
+        align-items: center; }
+      #footer .footer_main_info i, #footer .footer_main_links i {
+        border: 1px solid #f8f8f8;
+        border-radius: 50%;
+        padding: 20px;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      #footer .footer_main_info a, #footer .footer_main_links a {
+        color: #f8f8f8; }
+        #footer .footer_main_info a:hover, #footer .footer_main_links a:hover {
+          color: #F98404; }
+  #footer .footer_bottom-bar {
+    align-items: center;
+    padding: 10px; }
+    #footer .footer_bottom-bar .container-md {
+      margin: 0 auto; }
+    #footer .footer_bottom-bar_left {
+      color: #f8f8f8; }
+      @media (max-width: 576px) {
+        #footer .footer_bottom-bar_left {
+          text-align: center;
+          padding: 10px 15%; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #footer .footer_bottom-bar_left {
+          padding-right: 20%; } }
+    #footer .footer_bottom-bar_right {
+      display: flex;
+      justify-content: flex-end; }
+    #footer .footer_bottom-bar_right ul {
+      display: flex; }
+      @media (max-width: 576px) {
+        #footer .footer_bottom-bar_right ul {
+          margin: 0 auto; } }
+    #footer .footer_bottom-bar_right ul li {
+      margin-right: 10px; }
+    #footer .footer_bottom-bar_right ul li i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+      padding: 15px;
+      border-radius: 50%; }
+      #footer .footer_bottom-bar_right ul li i:hover {
+        color: #F98404;
+        background: #f8f8f8;
+        transition: all 0.5s 0s ease-out; }

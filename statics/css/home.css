@@ -5,8 +5,7 @@
   src: url("../fonts/SVN-BlendaScript.woff2") format("woff2"), url("../fonts/SVN-BlendaScript.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
-}
+  font-display: swap; }
 
 /* Device Breakpoint */
 /* CUSTOM ANIMATION */
@@ -18,24 +17,18 @@
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 @keyframes slide-top {
   0% {
     -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
     -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-  }
-}
+    transform: translateY(-100px); } }
 
 /**
  * ----------------------------------------
@@ -46,30 +39,23 @@
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 @keyframes fade-in-bottom {
   0% {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 
 /* END */
-/* line 4, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 .homebanner {
   background-image: url(../../uploads/media/banner-bg-3.jpg);
   height: 100vh;
@@ -83,240 +69,146 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
+  text-align: center; }
+  .homebanner .overlay {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    inset: 0;
+    padding: 0; }
+  .homebanner img {
+    animation: fade-in-bottom 0.6s linear 0.2s both; }
+  .homebanner div {
+    padding: 20px; }
+  .homebanner_intro-txt {
+    margin-top: 35vh; }
+    .homebanner_intro-txt h1 {
+      color: #f8f8f8;
+      animation: fade-in-bottom 0.2s linear 0.2s both; }
+    .homebanner_intro-txt p {
+      color: #f8f8f8;
+      animation: fade-in-bottom 0.4s linear 0.2s both; }
 
-/* line 21, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner .overlay {
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  inset: 0;
-  padding: 0;
-}
-
-/* line 30, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner img {
-  animation: fade-in-bottom 0.6s linear 0.2s both;
-}
-
-/* line 34, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner div {
-  padding: 20px;
-}
-
-/* line 38, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner_intro-txt {
-  margin-top: 35vh;
-}
-
-/* line 41, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner_intro-txt h1 {
-  color: #f8f8f8;
-  animation: fade-in-bottom 0.2s linear 0.2s both;
-}
-
-/* line 46, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.homebanner_intro-txt p {
-  color: #f8f8f8;
-  animation: fade-in-bottom 0.4s linear 0.2s both;
-}
-
-/* line 59, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 #product-categories .product-cat {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+  #product-categories .product-cat-item {
+    height: 250px;
+    align-items: center;
+    display: flex; }
 
-/* line 62, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#product-categories .product-cat-item {
-  height: 250px;
-  align-items: center;
-  display: flex;
-}
-
-/* line 74, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 #why-us {
   background-image: url(../images/section-bg.svg);
   background-repeat: repeat-x;
   background-position: top center;
   background-size: contain;
   text-align: center;
-  margin-top: 60px;
-}
+  margin-top: 60px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #why-us {
+      background-size: cover;
+      margin-top: -5%; } }
+  #why-us .whyus_textblock {
+    color: #F98404;
+    padding: 100px 0 20px 0;
+    height: 300px;
+    font-family: 'SVN-Blenda Script';
+    margin: 0 auto;
+    max-width: 650px; }
+    #why-us .whyus_textblock span {
+      color: #5E454B; }
+    #why-us .whyus_textblock p {
+      color: #0e0e0e; }
+  #why-us .whyus-txtbox {
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto; }
+    #why-us .whyus-txtbox_title {
+      font-weight: 700;
+      color: #F98404; }
+    #why-us .whyus-txtbox img {
+      width: 76px;
+      height: 76px; }
+    #why-us .whyus-txtbox > div > div {
+      background: #f8f8f8;
+      padding: 40px 5px;
+      margin-bottom: 10px; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* line 74, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-  #why-us {
-    background-size: cover;
-    margin-top: -5%;
-  }
-}
-
-/* line 88, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus_textblock {
-  color: #F98404;
-  padding: 100px 0 20px 0;
-  height: 300px;
-  font-family: 'SVN-Blenda Script';
-  margin: 0 auto;
-  max-width: 650px;
-}
-
-/* line 96, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus_textblock span {
-  color: #5E454B;
-}
-
-/* line 100, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus_textblock p {
-  color: #0e0e0e;
-}
-
-/* line 105, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus-txtbox {
-  text-align: center;
-  padding: 15px;
-  margin: 0 auto;
-}
-
-/* line 110, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus-txtbox_title {
-  font-weight: 700;
-  color: #F98404;
-}
-
-/* line 115, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus-txtbox img {
-  width: 76px;
-  height: 76px;
-}
-
-/* line 120, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#why-us .whyus-txtbox > div > div {
-  background: #f8f8f8;
-  padding: 40px 5px;
-  margin-bottom: 10px;
-}
-
-/* line 129, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 .prd-slider,
 .clients-logo {
-  margin-top: 10vh;
-}
+  margin-top: 10vh; }
+  .prd-slider h1,
+  .clients-logo h1 {
+    color: #F98404;
+    text-align: center;
+    font-family: 'SVN-Blenda Script';
+    padding-bottom: 5vh; }
 
-/* line 133, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-.prd-slider h1,
-.clients-logo h1 {
-  color: #F98404;
-  text-align: center;
-  font-family: 'SVN-Blenda Script';
-  padding-bottom: 5vh;
-}
-
-/* line 142, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 .product-block img {
   width: 100%;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
-/* line 147, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 .product-block h4,
 .product-block p {
   font-size: 1.2rem;
   text-align: center;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-/* line 157, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 .clients-logo img {
   width: 100%;
   text-align: center;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
+  @media (max-width: 576px) {
+    .clients-logo img {
+      width: 100%; } }
 
-@media (max-width: 576px) {
-  /* line 157, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-  .clients-logo img {
-    width: 100%;
-  }
-}
-
-/* line 169, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
 #newsletters {
   background-color: #e9bc32;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
-}
-
-/* line 180, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .box {
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  text-align: center;
-  max-width: 500px;
-  margin: 0 15px;
-}
-
-/* line 190, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .box h2 {
-  margin: 10px 0 0;
-}
-
-/* line 194, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .box p {
-  color: #312940;
-  margin: 10px;
-}
-
-/* line 199, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .box img {
-  max-width: 100%;
-  width: 400px;
-}
-
-/* line 204, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .form-control {
-  position: relative;
-  margin: 30px 0 20px;
-  padding: 0;
-  border: 0;
-}
-
-/* line 211, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .input {
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  display: block;
-  font-family: 'Muli', sans-serif;
-  font-size: 14px;
-  height: 42px;
-  padding: 12px 25px;
-  width: 100%;
-}
-
-/* line 223, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .btn {
-  background-color: #312940;
-  border: 0;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 14px;
-  height: 42px;
-  padding: 12px 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* line 236, ../Users/Admin/OneDrive/Documents/eProject/BloomingPetals-Main/statics/scss/home.scss */
-#newsletters .input:focus,
-#newsletters .btn:focus {
-  outline: 0;
-}
-
-/*# sourceMappingURL=home.css.map */
+  height: 70vh; }
+  #newsletters .box {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 15px; }
+  #newsletters .box h2 {
+    margin: 10px 0 0; }
+  #newsletters .box p {
+    color: #312940;
+    margin: 10px; }
+  #newsletters .box img {
+    max-width: 100%;
+    width: 400px; }
+  #newsletters .form-control {
+    position: relative;
+    margin: 30px 0 20px;
+    padding: 0;
+    border: 0; }
+  #newsletters .input {
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    height: 42px;
+    padding: 12px 25px;
+    width: 100%; }
+  #newsletters .btn {
+    background-color: #312940;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    height: 42px;
+    padding: 12px 25px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  #newsletters .input:focus,
+  #newsletters .btn:focus {
+    outline: 0; }

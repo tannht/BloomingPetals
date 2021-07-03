@@ -54,6 +54,7 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+<<<<<<< HEAD
 
 @-webkit-keyframes cd-qty-enter {
   0% {
@@ -190,6 +191,8 @@
     -webkit-transform: translateX(80px);
     transform: translateX(80px);
     opacity: 0; } }
+=======
+>>>>>>> main
 
 /* END */
 ::-webkit-scrollbar {
@@ -500,6 +503,7 @@ section#header {
       @media (min-width: 768px) and (max-width: 1023px) {
         .mobile-menu_sidebar-menu .close-btn {
           right: 10%; } }
+<<<<<<< HEAD
 
 .pagetitlebanner {
   height: 400px;
@@ -535,6 +539,8 @@ section#header {
 
 .product-block img {
   width: 100%; }
+=======
+>>>>>>> main
 
 .img-wrapper {
   overflow: hidden;
@@ -652,5 +658,8 @@ section#header {
         color: #F98404;
         background: #f8f8f8;
         transition: all 0.5s 0s ease-out; }
+<<<<<<< HEAD
 
 /* ADD TO CART */
+=======
+>>>>>>> main

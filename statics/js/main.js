@@ -124,8 +124,12 @@ function getProductsByCat(CatData) {
     fetch(api_ulr)
         .then(response => response.json())
         .then(productData => {
+<<<<<<< HEAD
             // FILTER PRODUCTS BY CATEGORY
 
+=======
+            // FILTER PRODUCTS BY CATEGORY            
+>>>>>>> main
             function Cat(products) {
                 return products.catID == CatData;
             }
@@ -139,6 +143,7 @@ function getProductsByCat(CatData) {
                         <img src="/${pro.img}" alt="${pro.name}" />
                         </div>
                     <p>${pro.name}<p>
+<<<<<<< HEAD
                     <span>$${pro.price}</span></a>
                     <main class="cd-main ">
     <div class="text-component text-center">
@@ -148,6 +153,9 @@ function getProductsByCat(CatData) {
       </p>
     </div>
   </main>
+=======
+                    <span>Price: $${pro.price}</span></a>
+>>>>>>> main
                     </div>`;
             }
 
@@ -160,6 +168,7 @@ function getProductsByCat(CatData) {
         .catch(err => console.log("Data Error"));
 };
 // RENDER ALL PRODUCTS
+<<<<<<< HEAD
 function allProducts() {
     fetch(api_ulr)
         .then(response => response.json())
@@ -168,6 +177,14 @@ function allProducts() {
 
             function productsArray(pro) {
                 return `
+=======
+function show
+fetch(api_ulr)
+    .then(response => response.json())
+    .then(productData => {
+        function productsArray(pro) {
+            return `
+>>>>>>> main
         <div class="product-block col-6 col-md-4">
                         <a href="${pro.proSlug}">                    
                             <div class="img-wrapper">

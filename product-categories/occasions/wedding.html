@@ -23,15 +23,17 @@
         <div class="prd-slider container-md">
             <div style="margin-bottom: 100px;"></div>
             <ul>
-                <li id="cat01" class="catItems"><a href="#?=cat01" onlclick="setAttr()">CAT 01</a></li>
-                <li id="cat02" class="catItems"><a href="#?=cat02" onlclick="setAttr()">CAT 02</a></li>
-                <li id="cat03" class="catItems"><a href="#?=cat03" onlclick="setAttr()">CAT 03</a></li>
+                <li id="cat01" class="catItems"><a href="#?cat01" >CAT 01</a></li>
+                <li id="cat02" class="catItems"><a href="#?cat02" >CAT 02</a></li>
+                <li id="cat03" class="catItems"><a href="#?cat03" >CAT 03</a></li>
             </ul>
             <div id="products" class="prd-slider_item row" catdata="cat01">
                 <!-- ||Database query -->
                 <script>
                     $('document').ready(() => {
-                        
+                        var url = '';
+                        $('.catItem').click(()=>{url = window.location.href;})
+                       console.log(url)
                         getProductsByCat($("#products").attr("catdata"));
                     });
                 </script>

@@ -2,7 +2,7 @@
 
 // BANNER
 .homebanner {
-    background-image: url(../../uploads/media/banner-bg-3.jpg);
+    background-image: url(/uploads/media/banner-bg-3.jpg);
 
 
     height: $banner-height;
@@ -57,16 +57,35 @@
 // PRODUCT CATEGORIES 
 #product-categories {
     .product-cat {
-        margin: 0 auto;
-
-        &-item {
+        .product-cat-item {
             height: 250px;
             align-items: center;
             display: flex;
 
         }
 
+        .cat-1 {
+            background-image: url(/uploads/media/cat-1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
 
+        }
+
+        .cat-2 {
+            background-image: url(/uploads/media/cat-2.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .cat-3 {
+            background-image: url(/uploads/media/cat-3.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+
+        }
     }
 }
 

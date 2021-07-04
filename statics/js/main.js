@@ -130,6 +130,14 @@ function getProductsByCat(CatData) {
                 return products.catID == CatData;
             }
             var productsList = productData.filter(Cat);
+            console.log(productsList[1].catName)
+            
+            // function getCatName() {
+            //     var pageTitle = (productsList[1].catName)
+
+            //     $("title").append(pageTitle + " Category | Blooming Petals")
+            // };
+            // getCatName();
 
             function items(pro) {
 
@@ -153,9 +161,10 @@ function getProductsByCat(CatData) {
 
             var a = productsList.map(items);
             $('#products').html(a.join(''))
-            // GET CATEGORY NAME            
-            // var pageTitle = (productsList[1].catName)
-            // $("title").append(pageTitle + " Category | Blooming Petals")
+
+
+
+
         })
         .catch(err => console.log("Data Error"));
 };
@@ -181,19 +190,25 @@ function allProducts() {
             var allProducts = productData.map(productsArray)
             $('#products').html(allProducts.join(''));
 
+            // GET CATEGORY NAME 
 
         })
         .catch(err => console.log("Data Error"));
 }
 //FILTER PRODUCTS BY CATEGORY
-
 function getData() {
 
     var cathref = window.location.href;
     var catdata = cathref.slice(-5);
     if (catdata == ".html") {
         getProductsByCat('cat11')
-    } else
-        getProductsByCat(catdata);
+    } else {
+        getProductsByCat(catdata)
+    };
+
+    // GET CATEGORY NAME            
+    // var pageTitle = (productsList[1].catName)
+    // $("title").append(pageTitle + " Category | Blooming Petals")
 }
+getData();
 // ADD TO CART

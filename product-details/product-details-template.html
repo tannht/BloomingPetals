@@ -42,22 +42,36 @@
                         <li class="category">Category: <a href="">Wedding</a></li>
                     </ul>
                     <a id="1" href="javascript:void(0)" class="add-to-cart-btn">Add to cart</a>
+
+
+                    <div class="rating-group">
+                        <input class="rating__input rating__input--none" name="rating" id="rating-none" value="0"
+                            type="radio">
+                        <label aria-label="No rating" class="rating__label" for="rating-none"><i
+                                class="rating__icon rating__icon--none fa fa-ban"></i></label>
+                        <label aria-label="1 star" class="rating__label" for="rating-1"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+                        <label aria-label="2 stars" class="rating__label" for="rating-2"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+                        <label aria-label="3 stars" class="rating__label" for="rating-3"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+                        <label aria-label="4 stars" class="rating__label" for="rating-4"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+                        <label aria-label="5 stars" class="rating__label" for="rating-5"><i
+                                class="rating__icon rating__icon--star fa fa-star"></i></label>
+                        <input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+                    </div>
+                    
                     <div class="social-share">
-                        <ul class="social-icons">
-
-                            <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank"
-                                    title="Share on Facebook"
-                                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i
-                                        class="fab fa-facebook-f"></i><span class="sr-only">Share on
-                                        Facebook</span></a></li>
-                            <li><a href="https://twitter.com/intent/tweet" target="_blank" title="Tweet"
-                                    onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i
-                                        class="fab fa-twitter"></i><span class="sr-only">Tweet</span></a></li>
-                            <li><a href="http://pinterest.com/pin/create/button/" target="_blank" title="Pin it"
-                                    onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><i
-                                        class="fab fa-pinterest-p"></i><span class="sr-only">Pin it</span></a>
-
-                        </ul>
+                        <script>
+                            $('document').ready(() => {
+                                socialComponent('.social-share');
+                            });
+                        </script>
                     </div>
                 </div>
             </div>

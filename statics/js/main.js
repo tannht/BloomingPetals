@@ -101,20 +101,37 @@ function closeMenu() {
 var api_ulr = '/statics/js/products-data.json';
 
 // GET PRODUCT BY ID  
-function getProduct(proID) {
+function getProduct(proID, selector) {
     fetch(api_ulr)
         .then(response => response.json())
         .then(productData => {
-            var productSingle = `            
-                <h1>${productData[proID].name}</h1>
-                <p>${productData[proID].price}</p>
-                <p>${productData[proID].img}</p>
-                <p>${productData[proID].catName}</p>
-                <p>${productData[proID].sku}</p>
-                <p>${productData[proID].desc}</p>
-                <p>${productData[proID].catSlug}</p>
-                <p>${productData[proID].proSlug}</p> `;
-            $('#product').html(productSingle);
+            
+            var productSingle = `
+            <div class="container row">           
+            <div class="product-image col-sm-6">
+            <div class="img-frame">
+                <img src="../${productData[proID].img}" alt="">
+            </div>
+        </div>
+        <div class="right-content col-sm-6">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Home</a>></li>
+                    <li><a href="#">${productData[proID].catName}</a>></li>
+                    <li><a href="#">${productData[proID].catName}</a>></li>
+                    <li><a href="#">${productData[proID].catName}</a>></li>
+                    <li><a href="#">${productData[proID].catName}</a></li>
+                </ul>
+            </div>
+            <div class="product-info">
+                <h1 class="price">$${productData[proID].price}</h1>
+                <h2 class="product-title">${productData[proID].name}</h2>
+                <ul class="more-info">
+                    <li class="sku">SKU: <b>${productData[proID].sku}</b></li>
+                    <li class="category">Category: <a href="${productData[proID].catSlug}">${productData[proID].catName}</a></li>
+                </ul>
+                <a id="1" href="javascript:void(0)" class="add-to-cart-btn">Add to cart</a> `;
+            $(selector).html(productSingle);
             $('title').append(productData[proID].name + " | Blooming Petals")
         })
         .catch(err => console.log("Data Error"));
@@ -154,12 +171,12 @@ function getProductsByCat(CatData) {
             var a = productsList.map(items);
             $('#products').html(a.join(''))
             // GET CATEGORY NAME            
-            
+
             console.log($("title").text())
-            
-            var title = $("title").text(),               
+
+            var title = $("title").text(),
                 newTitle = $("title").replace(title, productsList[1].catName + " Category | Blooming Petals")
-               
+
         })
         .catch(err => console.log("Data Error"));
 };
@@ -191,13 +208,13 @@ function allProducts() {
 }
 //FILTER PRODUCTS BY CATEGORY
 
-function getUrl() {     
+function getUrl() {
     var url = window.location.href.slice(-5);
     if (url == ".html") {
         getProductsByCat('cat11')
     } else
         getProductsByCat(url);
-        
+
 }
 
 //social share 
@@ -216,10 +233,34 @@ function socialComponent(selector) {
         <li><a href="http://pinterest.com/pin/create/button/" target="_blank" title="Pin it"
                 onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><i
                     class="fab fa-pinterest-p"></i><span class="sr-only">Pin it</span></a>
-
     </ul>
 </div>`;
-$(selector).html(htmlSocial);
+    $(selector).html(htmlSocial);
+}
+
+function ratingGroup(selector) {
+    var htmlRating = `
+    <input class="rating__input rating__input--none" name="rating" id="rating-none" value="0"
+    type="radio">
+<label aria-label="No rating" class="rating__label" for="rating-none"><i
+        class="rating__icon rating__icon--none fa fa-ban"></i></label>
+<label aria-label="1 star" class="rating__label" for="rating-1"><i
+        class="rating__icon rating__icon--star fa fa-star"></i></label>
+<input class="rating__input" name="rating" id="rating-1" value="1" type="radio">
+<label aria-label="2 stars" class="rating__label" for="rating-2"><i
+        class="rating__icon rating__icon--star fa fa-star"></i></label>
+<input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
+<label aria-label="3 stars" class="rating__label" for="rating-3"><i
+        class="rating__icon rating__icon--star fa fa-star"></i></label>
+<input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+<label aria-label="4 stars" class="rating__label" for="rating-4"><i
+        class="rating__icon rating__icon--star fa fa-star"></i></label>
+<input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
+<label aria-label="5 stars" class="rating__label" for="rating-5"><i
+        class="rating__icon rating__icon--star fa fa-star"></i></label>
+<input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+    `;
+    $(selector).html(htmlRating);
 }
 
 // ADD TO CART
@@ -227,125 +268,125 @@ $(selector).html(htmlSocial);
 // Shopping Cart API
 // ************************************************
 
-var shoppingCart = (function() {
+var shoppingCart = (function () {
     // =============================
     // Private methods and propeties
     // =============================
     cart = [];
-    
+
     // Constructor
     function Item(name, price, count) {
-      this.name = name;
-      this.price = price;
-      this.count = count;
+        this.name = name;
+        this.price = price;
+        this.count = count;
     }
-    
+
     // Save cart
     function saveCart() {
-      sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+        sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
     }
-    
-      // Load cart
+
+    // Load cart
     function loadCart() {
-      cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+        cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
     }
     if (sessionStorage.getItem("shoppingCart") != null) {
-      loadCart();
+        loadCart();
     }
-    
-  
+
+
     // =============================
     // Public methods and propeties
     // =============================
     var obj = {};
-    
+
     // Add to cart
-    obj.addItemToCart = function(name, price, count) {
-      for(var item in cart) {
-        if(cart[item].name === name) {
-          cart[item].count ++;
-          saveCart();
-          return;
+    obj.addItemToCart = function (name, price, count) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart[item].count++;
+                saveCart();
+                return;
+            }
         }
-      }
-      var item = new Item(name, price, count);
-      cart.push(item);
-      saveCart();
+        var item = new Item(name, price, count);
+        cart.push(item);
+        saveCart();
     }
     // Set count from item
-    obj.setCountForItem = function(name, count) {
-      for(var i in cart) {
-        if (cart[i].name === name) {
-          cart[i].count = count;
-          break;
+    obj.setCountForItem = function (name, count) {
+        for (var i in cart) {
+            if (cart[i].name === name) {
+                cart[i].count = count;
+                break;
+            }
         }
-      }
     };
     // Remove item from cart
-    obj.removeItemFromCart = function(name) {
-        for(var item in cart) {
-          if(cart[item].name === name) {
-            cart[item].count --;
-            if(cart[item].count === 0) {
-              cart.splice(item, 1);
+    obj.removeItemFromCart = function (name) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart[item].count--;
+                if (cart[item].count === 0) {
+                    cart.splice(item, 1);
+                }
+                break;
             }
-            break;
-          }
-      }
-      saveCart();
+        }
+        saveCart();
     }
-  
+
     // Remove all items from cart
-    obj.removeItemFromCartAll = function(name) {
-      for(var item in cart) {
-        if(cart[item].name === name) {
-          cart.splice(item, 1);
-          break;
+    obj.removeItemFromCartAll = function (name) {
+        for (var item in cart) {
+            if (cart[item].name === name) {
+                cart.splice(item, 1);
+                break;
+            }
         }
-      }
-      saveCart();
+        saveCart();
     }
-  
+
     // Clear cart
-    obj.clearCart = function() {
-      cart = [];
-      saveCart();
+    obj.clearCart = function () {
+        cart = [];
+        saveCart();
     }
-  
+
     // Count cart 
-    obj.totalCount = function() {
-      var totalCount = 0;
-      for(var item in cart) {
-        totalCount += cart[item].count;
-      }
-      return totalCount;
-    }
-  
-    // Total cart
-    obj.totalCart = function() {
-      var totalCart = 0;
-      for(var item in cart) {
-        totalCart += cart[item].price * cart[item].count;
-      }
-      return Number(totalCart.toFixed(2));
-    }
-  
-    // List cart
-    obj.listCart = function() {
-      var cartCopy = [];
-      for(i in cart) {
-        item = cart[i];
-        itemCopy = {};
-        for(p in item) {
-          itemCopy[p] = item[p];
-  
+    obj.totalCount = function () {
+        var totalCount = 0;
+        for (var item in cart) {
+            totalCount += cart[item].count;
         }
-        itemCopy.total = Number(item.price * item.count).toFixed(2);
-        cartCopy.push(itemCopy)
-      }
-      return cartCopy;
+        return totalCount;
     }
-  
+
+    // Total cart
+    obj.totalCart = function () {
+        var totalCart = 0;
+        for (var item in cart) {
+            totalCart += cart[item].price * cart[item].count;
+        }
+        return Number(totalCart.toFixed(2));
+    }
+
+    // List cart
+    obj.listCart = function () {
+        var cartCopy = [];
+        for (i in cart) {
+            item = cart[i];
+            itemCopy = {};
+            for (p in item) {
+                itemCopy[p] = item[p];
+
+            }
+            itemCopy.total = Number(item.price * item.count).toFixed(2);
+            cartCopy.push(itemCopy)
+        }
+        return cartCopy;
+    }
+
     // cart : Array
     // Item : Object/Class
     // addItemToCart : Function
@@ -358,78 +399,77 @@ var shoppingCart = (function() {
     // saveCart : Function
     // loadCart : Function
     return obj;
-  })();
-  
-  
-  // *****************************************
-  // Triggers / Events
-  // ***************************************** 
-  // Add item
-  $('.add-to-cart').click(function(event) {
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function (event) {
     event.preventDefault();
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
     shoppingCart.addItemToCart(name, price, 1);
     displayCart();
-  });
-  
-  // Clear items
-  $('.clear-cart').click(function() {
+});
+
+// Clear items
+$('.clear-cart').click(function () {
     shoppingCart.clearCart();
     displayCart();
-  });
-  
-  
-  function displayCart() {
+});
+
+
+function displayCart() {
     var cartArray = shoppingCart.listCart();
     var output = "";
-    for(var i in cartArray) {
-      output += "<tr>"
-        + "<td>" + cartArray[i].name + "</td>" 
-        + "<td>(" + cartArray[i].price + ")</td>"
-        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-        + " = " 
-        + "<td>" + cartArray[i].total + "</td>" 
-        +  "</tr>";
+    for (var i in cartArray) {
+        output += "<tr>" +
+            "<td>" + cartArray[i].name + "</td>" +
+            "<td>(" + cartArray[i].price + ")</td>" +
+            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
+            "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
+            "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
+            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+            " = " +
+            "<td>" + cartArray[i].total + "</td>" +
+            "</tr>";
     }
     $('.show-cart').html(output);
     $('.total-cart').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
-  }
-  
-  // Delete item button
-  
-  $('.show-cart').on("click", ".delete-item", function(event) {
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function (event) {
     var name = $(this).data('name')
     shoppingCart.removeItemFromCartAll(name);
     displayCart();
-  })
-  
-  
-  // -1
-  $('.show-cart').on("click", ".minus-item", function(event) {
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function (event) {
     var name = $(this).data('name')
     shoppingCart.removeItemFromCart(name);
     displayCart();
-  })
-  // +1
-  $('.show-cart').on("click", ".plus-item", function(event) {
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function (event) {
     var name = $(this).data('name')
     shoppingCart.addItemToCart(name);
     displayCart();
-  })
-  
-  // Item count input
-  $('.show-cart').on("change", ".item-count", function(event) {
-     var name = $(this).data('name');
-     var count = Number($(this).val());
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function (event) {
+    var name = $(this).data('name');
+    var count = Number($(this).val());
     shoppingCart.setCountForItem(name, count);
     displayCart();
-  });
-  
-  displayCart();
-  //social share 
-  
+});
+
+displayCart();
+//social share 

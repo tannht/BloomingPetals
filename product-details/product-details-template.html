@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="stylesheet" href="../statics/css/animate.css">
+    <link rel="stylesheet" href="../statics/css/style.css" />
+    <link rel="stylesheet" href="../statics/css/product-detail.css" />
+</head>
+
+
+<body>
+    <section include-header="../header.html" id="header"></section>
+    <div id="product-container">
+        <div class="fluid container-md row">
+            <div class="product-image col-sm-6">
+                <div class="img-frame">
+                    <img src="../uploads/img/wedding/BP-WB01.jpg" alt="">
+                </div>
+            </div>
+            <div class="right-content col-sm-6">
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="../index.html">Home</a>></li>
+                        <li><a href="#">Catlv1</a>></li>
+                        <li><a href="#">Catlv2</a>></li>
+                        <li><a href="#">Catlv3</a>></li>
+                        <li><a href="#">Catlv3</a></li>
+                    </ul>
+                </div>
+                <div class="product-info">
+                    <h1 class="price">$99</h1>
+                    <h2 class="product-title">Product Title</h2>
+                    <ul class="more-info">
+                        <li class="sku">SKU: <b>BP-WB01</b></li>
+                        <li class="category">Category: <a href="">Wedding</a></li>
+                    </ul>
+                    <a id="1" href="javascript:void(0)" class="add-to-cart-btn">Add to cart</a>
+                    <div class="social-share">
+                        <ul class="social-icons">
+
+                            <li><a href="https://www.facebook.com/sharer/sharer.php" target="_blank"
+                                    title="Share on Facebook"
+                                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i
+                                        class="fab fa-facebook-f"></i><span class="sr-only">Share on
+                                        Facebook</span></a></li>
+                            <li><a href="https://twitter.com/intent/tweet" target="_blank" title="Tweet"
+                                    onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i
+                                        class="fab fa-twitter"></i><span class="sr-only">Tweet</span></a></li>
+                            <li><a href="http://pinterest.com/pin/create/button/" target="_blank" title="Pin it"
+                                    onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><i
+                                        class="fab fa-pinterest-p"></i><span class="sr-only">Pin it</span></a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section include-footer="../footer.html"></section>
+</body>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../statics/js/main.js"></script>
+
+</html>

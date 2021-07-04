@@ -361,3 +361,9 @@
   #newsletters .input:focus,
   #newsletters .btn:focus {
     outline: 0; }
+
+#footer {
+  background: #E9BC32;
+  background-image: url(../images/footer-bg.svg);
+  background-position: top center;
+  background-size: cover; }

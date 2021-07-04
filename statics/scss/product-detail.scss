@@ -1,7 +1,71 @@
 @import 'variables';
 
-.pagetitlebanner{
-    background:url(/uploads/media/about-banner.jpg);
+#product-container {
+    height: 100vh;
+    background: url(../images/product-detail-background-01.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    text-align: center;
+    @include big-desktop{
+        height: 80vh;
+    }
+
+    .price,
+    .product-tile {
+        text-align: center;
+    }
+
+    .breadcrumb ul {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .more-info {
+        margin-bottom: 20px;
+    }
+
+    .add-to-cart-btn {
+        background: color(primary);
+        width: 200px;
+        height: 40px;
+        text-transform: uppercase;
+
+        color: color(light);
+        font-weight: 700;
+        font-size: 18px;
+        padding: 10px;
+
+        &:hover {
+            background: color(primary-dark)
+        }
+    }
+
+    .product-image .img-frame {
+
+        overflow: hidden;
+        display: flex;
+    }
+
+    .product-info {
+        padding: 20px;
+        max-width: 80%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255,.6);
+        height: 300px;
+
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+    }
+
 }

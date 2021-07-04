@@ -15,7 +15,7 @@
   		animatingQuantity = false;
 		initCartEvents();
 
-
+		
 		function initCartEvents() {
 			// add products to cart
 			for(var i = 0; i < cartAddBtns.length; i++) {(function(i){
@@ -94,8 +94,10 @@
 				Util.addClass(cart[0], 'cd-cart--open');
 			}
 		};
+		
 
 		function addProduct(target) {
+			
 			// this is just a product placeholder
 			// you should insert an item with the selected product info
 			// replace productId, productName, price and url with your real product info

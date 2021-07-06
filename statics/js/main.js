@@ -159,14 +159,21 @@ function getProductsByCat(CatData) {
             function items(pro) {
 
                 return `<div class="col-md-4 col-6">
-                <div class="card" style="width: 20rem;">
+                <div class="card" >
                     <div class="img-wrapper">
                     <img src="../${pro.img}" alt="${pro.name}"></div>
                     <div class="card-block">
                         <h4 class="card-title">${pro.name}</h4>
-                        <p class="card-text">Price: $${pro.price}</p>
-                        <a href="javascript:void(0)" data-id="${pro.id}" data-imgurl="../${pro.img}" data-name="${pro.name}" data-sku="${pro.sku}" data-price="${pro.price}" class="add-to-cart btn btn-primary">Add to
-                cart</a>
+                        <div class="buy">                      
+                        <p class="card-text">$${pro.price}</p>
+                        <a href="javascript:void(0)"
+                        data-id="${pro.id}"
+                        data-imgurl="../${pro.img}"
+                        data-name="${pro.name}"
+                        data-sku="${pro.sku}"
+                        data-price="${pro.price}"
+                        class="add-to-cart btn btn-primary">Add to cart</a>
+                        </div>           
                     </div>
                 </div>
             </div>`;
@@ -364,7 +371,7 @@ var shoppingCart = (function () {
         for (var item in cart) {
             totalCount += cart[item].count;
         }
-        
+
         return totalCount;
     }
 
@@ -422,7 +429,7 @@ function addItem() {
             price = Number($(this).data('price'));
         shoppingCart.addItemToCart(id, img, name, sku, price, 1);
         displayCart();
-        
+
     });
 }
 

@@ -1,6 +1,5 @@
 @import 'variables';
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 ::-webkit-scrollbar {
     width: 8px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -23,6 +22,7 @@ body {
     background-repeat: repeat;
     color: color(body-color);
     font-size: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 li {
@@ -41,6 +41,7 @@ i {
 *:focus {
     outline: none;
 }
+
 
 a {
     color: color(primary);
@@ -187,7 +188,7 @@ section#header {
 
     &_right {
         display: flex;
-        align-items: center;        
+        align-items: center;
     }
 
     i {
@@ -568,6 +569,10 @@ section#header {
     overflow: hidden;
     width: 100%;
     height: 250px;
+    justify-content: center;
+    @include mobile {
+        height: 150px;
+    }
 
     &:hover {
         border-radius: 10px;
@@ -584,10 +589,30 @@ section#header {
         transform: scale(1.1);
     }
 }
+
 .card-block {
-    padding: 20px;
+    padding: 10px;
+    .buy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+        }
+        .card-text {
+            font-weight: 700px;
+            font-size: 24px;
+        }
+    }
 }
 
+.prd-slider_item {
+    background: color(light);
+
+    div {
+        padding: 5px;
+    }
+}
 
 
 // SCROLLTOP BUTTON

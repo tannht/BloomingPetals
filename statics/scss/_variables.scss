@@ -1,12 +1,12 @@
 /*//////////////DEFINE COLORS///////////////*/
 
 $colors: (
-  primary: #F98404,
-  primary-light: lighten(#F98404, 20%),
-  primary-dark: darken(#F98404, 10%),
-  second-color: #FC5404,
+  primary: #598b2c,
+  primary-light: lighten(#598b2c, 20%),
+  primary-dark: darken(#598b2c, 10%),
+  second-color: #60935d,
   light:#f8f8f8,
-  dark: #5E454B,
+  dark: #52414C,
   body-color: rgb(14, 14, 14),
 );
 @function color($color-name) {

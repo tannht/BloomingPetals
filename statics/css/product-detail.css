@@ -215,7 +215,7 @@
   #product-container .more-info {
     margin-bottom: 20px; }
   #product-container .add-to-cart-btn {
-    background: #F98404;
+    background: #598b2c;
     width: 200px;
     height: 40px;
     text-transform: uppercase;
@@ -224,7 +224,7 @@
     font-size: 18px;
     padding: 10px; }
     #product-container .add-to-cart-btn:hover {
-      background: #c76903; }
+      background: #406420; }
   #product-container .product-image .img-frame {
     overflow: hidden;
     display: flex; }

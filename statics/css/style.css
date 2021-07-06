@@ -654,3 +654,15 @@ section#header {
         transition: all 0.5s 0s ease-out; }
 
 /* ADD TO CART */
+.incart-itemts .img-frame {
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex; }
+  .incart-itemts .img-frame img {
+    width: 100%;
+    transform: scale(1.2); }

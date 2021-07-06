@@ -104,35 +104,43 @@ var api_ulr = '/statics/js/products-data.json';
 function getProduct(proID, selector) {
     fetch(api_ulr)
         .then(response => response.json())
-        .then(productData => {
-            
+        .then(data => {
+
             var productSingle = `
             <div class="container row">           
             <div class="product-image col-sm-6">
             <div class="img-frame">
-                <img src="../${productData[proID].img}" alt="">
+                <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
             </div>
         </div>
         <div class="right-content col-sm-6">
             <div class="breadcrumb">
                 <ul>
                     <li><a href="../index.html">Home</a>></li>
-                    <li><a href="#">${productData[proID].catName}</a>></li>
-                    <li><a href="#">${productData[proID].catName}</a>></li>
-                    <li><a href="#">${productData[proID].catName}</a>></li>
-                    <li><a href="#">${productData[proID].catName}</a></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a></li>
                 </ul>
             </div>
             <div class="product-info">
-                <h1 class="price">$${productData[proID].price}</h1>
-                <h2 class="product-title">${productData[proID].name}</h2>
+                <h1 class="price">$${data[proID].price}</h1>
+                <h2 class="product-title">${data[proID].name}</h2>
                 <ul class="more-info">
-                    <li class="sku">SKU: <b>${productData[proID].sku}</b></li>
-                    <li class="category">Category: <a href="${productData[proID].catSlug}">${productData[proID].catName}</a></li>
+                    <li class="sku">SKU: <b>${data[proID].sku}</b></li>
+                    <li class="category">Category: <a href="${data[proID].catSlug}">${data[proID].catName}</a></li>
                 </ul>
-                <a id="1" href="javascript:void(0)" class="add-to-cart-btn">Add to cart</a> `;
+                
+                <a href="javascript:void(0)" data-id="${data[proID].id}" data-imgurl="../${data[proID].img}" data-name="${data[proID].name}" data-sku="${data[proID].sku}" data-price="${data[proID].price}" class="add-to-cart btn btn-primary">Add to
+                cart</a> `;
+
             $(selector).html(productSingle);
-            $('title').append(productData[proID].name + " | Blooming Petals")
+            $('title').append(data[proID].name + " | Blooming Petals")
+            //add to cart event
+            addItem();
+
+            displayCart();
+
         })
         .catch(err => console.log("Data Error"));
 }
@@ -140,42 +148,37 @@ function getProduct(proID, selector) {
 function getProductsByCat(CatData) {
     fetch(api_ulr)
         .then(response => response.json())
-        .then(productData => {
+        .then(data => {
             // FILTER PRODUCTS BY CATEGORY
 
             function Cat(products) {
                 return products.catID == CatData;
             }
-            var productsList = productData.filter(Cat);
+            var productsList = data.filter(Cat);
 
             function items(pro) {
 
-                return `<div class="product-block col-6 col-md-4">
-                    <a href="${pro.proSlug}">                    
-                        <div class="img-wrapper">
-                        <img src="/${pro.img}" alt="${pro.name}" />
-                        </div>
-                    <p>${pro.name}<p>
-                    <span>$${pro.price}</span></a>
-                    <main class="cd-main ">
-    <div class="text-component text-center">
-      
-      <p class="flex flex-wrap flex-center ">       
-        <a href="javascript:void(0)" class="cd-add-to-cart js-cd-add-to-cart" data-price="${pro.price}">Add To Cart</a>
-      </p>
-    </div>
-  </main>
-                    </div>`;
+                return `<div class="col">
+                <div class="card" style="width: 20rem;">
+                    <img src="../${pro.img}" alt="${pro.name}">
+                    <div class="card-block">
+                        <h4 class="card-title">${pro.name}</h4>
+                        <p class="card-text">Price: $${pro.price}</p>
+                        <a href="javascript:void(0)" data-id="${pro.id}" data-imgurl="../${pro.img}" data-name="${pro.name}" data-sku="${pro.sku}" data-price="${pro.price}" class="add-to-cart btn btn-primary">Add to
+                cart</a>
+                    </div>
+                </div>
+            </div>`;
             }
 
             var a = productsList.map(items);
             $('#products').html(a.join(''))
-            // GET CATEGORY NAME            
+            // GET CATEGORY NAME
 
-            console.log($("title").text())
+            addItem();
+            displayCart();
 
-            var title = $("title").text(),
-                newTitle = $("title").replace(title, productsList[1].catName + " Category | Blooming Petals")
+
 
         })
         .catch(err => console.log("Data Error"));
@@ -184,22 +187,20 @@ function getProductsByCat(CatData) {
 function allProducts() {
     fetch(api_ulr)
         .then(response => response.json())
-        .then(productData => {
-
+        .then(data => {
 
             function productsArray(pro) {
                 return `
-        <div class="product-block col-6 col-md-4">
-                        <a href="${pro.proSlug}">                    
-                            <div class="img-wrapper">
-                            <img src="/${pro.img}" alt="${pro.name}" width="300" />
-                            </div>
-                        <p>${pro.name}<p>
-                        <span>$${pro.price}</span></a>
-                        </div>
+            <div class="product-block col-6 col-md-4">                                           
+                <div class="img-wrapper">
+                <img  src="../${pro.img}" alt="${pro.name}" width="300" />
+                </div>
+                <p>${pro.name}<p>
+                <span>$${pro.price}</span> <a href="${pro.proSlug}" class="add-to-cart btn btn-primary">Add To Cart</a>
+            </div>
         `;
             };
-            var allProducts = productData.map(productsArray)
+            var allProducts = data.map(productsArray)
             $('#products').html(allProducts.join(''));
 
 
@@ -275,8 +276,11 @@ var shoppingCart = (function () {
     cart = [];
 
     // Constructor
-    function Item(name, price, count) {
+    function Item(id, img, name, sku, price, count) {
+        this.id = id;
+        this.img = img;
         this.name = name;
+        this.sku = sku;
         this.price = price;
         this.count = count;
     }
@@ -301,31 +305,31 @@ var shoppingCart = (function () {
     var obj = {};
 
     // Add to cart
-    obj.addItemToCart = function (name, price, count) {
+    obj.addItemToCart = function (id, img, name, sku, price, count) {
         for (var item in cart) {
-            if (cart[item].name === name) {
+            if (cart[item].id === id) {
                 cart[item].count++;
                 saveCart();
                 return;
             }
         }
-        var item = new Item(name, price, count);
+        var item = new Item(id, img, name, sku, price, count);
         cart.push(item);
         saveCart();
     }
     // Set count from item
-    obj.setCountForItem = function (name, count) {
+    obj.setCountForItem = function (id, count) {
         for (var i in cart) {
-            if (cart[i].name === name) {
+            if (cart[i].id === id) {
                 cart[i].count = count;
                 break;
             }
         }
     };
     // Remove item from cart
-    obj.removeItemFromCart = function (name) {
+    obj.removeItemFromCart = function (id) {
         for (var item in cart) {
-            if (cart[item].name === name) {
+            if (cart[item].id === id) {
                 cart[item].count--;
                 if (cart[item].count === 0) {
                     cart.splice(item, 1);
@@ -337,9 +341,9 @@ var shoppingCart = (function () {
     }
 
     // Remove all items from cart
-    obj.removeItemFromCartAll = function (name) {
+    obj.removeItemFromCartAll = function (id) {
         for (var item in cart) {
-            if (cart[item].name === name) {
+            if (cart[item].id === id) {
                 cart.splice(item, 1);
                 break;
             }
@@ -381,7 +385,7 @@ var shoppingCart = (function () {
                 itemCopy[p] = item[p];
 
             }
-            itemCopy.total = Number(item.price * item.count).toFixed(2);
+            itemCopy.total = Number(item.price * item.count).toFixed(0);
             cartCopy.push(itemCopy)
         }
         return cartCopy;
@@ -406,13 +410,19 @@ var shoppingCart = (function () {
 // Triggers / Events
 // ***************************************** 
 // Add item
-$('.add-to-cart').click(function (event) {
-    event.preventDefault();
-    var name = $(this).data('name');
-    var price = Number($(this).data('price'));
-    shoppingCart.addItemToCart(name, price, 1);
-    displayCart();
-});
+function addItem() {
+    $('.add-to-cart').click(function (event) {
+        event.preventDefault();
+        var img = $(this).data('imgurl'),
+            name = $(this).data('name'),
+            id = $(this).data('id'),
+            sku = $(this).data('sku'),
+            price = Number($(this).data('price'));
+        shoppingCart.addItemToCart(id, img, name, sku, price, 1);
+        displayCart();
+        console.log(img)
+    });
+}
 
 // Clear items
 $('.clear-cart').click(function () {
@@ -425,15 +435,17 @@ function displayCart() {
     var cartArray = shoppingCart.listCart();
     var output = "";
     for (var i in cartArray) {
-        output += "<tr>" +
+        output += "<tr  class='incart-itemts'>" +
+            "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
             "<td>" + cartArray[i].name + "</td>" +
-            "<td>(" + cartArray[i].price + ")</td>" +
-            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
-            "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
-            "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
-            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+            "<td>SKU: " + cartArray[i].sku + "</td>" +
+            "<td>$" + cartArray[i].price + "</td>" +
+            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
+            "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
+            "<button data-id='" + cartArray[i].id + "' class='plus-item btn btn-primary input-group-addon' value='" + cartArray[i].count + "' >+</button></div></td>" +
+            "<td><button data-id='" + cartArray[i].id + "' class='delete-item btn btn-danger' value='" + cartArray[i].count + "' >X</button></td>" +
             " = " +
-            "<td>" + cartArray[i].total + "</td>" +
+            "<td>$" + cartArray[i].total + "</td>" +
             "</tr>";
     }
     $('.show-cart').html(output);
@@ -444,32 +456,87 @@ function displayCart() {
 // Delete item button
 
 $('.show-cart').on("click", ".delete-item", function (event) {
-    var name = $(this).data('name')
-    shoppingCart.removeItemFromCartAll(name);
+    // var name = $(this).data('name')
+    var id = $(this).data('id');
+    shoppingCart.removeItemFromCartAll(id);
     displayCart();
 })
-
 
 // -1
+
 $('.show-cart').on("click", ".minus-item", function (event) {
-    var name = $(this).data('name')
-    shoppingCart.removeItemFromCart(name);
+    // var name = $(this).data('name')
+    var id = $(this).data('id');
+    shoppingCart.removeItemFromCart(id);
     displayCart();
 })
+
 // +1
+
 $('.show-cart').on("click", ".plus-item", function (event) {
-    var name = $(this).data('name')
-    shoppingCart.addItemToCart(name);
+    // var name = $(this).data('name')
+    var id = $(this).data('id');
+    shoppingCart.addItemToCart(id);
     displayCart();
 })
 
 // Item count input
+
 $('.show-cart').on("change", ".item-count", function (event) {
-    var name = $(this).data('name');
+    // var name = $(this).data('name');
+    var id = $(this).data('id');
     var count = Number($(this).val());
-    shoppingCart.setCountForItem(name, count);
+    shoppingCart.setCountForItem(id, count);
     displayCart();
 });
 
 displayCart();
-//social share 
+
+//add modal content
+
+function modal() {
+    var htmlModel = `
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h5 class="modal-title" id="ModalLabel">Cart</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+               </button>
+           </div>
+           <div class="modal-body">
+               <table class="show-cart table">
+    
+               </table>
+               <div>Total price: $<span class="total-cart"></span></div>
+           </div>
+           <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Order now</button>
+           </div>
+       </div>
+    </div>
+    </div>`;
+    $('#modal-content-js').html(htmlModel);
+    var cartArray = shoppingCart.listCart();
+    var output = "";
+    for (var i in cartArray) {
+        output += "<tr  class='incart-itemts'>" +
+            "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
+            "<td>" + cartArray[i].name + "</td>" +
+            "<td>SKU: " + cartArray[i].sku + "</td>" +
+            "<td>$" + cartArray[i].price + "</td>" +
+            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
+            "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
+            "<button data-id='" + cartArray[i].id + "' class='plus-item btn btn-primary input-group-addon' value='" + cartArray[i].count + "' >+</button></div></td>" +
+            "<td><button data-id='" + cartArray[i].id + "' class='delete-item btn btn-danger' value='" + cartArray[i].count + "' >X</button></td>" +
+            " = " +
+            "<td>$" + cartArray[i].total + "</td>" +
+            "</tr>";
+    }
+    $('.show-cart').html(output);
+    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-count').html(shoppingCart.totalCount());
+}

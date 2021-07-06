@@ -315,7 +315,8 @@ section#header {
         justify-content: space-between;
         width: 100%; }
   .navibar_right {
-    justify-content: flex-end; }
+    display: flex;
+    align-items: center; }
   .navibar i {
     padding-right: 10px;
     color: #5E454B; }
@@ -537,6 +538,7 @@ section#header {
   width: 100%; }
 
 .img-wrapper {
+  display: flex;
   overflow: hidden;
   width: 100%;
   height: 250px; }
@@ -547,6 +549,9 @@ section#header {
     transition: all 3s; }
   .img-wrapper img:hover {
     transform: scale(1.1); }
+
+.card-block {
+  padding: 20px; }
 
 #to-top-btn {
   position: fixed;
@@ -666,3 +671,19 @@ section#header {
   .incart-itemts .img-frame img {
     width: 100%;
     transform: scale(1.2); }
+
+.total-count {
+  background: #F98404;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  left: 23px;
+  border-radius: 50%;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  position: absolute;
+  top: 24px;
+  align-items: center; }

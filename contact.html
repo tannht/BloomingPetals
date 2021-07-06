@@ -26,7 +26,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
 
-=======
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,38 +34,65 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="text-align: center; border-style: groove;">CONTACT US</h1>
-    <h3 style="text-align: center;">We'll answer any of your questions about our online sales, rights or partnerships right here.</h3>
-    </tr>
-    <table style="width:100%; text-align: center;">
-    <tr style="color: pink;">
-        <td>ADRESS</td>
-        <td>HOTLINE</td>
-        <td>EMAIL</td>
-        <td>FANPAGE</td>
-    </tr>
-    <tr>
-        <td><h4> 590 CMTT, Phường 11, Quận 3, <br> Thành phố Hồ Chí Minh 723564, Việt Nam</h4></td>
-        <td>+842838460846</td>
-        <td>http://fpt.aptech.edu.vn</td>
-        <td>sdf</td>
-</table>
-<br>
-<tr">
-    <th>Mid Name & last name <br><input type="name" placeholder="Name"></th> 
-    <th><input type="name" placeholder="Last name"></th> 
-</tr>
-<br>
-<tr>
-    <th>Number Phone <br><input type="phone" placeholder="Your munber"></th>  <br>
-
-    <th>Email <br><input type="email" name="Email" placeholder="Gmail"></th> 
-<br>
-<th><textarea name="Comments/questions" id="Comments/questions" cols="30" rows="10" placeholder="Write something" style="height:200px"></textarea></th>  
-<br>
-<input type="submit" value="submit"> <br>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504.27073196190815!2d106.66593911606662!3d10.786663804417978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1625146416727!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+    <h1 style="text-align: center;">CONTACT  US</h1>
+    <p style="text-align: center;">We'll answer any of your questions about our online sales, <br> rights or partnerships right here.</p>
+    <br>
+    <table border="2" width="100%">
+        <tr style="text-align: center;">
+           <td><b>ADRESS</b></td>
+            <td><b>HOTLINE</b></td>
+            <td><b>EMAIL</b></td>
+            <td><b>FANFAGE</b></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td width="25%">351 Hoang Sa Street, Tan Dinh Ward,<br> District 1, HCMC.</td>
+            <td width="25%">1900 88 99</td>
+            <td width="25%">contact@bloomingpetals.com</td>
+            <td width="25%">chua biet</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+       
+        <tr>
+            <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.222689511282!2d106.68359841402405!3d10.794249061817967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d2376d6ae9%3A0x25b96d2356bdcaa!2zMzUxIEhvw6BuZyBTYSwgVMOibiDEkOG7i25oLCBRdeG6rW4gMSwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1625537232788!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></td>
+            <td> <div class="container">
+                <div id="form-main">
+                    <div id="form-div">
+                        <form class="montform" id="reused_form" >
+                            <p class="name">
+                                <input name="name" style="height: 60px; width: 250px;" type="text" class="feedback-input" required placeholder="Last name & middle name" id="name" />  <input name="name" style="height: 60px; width: 250px;" type="text" class="feedback-input" required placeholder="First Name" id="name" />
+                            </p>
+                            <p class="email">
+                                <input name="email" style="height: 60px; width: 500px;" type="email" required class="feedback-input" id="email" placeholder="Email" /> 
+                            </p>
+                            <p class="phone">
+                                <input type="phone" style="height: 60px;width: 500px;" type="phone" required class="feedback-input"id="phone" placeholder="Your number phone">
+                            </p>
+                            <p class="text" wight="40%">
+                                <textarea name="message" style="width: 500px; height: 250px;" class="feedback-input" id="comment" placeholder="Message" wight="40%"></textarea>
+                            </p>
+                            <div class="submit">
+                                <button type="submit" class="button-blue">SUBMIT</button>
+                                <div class="ease"></div>
+                            </div>
+                        </form>
+                        <div id="error_message" style="width:100%; height:100%; display:none; ">
+                            <h4>
+                                Error
+                            </h4>
+                            Sorry there was an error sending your form. 
+                        </div>
+                        <div id="success_message" style="width:100%; height:100%; display:none; "> <h2>Success! Your Message was Sent Successfully.</h2> </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+       
+       </tr>
+    </table>
+   
+   
 </body>
 >>>>>>> origin/haiDev
 </html>

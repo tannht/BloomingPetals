@@ -279,7 +279,9 @@ section#header {
   position: fixed;
   z-index: 999;
   width: 100%;
-  justify-content: center; }
+  justify-content: center;
+  transition: all 0.5s 0s ease-out;
+  left: 0; }
   .navibar a {
     color: #52414C; }
     .navibar a:hover {
@@ -602,6 +604,8 @@ section#header {
   background-image: url(../images/footer-bg.svg);
   background-position: top center;
   background-size: cover; }
+  #footer p {
+    color: white; }
   #footer .footer_main {
     min-height: 300px;
     padding-top: 10vh;

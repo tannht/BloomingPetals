@@ -124,6 +124,8 @@ section#header {
     z-index: 999;
     width: 100%;
     justify-content: center;
+    transition: all 0.5s 0s ease-out;
+    left: 0;
 
     a {
         color: color(dark);
@@ -653,7 +655,9 @@ section#header {
     background-image: url(../images/footer-bg.svg);
     background-position: top center;
     background-size: cover;
-
+    p {
+        color: white;
+    }
     .footer_main {
         min-height: 300px;
         padding-top: 10vh;

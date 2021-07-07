@@ -598,6 +598,6 @@ const validate = (e) => {
 
 const emailIsValid = email => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+};
 
 submitBtn.addEventListener('click', validate);

@@ -8,5 +8,5 @@
 2. Nguyen Thanh Hai
 3. Van Dinh Thanh
 
-#Link
+#Live Demo
 https://tannht.github.io/BloomingPetals/

@@ -161,14 +161,14 @@ function getProductsByCat(CatData) {
                 return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
-                    <img src="../${pro.img}" alt="${pro.name}"></div>
+                    <img src="../../${pro.img}" alt="${pro.name}"></div>
                     <div class="card-block">
                         <h4 class="card-title">${pro.name}</h4>
                         <div class="buy">                      
                         <p class="card-text">$${pro.price}</p>
                         <a href="javascript:void(0)"
                         data-id="${pro.id}"
-                        data-imgurl="../${pro.img}"
+                        data-imgurl="../../${pro.img}"
                         data-name="${pro.name}"
                         data-sku="${pro.sku}"
                         data-price="${pro.price}"

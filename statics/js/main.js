@@ -101,8 +101,8 @@ var api_url = 'https://sheetdb.io/api/v1/zrh61qnmxpqjm';
 // var api_url = 'https://morizone.com/products-data.json';
 // GET PRODUCT BY ID  
 function getProduct(proID, selector) {
-    console.log("key:" + key + "value:" + item[key]);
-    fetch(api_url2)
+    
+    fetch(api_url)
         .then(response => response.json())
         .then(data => {
             
@@ -110,7 +110,7 @@ function getProduct(proID, selector) {
             <div class="container row">           
             <div class="product-image col-sm-6">
             <div class="img-frame">
-                <img id="${data[proID].id}" src="../../${data[proID].img}" alt="${data[proID].name}">
+                <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
             </div>
         </div>
         <div class="right-content col-sm-6">
@@ -131,7 +131,7 @@ function getProduct(proID, selector) {
                     <li class="category">Category: <a href="${data[proID].catSlug}">${data[proID].catName}</a></li>
                 </ul>
                 
-                <a href="javascript:void(0)" data-id="${data[proID].id}" data-imgurl="${data[proID].img}" data-name="${data[proID].name}" data-sku="${data[proID].sku}" data-price="${data[proID].price}" class="add-to-cart btn btn-primary">Add to
+                <a href="javascript:void(0)" data-id="${data[proID].id}" data-imgurl="../${data[proID].img}" data-name="${data[proID].name}" data-sku="${data[proID].sku}" data-price="${data[proID].price}" class="add-to-cart btn btn-primary">Add to
                 cart</a> `;
 
             $(selector).html(productSingle);
@@ -163,7 +163,7 @@ function getProductsByCat(CatData) {
                     <div class="img-wrapper">
                     <img src="${pro.img}" alt="${pro.name}"></div>
                     <div class="card-block">
-                        <h4 class="card-title">${pro.name}</h4>
+                        <a href="${pro.proSlug}"><h5 class="card-title">${pro.name}</h5>
                         <div class="buy">                      
                         <p class="card-text">$${pro.price}</p>
                         <a href="javascript:void(0)"
@@ -201,7 +201,7 @@ function allProducts() {
                 return `
             <div class="product-block col-6 col-md-4">                                           
                 <div class="img-wrapper">
-                <img  src="../../${pro.img}" alt="${pro.name}" width="300" />
+                <img  src="${pro.img}" alt="${pro.name}" width="300" />
                 </div>
                 <p>${pro.name}<p>
                 <span>$${pro.price}</span> <a href="${pro.proSlug}" class="add-to-cart btn btn-primary">Add To Cart</a>

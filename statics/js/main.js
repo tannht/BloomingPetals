@@ -97,7 +97,7 @@ function closeMenu() {
 }
 
 // Declare api urls
-var api_url = '../../statics/js/products-data.json';
+var api_url = 'https://morizone.com/products-data.json';
 // GET PRODUCT BY ID  
 function getProduct(proID, selector) {
     console.log("key:" + key + "value:" + item[key]);

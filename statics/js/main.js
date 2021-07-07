@@ -96,16 +96,15 @@ function closeMenu() {
     $('.nav-btn').css("opacity", 1);
 }
 
-
 // Declare api urls
-var api_ulr = '../../js/products-data.json';
-
+var api_url = '../../statics/js/products-data.json';
 // GET PRODUCT BY ID  
 function getProduct(proID, selector) {
-    fetch(api_ulr)
+    console.log("key:" + key + "value:" + item[key]);
+    fetch(api_url2)
         .then(response => response.json())
         .then(data => {
-
+            
             var productSingle = `
             <div class="container row">           
             <div class="product-image col-sm-6">
@@ -138,15 +137,15 @@ function getProduct(proID, selector) {
             $('title').append(data[proID].name + " | Blooming Petals")
             //add to cart event
             addItem();
-
             displayCart();
-
+            
         })
         .catch(err => console.log("Data Error"));
 }
+
 // GET PRODUCT BY CATEGORY 
 function getProductsByCat(CatData) {
-    fetch(api_ulr)
+    fetch(api_url)
         .then(response => response.json())
         .then(data => {
             // FILTER PRODUCTS BY CATEGORY
@@ -193,7 +192,7 @@ function getProductsByCat(CatData) {
 };
 // RENDER ALL PRODUCTS
 function allProducts() {
-    fetch(api_ulr)
+    fetch(api_url)
         .then(response => response.json())
         .then(data => {
 
@@ -600,4 +599,4 @@ const emailIsValid = email => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
 
-submitBtn.addEventListener('click', validate);
+// submitBtn.addEventListener('click', validate);

@@ -193,7 +193,7 @@
 
 /* END */
 .homebanner {
-  background-image: url(/uploads/media/banner-bg-3.jpg);
+  background-image: url(../../uploads/media/banner-bg-3.jpg);
   height: 100vh;
   box-sizing: content-box;
   background-color: #f8f8f8;
@@ -234,17 +234,17 @@
   display: flex; }
 
 #product-categories .product-cat .cat-1 {
-  background-image: url(/uploads/media/cat-1.jpg);
+  background-image: url(../../uploads/media/cat-1.jpg);
   background-size: contain;
   background-repeat: no-repeat; }
 
 #product-categories .product-cat .cat-2 {
-  background-image: url(/uploads/media/cat-2.jpg);
+  background-image: url(../../uploads/media/cat-2.jpg);
   background-size: contain;
   background-repeat: no-repeat; }
 
 #product-categories .product-cat .cat-3 {
-  background-image: url(/uploads/media/cat-3.jpg);
+  background-image: url(../../uploads/media/cat-3.jpg);
   background-size: contain;
   background-repeat: no-repeat; }
 

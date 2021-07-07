@@ -110,7 +110,7 @@ function getProduct(proID, selector) {
             <div class="container row">           
             <div class="product-image col-sm-6">
             <div class="img-frame">
-                <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
+                <img id="${data[proID].id}" src="../../${data[proID].img}" alt="${data[proID].name}">
             </div>
         </div>
         <div class="right-content col-sm-6">
@@ -201,7 +201,7 @@ function allProducts() {
                 return `
             <div class="product-block col-6 col-md-4">                                           
                 <div class="img-wrapper">
-                <img  src="../${pro.img}" alt="${pro.name}" width="300" />
+                <img  src="../../${pro.img}" alt="${pro.name}" width="300" />
                 </div>
                 <p>${pro.name}<p>
                 <span>$${pro.price}</span> <a href="${pro.proSlug}" class="add-to-cart btn btn-primary">Add To Cart</a>

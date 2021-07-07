@@ -98,7 +98,7 @@ function closeMenu() {
 
 
 // Declare api urls
-var api_ulr = '../js/products-data.json';
+var api_ulr = '../../js/products-data.json';
 
 // GET PRODUCT BY ID  
 function getProduct(proID, selector) {

@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="../statics/css/animate.css">
     <link rel="stylesheet" href="../statics/css/style.css" />
     <link rel="stylesheet" href="../statics/css/product-detail.css" />
-    
-    
+
+
 
 </head>
 
 
 <body>
     <section include-header="header.html" id="header"></section>
-    
+
     <div id="product-container">
 
         <!-- product-info here -->
@@ -33,33 +33,43 @@
             <!-- social share here  -->
 
         </div>
+        <div class="product-details">
+            Blooming Petals Commitment
+            <ul>
+                <li>Free delivery to 63 cities/provinces all over the country (even remote, mountainous areas and island
+                    areas).</li>
+                <li>Flowers are always fresh at delivery to receiver.</li>
+                <li> Flowers are designed upon design request and art.</li>
+                <li> Actual photos of product can be sent upon request.</li>
+                <li> Good consulting service and support for customers.</li>
+            </ul>
+        </div>
     </div>
-    
+
     <!-- Modal -->
     <section id="modal-content-js">
-        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-       <div class="modal-content">
-           <div class="modal-header">
-               <h5 class="modal-title" id="ModalLabel">Cart</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                   <span aria-hidden="true">&times;</span>
-               </button>
-           </div>
-           <div class="modal-body">
-               <table class="show-cart table">
-    
-               </table>
-               <div>Total price: $<span class="total-cart"></span></div>
-           </div>
-           <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary">Order now</button>
-           </div>
-       </div>
-    </div>
-    </div>
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="show-cart table">
+
+                        </table>
+                        <div>Total price: $<span class="total-cart"></span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!---end modal-->
     <section include-footer="footer.html"></section>
@@ -68,10 +78,11 @@
     $('document').ready(() => {
         socialComponent('.social-share');
         ratingGroup('.rating-group');
-        getProduct(1, '#product-container')        
+        getProduct(1, '#product-container')
     });
 </script>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../statics/js/main.js"></script>
+
 </html>

@@ -34,15 +34,7 @@
 
         </div>
         <div class="product-details">
-            Blooming Petals Commitment
-            <ul>
-                <li>Free delivery to 63 cities/provinces all over the country (even remote, mountainous areas and island
-                    areas).</li>
-                <li>Flowers are always fresh at delivery to receiver.</li>
-                <li> Flowers are designed upon design request and art.</li>
-                <li> Actual photos of product can be sent upon request.</li>
-                <li> Good consulting service and support for customers.</li>
-            </ul>
+
         </div>
     </div>
 
@@ -78,7 +70,10 @@
     $('document').ready(() => {
         socialComponent('.social-share');
         ratingGroup('.rating-group');
-        getProduct(1, '#product-container')
+        getProduct(0, '#product-container');
+        // detailsBlock(".product-details");
+        
+
     });
 </script>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
@@ -86,3 +81,12 @@
 <script src="../statics/js/main.js"></script>
 
 </html>
+
+
+
+record['id'] = dataRow[0];
+record['name'] = dataRow[1];
+record['catID'];
+record['catName'];
+record['catSlug']; record['sku']; record['name']; record['price']; record['desc']; record['img']; record['imgGit'];
+record['proSlug'];

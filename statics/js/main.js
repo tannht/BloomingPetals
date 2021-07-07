@@ -97,15 +97,21 @@ function closeMenu() {
 }
 
 // Declare api urls
-var api_url = 'https://sheetdb.io/api/v1/zrh61qnmxpqjm';
+var api_url = 'https://script.google.com/macros/s/AKfycbzREWIKw-FELGuiFFmfRh4T0RRqbDfPjBbKhcT6rsGatjogUUVAysDKjsW5B6XeT5zW0A/exec';
 // var api_url = 'https://morizone.com/products-data.json';
-// GET PRODUCT BY ID  
+// GET PRODUCT BY ID 
+// fetch(api_url) 
+//     .then(response => response.json())
+//     .then(res => {
+//         console.log(Object.values(res.user))
+//     })
+//     .catch(err => console.log("API Error"));
 function getProduct(proID, selector) {
     
     fetch(api_url)
         .then(response => response.json())
-        .then(data => {
-            
+        .then(res => {  
+            var data = Object.values(res.user)                   
             var productSingle = `
             <div class="container row">           
             <div class="product-image col-sm-6">
@@ -148,8 +154,8 @@ function getProduct(proID, selector) {
 function getProductsByCat(CatData) {
     fetch(api_url)
         .then(response => response.json())
-        .then(data => {
-            // FILTER PRODUCTS BY CATEGORY
+        .then(res => {  
+            var data = Object.values(res.user)           
 
             function Cat(products) {
                 return products.catID == CatData;

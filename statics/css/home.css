@@ -210,7 +210,10 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 0; }
   .homebanner img {
     animation: fade-in-bottom 0.6s linear 0.2s both; }
@@ -257,14 +260,14 @@
       background-size: cover;
       margin-top: -5%; } }
   #why-us .whyus_textblock {
-    color: #F98404;
+    color: #598b2c;
     padding: 100px 0 20px 0;
     height: 300px;
     font-family: 'SVN-Blenda Script';
     margin: 0 auto;
     max-width: 650px; }
     #why-us .whyus_textblock span {
-      color: #5E454B; }
+      color: #52414C; }
     #why-us .whyus_textblock p {
       color: #0e0e0e; }
   #why-us .whyus-txtbox {
@@ -273,7 +276,7 @@
     margin: 0 auto; }
     #why-us .whyus-txtbox_title {
       font-weight: 700;
-      color: #F98404; }
+      color: #598b2c; }
     #why-us .whyus-txtbox img {
       width: 76px;
       height: 76px; }
@@ -287,7 +290,7 @@
   margin-top: 10vh; }
   .prd-slider h1,
   .clients-logo h1 {
-    color: #F98404;
+    color: #598b2c;
     text-align: center;
     font-family: 'SVN-Blenda Script';
     padding-bottom: 5vh; }
@@ -361,3 +364,9 @@
   #newsletters .input:focus,
   #newsletters .btn:focus {
     outline: 0; }
+
+#footer {
+  background: #E9BC32;
+  background-image: url(../images/footer-bg.svg);
+  background-position: top center;
+  background-size: cover; }

@@ -21,21 +21,17 @@
 <body>
     <section include-header="header.html" id="header"></section>
 
-    <div id="product-container">
+    <div id="product-container" data-id="0">
 
         <!-- product-info here -->
 
-        <div class="rating-group">
-            <!-- rating group here -->
+        
+
 
         </div>
-        <div class="social-share">
-            <!-- social share here  -->
-
-        </div>
-        <div class="product-details">
-
-        </div>
+    </div>
+    <div class="product-details">
+               
     </div>
 
     <!-- Modal -->
@@ -66,18 +62,7 @@
     <!---end modal-->
     <section include-footer="footer.html"></section>
 </body>
-<script>
-    $('document').ready(() => {
-        socialComponent('.social-share');
-        ratingGroup('.rating-group');
-        getProduct(0, '#product-container');
-        // detailsBlock(".product-details");
-        
-
-    });
-</script>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../statics/js/main.js"></script>
-
 </html>

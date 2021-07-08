@@ -93,7 +93,7 @@ function openMenu() {
 
 function closeMenu() {
     $('.mobile-menu_sidebar-menu').removeClass("show")
-    $('.nav-btn').css("opacity", 1);    
+    $('.nav-btn').css("opacity", 1);
 }
 
 // Declare api urls
@@ -107,55 +107,69 @@ var api_url = 'https://script.google.com/macros/s/AKfycbzREWIKw-FELGuiFFmfRh4T0R
 //     })
 //     .catch(err => console.log("API Error"));
 function getProduct(proID, selector) {
-    
+
     fetch(api_url)
         .then(response => response.json())
-        .then(res => {  
-            var data = Object.values(res.user)                   
+        .then(res => {
+            var data = Object.values(res.user)
             var productSingle = `
             <div class="container row">           
-            <div class="product-image col-sm-6">
-            <div class="img-frame">
-                <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
-            </div>
+            <div class="product-image col-sm">
+            
+            <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
+            
         </div>
-        <div class="right-content col-sm-6">
+        <div class="right-content col-sm">
             <div class="breadcrumb">
                 <ul>
-                    <li><a href="../index.html">Home</a>></li>
-                    <li><a href="#">${data[proID].catName}</a>></li>
-                    <li><a href="#">${data[proID].catName}</a>></li>
-                    <li><a href="#">${data[proID].catName}</a>></li>
-                    <li><a href="#">${data[proID].catName}</a></li>
+                    <li><a href="../index.html">Home</a>|</li>
+                    <li><a href="#">${data[proID].catName}</a>|</li>                    
+                    <li>${data[proID].name}|</li>
                 </ul>
             </div>
             <div class="product-info">
                 <h1 class="price">$${data[proID].price}</h1>
                 <h2 class="product-title">${data[proID].name}</h2>
+                <div class="rating-group"></div>
+        
                 <ul class="more-info">
                     <li class="sku">SKU: <b>${data[proID].sku}</b></li>
                     <li class="category">Category: <a href="${data[proID].catSlug}">${data[proID].catName}</a></li>
                 </ul>
                 
                 <a href="javascript:void(0)" data-id="${data[proID].id}" data-imgurl="../${data[proID].img}" data-name="${data[proID].name}" data-sku="${data[proID].sku}" data-price="${data[proID].price}" class="add-to-cart btn btn-primary">Add to
-                cart</a> `;
+                cart</a> 
+                <div class="social-share"></div>
+                `;
 
             $(selector).html(productSingle);
             $('title').append(data[proID].name + " | Blooming Petals")
             //add to cart event
             addItem();
             displayCart();
-            
+            socialComponent('.social-share');
+            ratingGroup('.rating-group');
+
         })
         .catch(err => console.log("Data Error"));
 }
+
+function renderproduct() {
+    var Id = $('#product-container').data('id');
+    $('#product-container').html(getProduct(Id, '#product-container'));
+}
+renderproduct();
+
+
+
+
 
 // GET PRODUCT BY CATEGORY 
 function getProductsByCat(CatData) {
     fetch(api_url)
         .then(response => response.json())
-        .then(res => {  
-            var data = Object.values(res.user)           
+        .then(res => {
+            var data = Object.values(res.user)
 
             function Cat(products) {
                 return products.catID == CatData;
@@ -267,13 +281,13 @@ function ratingGroup(selector) {
 <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
 <label aria-label="3 stars" class="rating__label" for="rating-3"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
-<input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+<input class="rating__input" name="rating" id="rating-3" value="3" type="radio" >
 <label aria-label="4 stars" class="rating__label" for="rating-4"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
 <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
 <label aria-label="5 stars" class="rating__label" for="rating-5"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
-<input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+<input class="rating__input" name="rating" id="rating-5" value="5" type="radio" checked>
     `;
     $(selector).html(htmlRating);
 }
@@ -556,7 +570,7 @@ function modal() {
     $('.total-count').html(shoppingCart.totalCount());
 }
 
- //form
+//form
 
 const name = document.getElementById('name');
 const email = document.getElementById('email');
@@ -565,45 +579,45 @@ const contactForm = document.getElementById('contact-form');
 const errorElement = document.getElementById('error');
 const successMsg = document.getElementById('success-msg');
 const submitBtn = document.getElementById('submit');
-  
+
 const validate = (e) => {
-  e.preventDefault();
- 
-  if (name.value.length < 3) {
-    errorElement.innerHTML = 'Your name should be at least 3 characters long.';
-    return false;
-  } 
-  
-  if (!(email.value.includes('.') && (email.value.includes('@')))) {
-    errorElement.innerHTML = 'Please enter a valid email address.';
-    return false;
-  } 
+    e.preventDefault();
 
-  if (!emailIsValid(email.value)) {
-    errorElement.innerHTML = 'Please enter a valid email address.';
-    return false;
-  }
+    if (name.value.length < 3) {
+        errorElement.innerHTML = 'Your name should be at least 3 characters long.';
+        return false;
+    }
 
-  if (message.value.length < 15) {
-    errorElement.innerHTML = 'Please write a longer message.';
-    return false;
-  }
+    if (!(email.value.includes('.') && (email.value.includes('@')))) {
+        errorElement.innerHTML = 'Please enter a valid email address.';
+        return false;
+    }
 
-  errorElement.innerHTML = '';
-  successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.'; 
+    if (!emailIsValid(email.value)) {
+        errorElement.innerHTML = 'Please enter a valid email address.';
+        return false;
+    }
 
-  e.preventDefault();
-  setTimeout(function () {
-    successMsg.innerHTML = '';
-    document.getElementById('contact-form').reset();
-  }, 6000);
+    if (message.value.length < 15) {
+        errorElement.innerHTML = 'Please write a longer message.';
+        return false;
+    }
 
-  return true;
+    errorElement.innerHTML = '';
+    successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.';
+
+    e.preventDefault();
+    setTimeout(function () {
+        successMsg.innerHTML = '';
+        document.getElementById('contact-form').reset();
+    }, 6000);
+
+    return true;
 
 }
 
 const emailIsValid = email => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
 
 // submitBtn.addEventListener('click', validate);

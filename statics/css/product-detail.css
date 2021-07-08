@@ -225,9 +225,12 @@
     padding: 10px; }
     #product-container .add-to-cart-btn:hover {
       background: #406420; }
-  #product-container .product-image .img-frame {
-    overflow: hidden;
-    display: flex; }
+  #product-container .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #product-container .product-image img {
+      max-width: 100%; }
   #product-container .product-info {
     padding: 20px;
     max-width: 80%;

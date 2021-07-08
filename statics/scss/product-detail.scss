@@ -47,10 +47,13 @@
         }
     }
 
-    .product-image .img-frame {
-
-        overflow: hidden;
+    .product-image  {        
         display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-width:100%;
+        }        
     }
 
     .product-info {

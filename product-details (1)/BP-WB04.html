@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="stylesheet" href="../statics/css/animate.css">
+    <link rel="stylesheet" href="../statics/css/style.css" />
+    <link rel="stylesheet" href="../statics/css/product-detail.css" />
+</head>
+
+
+<body>
+    <section include-header="/header.html" id="header"></section>
+    <div id="product-container">
+        
+            <!-- product-info here -->
+            
+                    <div class="rating-group">
+                        <!-- rating group here -->
+                    </div>
+                    <div class="social-share">
+                        <!-- social share here  -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <section include-footer="/footer.html"></section>
+</body>
+<script>
+    $('document').ready(() => {
+        socialComponent('.social-share');
+        ratingGroup('.rating-group');
+        getProduct(3, '#product-container')
+    });
+</script>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../statics/js/main.js"></script>
+
+</html>

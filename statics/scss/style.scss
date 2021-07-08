@@ -398,7 +398,9 @@ section#header {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            .total-count{
 
+            }
             .nav-btn {
                 font-size: 28px;
                 color: color(primary);
@@ -427,6 +429,7 @@ section#header {
     .show {
         animation: fadeIn 0.5s;
         visibility: visible;
+        z-index: 999;
 
         .mobile-menu_sidebar-menu_content {
             left: 0;

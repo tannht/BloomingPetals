@@ -461,7 +461,8 @@ section#header {
     transition: all 0.5s 0s ease-out; }
   .mobile-menu .show {
     animation: fadeIn 0.5s;
-    visibility: visible; }
+    visibility: visible;
+    z-index: 999; }
     .mobile-menu .show .mobile-menu_sidebar-menu_content {
       left: 0; }
     .mobile-menu .show .close-btn {
@@ -469,7 +470,10 @@ section#header {
   .mobile-menu_sidebar-menu {
     position: fixed;
     background-color: rgba(83, 83, 83, 0.5);
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     visibility: hidden; }
     .mobile-menu_sidebar-menu_content {
       position: absolute;
@@ -478,6 +482,7 @@ section#header {
       bottom: 0;
       background: rgba(255, 255, 255, 0.9);
       padding: 20px;
+      padding-top: 55px;
       transition: all 0.5s;
       left: -75vw;
       height: 100vh;
@@ -486,6 +491,18 @@ section#header {
       .mobile-menu_sidebar-menu_content::-webkit-scrollbar {
         box-shadow: none;
         background: transparent; }
+      .mobile-menu_sidebar-menu_content .category {
+        text-align: center;
+        font-weight: 700;
+        background: #598b2c;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 20;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px; }
       .mobile-menu_sidebar-menu_content .search {
         margin-bottom: 15px; }
         .mobile-menu_sidebar-menu_content .search input {

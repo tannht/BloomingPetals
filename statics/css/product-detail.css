@@ -192,8 +192,7 @@
     opacity: 0; } }
 
 /* END */
-#product-container {
-  height: 100vh;
+.product-main-container {
   background: url(../images/product-detail-background-01.jpg);
   background-size: cover;
   background-position: center;
@@ -203,82 +202,130 @@
   justify-content: center;
   padding-top: 120px;
   text-align: center; }
-  @media (min-width: 1600px) {
-    #product-container {
-      height: 80vh; } }
-  #product-container .price,
-  #product-container .product-tile {
-    text-align: center; }
-  #product-container .breadcrumb ul {
-    display: flex;
-    align-items: center; }
-  #product-container .more-info {
-    margin-bottom: 20px; }
-  #product-container .add-to-cart-btn {
-    background: #598b2c;
-    width: 200px;
-    height: 40px;
-    text-transform: uppercase;
-    color: #f8f8f8;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 10px; }
-    #product-container .add-to-cart-btn:hover {
-      background: #406420; }
-  #product-container .product-image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    #product-container .product-image img {
-      max-width: 100%; }
-  #product-container .product-info {
-    padding: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.6);
-    /* make hover effect work properly in IE */
-    /* hide radio inputs */
-    /* set icon padding and size */
-    /* set default star color */
-    /* set color of none icon when unchecked */
-    /* if none icon is checked, make it red */
-    /* if any input is checked, make its following siblings grey */
-    /* make all stars orange on rating group hover */
-    /* make hovered input's following siblings grey on hover */
-    /* make none icon grey on rating group hover */
-    /* make none icon red on hover */ }
-    #product-container .product-info .rating-group {
-      display: inline-flex;
-      margin-top: 20px;
-      padding-right: 40px; }
-    #product-container .product-info .rating__icon {
-      pointer-events: none; }
-    #product-container .product-info .rating__input {
-      position: absolute !important;
-      left: -9999px !important; }
-    #product-container .product-info .rating__label {
-      cursor: pointer;
-      padding: 0 0.1em;
-      font-size: 2rem; }
-    #product-container .product-info .rating__icon--star {
-      color: orange; }
-    #product-container .product-info .rating__icon--none {
-      color: #eee; }
-    #product-container .product-info .rating__input--none:checked + .rating__label .rating__icon--none {
-      color: red; }
-    #product-container .product-info .rating__input:checked ~ .rating__label .rating__icon--star {
-      color: #ddd; }
-    #product-container .product-info .rating-group:hover .rating__label .rating__icon--star {
-      color: orange; }
-    #product-container .product-info .rating__input:hover ~ .rating__label .rating__icon--star {
-      color: #ddd; }
-    #product-container .product-info .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
-      color: #eee; }
-    #product-container .product-info .rating__input--none:hover + .rating__label .rating__icon--none {
-      color: red; }
-    #product-container .product-info .social-icons {
-      display: flex;
-      justify-content: space-around;
-      width: 200px;
-      margin: 20px auto;
+  .product-main-container .product-frame {
+    background: #f8f8f8; }
+    .product-main-container .product-frame #product-container .price,
+    .product-main-container .product-frame #product-container .product-tile {
       text-align: center; }
+    .product-main-container .product-frame #product-container .breadcrumb_mod {
+      border-bottom: 1px solid #bdbdbd;
+      background-color: transparent !important;
+      border-radius: 0 !important; }
+      @media (max-width: 576px) {
+        .product-main-container .product-frame #product-container .breadcrumb_mod {
+          display: none; } }
+      .product-main-container .product-frame #product-container .breadcrumb_mod ul {
+        display: flex;
+        align-items: center;
+        padding: 10px; }
+    .product-main-container .product-frame #product-container .more-info {
+      margin-bottom: 20px; }
+    .product-main-container .product-frame #product-container .add-to-cart-btn {
+      background: #598b2c;
+      width: 200px;
+      height: 40px;
+      text-transform: uppercase;
+      color: #f8f8f8;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px; }
+      .product-main-container .product-frame #product-container .add-to-cart-btn:hover {
+        background: #406420; }
+    .product-main-container .product-frame #product-container .product-image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .product-main-container .product-frame #product-container .product-image img {
+        max-width: 100%; }
+    .product-main-container .product-frame #product-container .product-info {
+      padding: 20px;
+      max-width: 80%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.6);
+      /* make hover effect work properly in IE */
+      /* hide radio inputs */
+      /* set icon padding and size */
+      /* set default star color */
+      /* set color of none icon when unchecked */
+      /* if none icon is checked, make it red */
+      /* if any input is checked, make its following siblings grey */
+      /* make all stars orange on rating group hover */
+      /* make hovered input's following siblings grey on hover */
+      /* make none icon grey on rating group hover */
+      /* make none icon red on hover */ }
+      .product-main-container .product-frame #product-container .product-info .rating-group {
+        display: inline-flex;
+        margin-top: 20px;
+        align-items: center; }
+        .product-main-container .product-frame #product-container .product-info .rating-group i {
+          color: yellow; }
+      .product-main-container .product-frame #product-container .product-info .rating__icon {
+        pointer-events: none; }
+      .product-main-container .product-frame #product-container .product-info .rating__input {
+        position: absolute !important;
+        left: -9999px !important; }
+      .product-main-container .product-frame #product-container .product-info .rating__label {
+        cursor: pointer;
+        padding: 0 0.1em;
+        font-size: 2rem; }
+      .product-main-container .product-frame #product-container .product-info .rating__icon--star {
+        color: orange; }
+      .product-main-container .product-frame #product-container .product-info .rating__icon--none {
+        color: #eee; }
+      .product-main-container .product-frame #product-container .product-info .rating__input--none:checked + .rating__label .rating__icon--none {
+        color: red; }
+      .product-main-container .product-frame #product-container .product-info .rating__input:checked ~ .rating__label .rating__icon--star {
+        color: #ddd; }
+      .product-main-container .product-frame #product-container .product-info .rating-group:hover .rating__label .rating__icon--star {
+        color: orange; }
+      .product-main-container .product-frame #product-container .product-info .rating__input:hover ~ .rating__label .rating__icon--star {
+        color: #ddd; }
+      .product-main-container .product-frame #product-container .product-info .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+        color: #eee; }
+      .product-main-container .product-frame #product-container .product-info .rating__input--none:hover + .rating__label .rating__icon--none {
+        color: red; }
+      .product-main-container .product-frame #product-container .product-info .social-icons {
+        display: flex;
+        justify-content: space-around;
+        width: 200px;
+        margin: 20px auto;
+        text-align: center; }
+
+.product-detail-container .product-details .tab-wrapper {
+  margin: 0 auto;
+  background-color: #fff; }
+
+.product-detail-container .product-details .tab-menu {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 576px) {
+    .product-detail-container .product-details .tab-menu {
+      justify-content: left; } }
+
+.product-detail-container .product-details .tab-menu li {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  opacity: 0.8;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 0; }
+
+.product-detail-container .product-details .tab-menu li.active {
+  color: #598b2c;
+  opacity: 1; }
+
+.product-detail-container .product-details .tab-content > div {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px;
+  min-height: 200px; }
+
+.product-detail-container .product-details .line {
+  position: absolute;
+  width: 0;
+  height: 7px;
+  background-color: #598b2c;
+  top: 0;
+  left: 0; }

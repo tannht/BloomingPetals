@@ -366,6 +366,9 @@ section#header {
   .light-menu .navibar_inner_center a:hover {
     color: #8bc954 !important; }
 
+.light-menu .navibar_inner_right .icon-cart {
+  padding-top: 20px; }
+
 .light-menu .navibar_inner_right i,
 .light-menu .navibar_inner_right a {
   color: #f8f8f8 !important; }
@@ -448,6 +451,8 @@ section#header {
       display: flex;
       justify-content: space-evenly;
       align-items: center; }
+      .mobile-menu_inner_right .cart-icon {
+        margin-top: 20px; }
       .mobile-menu_inner_right .nav-btn {
         font-size: 28px;
         color: #598b2c;
@@ -730,12 +735,12 @@ section#header {
   text-align: center;
   padding: 10px;
   color: #fff;
-  left: 23px;
+  left: 10px;
+  bottom: 30px;
   border-radius: 50%;
   justify-content: center;
   width: 10px;
   height: 10px;
   display: flex;
-  position: absolute;
-  top: 24px;
+  position: relative;
   align-items: center; }

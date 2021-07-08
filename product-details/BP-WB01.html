@@ -20,20 +20,79 @@
 
 <body>
     <section include-header="header.html" id="header"></section>
+    <section class="product-main-container">
+        <div class="product-frame container-md">
+            <div id="product-container" data-id="0">
+                <!-- product-info here -->
+            </div>
+        </div>
+    </section>
+    <section class="product-detail-container container-md">
+        <div class="product-details">
+            <div class="tab-wrapper">
+                <ul class="tab-menu ">
+                    <li class="active">Details</li>
+                    <li>Reviews</li>
+                    <li>How to order</li>
+                </ul>
+                <div class="tab-content ">
+                    <!-- tab1 -->
+                    <div data-name="details">
+                        <p>Radiant, timeless, romantic. There's something so special about our red roses, especially the
+                            way the one you love will feel these beautiful blooms arrive at their door. Send a bouquet
+                            of
+                            red roses to celebrate an anniversary, or surprise them out of the blue.<p><br />
 
-    <div id="product-container" data-id="0">
+                                <h4>Blooming Petals Shop Commitment</h4>
+                                <ul>
+                                    <li>Free delivery to 63 cities/provinces all over the country (even remote,
+                                        mountainous
+                                        areas and island areas).</li>
+                                    <li>Flowers are always fresh at delivery to receiver.</li>
+                                    <li>Flowers are designed upon design request and art.</li>
+                                    <li>Actual photos of product can be sent upon request.</li>
+                                    <li>Good consulting service and support for customers.</li>
+                                </ul>
+                    </div>
+                    <!-- tab2 -->
+                    <div data-name="reviews" class="reviews">
+                        <form  method="POST">
+                            <div class="form-group">
+                                <label for="fullname" class="form-label">Your Name</label>
+                                <input id="fullname" name="fullnane" type="text" />
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your email</label>
+                                <input id="email" name="email" type="email" />
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Your password</label>
+                                <input id="password" name="password" type="password" />
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-password" class="form-label">Retype password</label>
+                                <input id="re-password" name="re-password" type="password" />
+                                <span class="form-message"></span>
+                            </div>
+                            <button class="form-submit">Register</button>
+                          </form>
+                    </div>
+                    <!-- tab3 -->
+                    <div data-name="how-to-oder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad
+                        esse. Hic at officiis
+                        fuga mollitia quod.</div>
+                    <!-- tab4 -->
 
-        <!-- product-info here -->
-
-        
-
+                </div>
+            </div>
 
         </div>
-    </div>
-    <div class="product-details">
-               
-    </div>
+    </section>
 
+    <section include-footer="footer.html"></section>
     <!-- Modal -->
     <section id="modal-content-js">
         <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
@@ -60,9 +119,10 @@
         </div>
     </section>
     <!---end modal-->
-    <section include-footer="footer.html"></section>
 </body>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../statics/js/main.js"></script>
+<script src="../statics/js/validator.js"></script>
+
 </html>

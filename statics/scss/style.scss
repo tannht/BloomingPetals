@@ -274,6 +274,9 @@ section#header {
         }
 
         &_inner_right {
+            .icon-cart {
+                padding-top: 20px;
+            }
 
             i,
             a {
@@ -400,7 +403,8 @@ section#header {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-
+            .cart-icon {
+                margin-top: 20px;}
             // .total-count {}
 
             .nav-btn {
@@ -819,6 +823,7 @@ section#header {
                 background: color(light);
                 transition: all 0.5s 0s ease-out;
             }
+            
         }
 
     }
@@ -835,7 +840,6 @@ section#header {
         justify-content: center;
         align-items: center;
         display: flex;
-
         img {
             width: 100%;
             transform: scale(1.2);
@@ -843,19 +847,20 @@ section#header {
     }
 }
 
+
 .total-count {
     background: #F98404;
     font-size: 13px;
     text-align: center;
     padding: 10px;
     color: #fff;
-    left: 23px;
+    left: 10px;
+    bottom: 30px;
     border-radius: 50%;
     justify-content: center;
     width: 10px;
     height: 10px;
     display: flex;
-    position: absolute;
-    top: 24px;
+    position: relative;    
     align-items: center;
 }

@@ -120,17 +120,28 @@ function getProduct(proID, selector) {
             
         </div>
         <div class="right-content col-sm">
-            <div class="breadcrumb">
+            <div class="breadcrumb_mod">
                 <ul>
-                    <li><a href="../index.html">Home</a>|</li>
-                    <li><a href="#">${data[proID].catName}</a>|</li>                    
-                    <li>${data[proID].name}|</li>
+                    <li><a href="../index.html">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li><a href="#">${data[proID].catName}</a>
+                    <i class="fa fa-angle-right"></i>
+                    </li>                    
+                    <li>${data[proID].name}</li>
                 </ul>
             </div>
             <div class="product-info">
                 <h1 class="price">$${data[proID].price}</h1>
                 <h2 class="product-title">${data[proID].name}</h2>
-                <div class="rating-group"></div>
+                <div class="rating-group">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>              
+                <i class="fa fa-star-half"></i>
+                (<span>${getRandomInt(10, 50)} reviews</span>)
+                </div>
         
                 <ul class="more-info">
                     <li class="sku">SKU: <b>${data[proID].sku}</b></li>
@@ -148,8 +159,8 @@ function getProduct(proID, selector) {
             addItem();
             displayCart();
             socialComponent('.social-share');
-            ratingGroup('.rating-group');
-
+            
+            
         })
         .catch(err => console.log("Data Error"));
 }
@@ -160,7 +171,11 @@ function renderproduct() {
 }
 renderproduct();
 
-
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+  }
 
 
 
@@ -554,8 +569,8 @@ function modal() {
     for (var i in cartArray) {
         output += "<tr  class='incart-itemts'>" +
             "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
-            "<td>" + cartArray[i].name + "</td>" +
-            "<td>SKU: " + cartArray[i].sku + "</td>" +
+            "<td><ul>" + "<li>" + cartArray[i].name + "</li>" +
+            +"<li>SKU: " + cartArray[i].sku + "</li>" + "</ul></td>" +
             "<td>$" + cartArray[i].price + "</td>" +
             "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
             "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
@@ -569,7 +584,38 @@ function modal() {
     $('.total-cart').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
 }
+//product-detail-tabs
+var $wrapper = $('.tab-wrapper'),
+    $allTabs = $wrapper.find('.tab-content > div'),
+    $tabMenu = $wrapper.find('.tab-menu li'),
+    $line = $('<div class="line"></div>').appendTo($tabMenu);
 
+$allTabs.not(':first-of-type').hide();
+$tabMenu.filter(':first-of-type').find(':first').width('100%')
+
+$tabMenu.each(function (i) {
+    $(this).attr('data-tab', 'tab' + i);
+});
+
+$allTabs.each(function (i) {
+    $(this).attr('data-tab', 'tab' + i);
+});
+
+$tabMenu.on('click', function () {
+
+    var dataTab = $(this).data('tab'),
+        $getWrapper = $(this).closest($wrapper);
+
+    $getWrapper.find($tabMenu).removeClass('active');
+    $(this).addClass('active');
+
+    $getWrapper.find('.line').width(0);
+    $(this).find($line).animate({
+        'width': '100%'
+    }, 'fast');
+    $getWrapper.find($allTabs).hide();
+    $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
+});
 //form
 
 const name = document.getElementById('name');

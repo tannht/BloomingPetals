@@ -56,7 +56,7 @@
                     </div>
                     <!-- tab2 -->
                     <div data-name="reviews" class="reviews">
-                        <form  method="POST">
+                        <form id="register" method="POST">
                             <div class="form-group">
                                 <label for="fullname" class="form-label">Your Name</label>
                                 <input id="fullname" name="fullnane" type="text" />
@@ -78,7 +78,7 @@
                                 <span class="form-message"></span>
                             </div>
                             <button class="form-submit">Register</button>
-                          </form>
+                        </form>
                     </div>
                     <!-- tab3 -->
                     <div data-name="how-to-oder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad
@@ -119,10 +119,21 @@
         </div>
     </section>
     <!---end modal-->
+    
 </body>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../statics/js/main.js"></script>
 <script src="../statics/js/validator.js"></script>
+<script>
+       
+    Validator({
+        form: '#register',
+        rules: [
+            Validator.isRequired('#fullname'),
+            Validator.isEmail('#email')
+        ]
+    });
 
+</script>
 </html>

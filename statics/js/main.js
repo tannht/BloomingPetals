@@ -192,7 +192,7 @@ function getProductsByCat(CatData) {
             var productsList = data.filter(Cat);
 
             function items(pro) {
-
+                
                 return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
@@ -202,7 +202,7 @@ function getProductsByCat(CatData) {
                         <div class="buy">                      
                         <p class="card-text">$${pro.price}</p>
                         <a href="javascript:void(0)"
-                        data-id="${pro.id}"
+                        data-id="${pro.key}"
                         data-imgurl="${pro.img}"
                         data-name="${pro.name}"
                         data-sku="${pro.sku}"
@@ -226,31 +226,25 @@ function getProductsByCat(CatData) {
         })
         .catch(err => console.log("Data Error"));
 };
+
+
 // RENDER ALL PRODUCTS
 function allProducts() {
     fetch(api_url)
         .then(response => response.json())
-        .then(data => {
+        .then(res => {
+            
 
-            function productsArray(pro) {
-                return `
-            <div class="product-block col-6 col-md-4">                                           
-                <div class="img-wrapper">
-                <img  src="${pro.img}" alt="${pro.name}" width="300" />
-                </div>
-                <p>${pro.name}<p>
-                <span>$${pro.price}</span> <a href="${pro.proSlug}" class="add-to-cart btn btn-primary">Add To Cart</a>
-            </div>
-        `;
-            };
-            var allProducts = data.map(productsArray)
-            $('#products').html(allProducts.join(''));
-
-
+           
         })
         .catch(err => console.log("Data Error"));
 }
 //FILTER PRODUCTS BY CATEGORY
+
+
+
+
+
 
 function getUrl() {
     var url = window.location.href.slice(-5);

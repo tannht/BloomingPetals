@@ -159,7 +159,7 @@ function getProduct(proID, selector) {
                         <a href="../${data[proID].download}" target="_blank"><i class="fa fa-download"></i> Download Brochure</a>
                     </center>
             `;
-            console.log(downloadPdf)
+
             $(selector).html(productSingle);
             $(".download").html(downloadPdf)
             $('title').append(data[proID].name + " | Blooming Petals")
@@ -179,6 +179,36 @@ function renderproduct() {
     $('#product-container').html(getProduct(Id, '#product-container'));
 }
 renderproduct();
+
+
+
+function getInfo() {
+    var fullName = $('input#fullname').val(),
+        email = $('input#email').val(),
+        vote = $('input[name="star"]:checked').val(),
+        comment = $('textarea#comment').val();
+    console.log(vote)
+    var voteArray = {
+        fullName: fullName,
+        email: email,
+        vote: vote,
+        commnet: comment,        
+    }
+    
+    
+    var render = `
+        <h1>Thanks for your vote!</h1>    
+        <p>Hi, <strong>${voteArray.fullName}</strong></p>
+        <p>You voted: <b>${voteArray.vote} star</b> </p>
+        <p>Your comment: <b>${voteArray.commnet} </b></p>
+        <p>We will moderate and show your review on our website soon!</p> 
+        `;
+    
+        $('.formblock').html(render)
+}
+
+
+
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -631,7 +661,3 @@ $tabMenu.on('click', function () {
     $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
 });
 //FORMS
-function ratingForm() {
-    $('')
-    return
-}

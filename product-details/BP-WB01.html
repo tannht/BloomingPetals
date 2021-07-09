@@ -57,42 +57,92 @@
                     </div>
                     <!-- tab2 -->
                     <div data-name="reviews" class="reviews row">
-                        <form id="ratingForm" method="GET" class="col-md-6">
-                            <div class="form-group">
-                                <label for="fullname" class="form-label">Your Name</label>
-                                <input class="form-control" id="fullname" name="fullnane" type="text" />
-                                <span class="form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Your email</label>
-                                <input class="form-control" id="email" name="email" type="email" />
-                                <span class="form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="vote" class="form-label">Your vote</label>
-                                <div class="rate">
-                                    <input type="radio" id="star5" name="rate" value="5" />
-                                    <label for="star5" title="5 stars">5 stars</label>
-                                    <input type="radio" id="star4" name="rate" value="4" />
-                                    <label for="star4" title="4 stars">4 stars</label>
-                                    <input type="radio" id="star3" name="rate" value="3" />
-                                    <label for="star3" title="3 stars">3 stars</label>
-                                    <input type="radio" id="star2" name="rate" value="2" />
-                                    <label for="star2" title="2 stars">2 stars</label>
-                                    <input type="radio" id="star1" name="rate" value="1" />
-                                    <label for="star1" title="1 star">1 star</label>
+                        <div class="formblock col-md-6">
+                            <form id="ratingForm" method="GET">
+                                <div class="form-group">
+                                    <label for="fullname" class="form-label">Your Name</label>
+                                    <input class="form-control" id="fullname" name="fullnane" type="text" />
+                                    <span class="form-message"></span>
                                 </div>
-                                <span class="form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="comment" class="form-label">Your Comment</label>
-                                <textarea class="form-control" id="comment" rows="3" cols="3"></textarea>
-                                <span class="form-message"></span>
-                            </div>
-                            <a href="javascript:void(0)" class="btn btn-primary form-submit">Send</a>
-                        </form>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Your email</label>
+                                    <input class="form-control" id="email" name="email" type="email" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vote" class="form-label">Your vote</label>
+                                    <div class="rating">
+                                        <input type="radio" name="star" id="star-1" value="1">
+                                        <input type="radio" name="star" id="star-2" value="2">
+                                        <input type="radio" name="star" id="star-3" value="3">
+                                        <input type="radio" name="star" id="star-4" value="4">
+                                        <input type="radio" name="star" id="star-5" value="5">
+                                        <label for="star-1">&#11088;</label>
+                                        <label for="star-2">&#11088;</label>
+                                        <label for="star-3">&#11088;</label>
+                                        <label for="star-4">&#11088;</label>
+                                        <label for="star-5">&#11088;</label>
+                                    </div>
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment" class="form-label">Your Comment</label>
+                                    <textarea class="form-control" id="comment" name="comment" rows="3"
+                                        cols="3"></textarea>
+                                    <span class="form-message"></span>
+                                </div>
+                                <button onclick="getInfo()" class="btn btn-primary form-submit"
+                                    type="submit">Send</button>
+                            </form>
+                        </div>
                         <div class="comments col-md-6">
                             <p class="lasted-comments">LASTED COMMENTS</p>
+                            <div class="comments-container">
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//female/female20161025795220154.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Sheppard I.</b>
+                                        <p>"Flowers was worth a fortune to my company. Flowers is the real deal!"</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161083813562042.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Diego X.</b>
+                                        <p>"This is simply unbelievable! Florist was worth a fortune to my company. It's
+                                            really wonderful."</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//female/female1021850105805.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Emilia Q.</b>
+                                        <p>"It really saves me time and effort. florist is exactly what our business has
+                                            been lacking. I will refer everyone I know."</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161086449342255.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Arden R.</b>
+                                        <p>"The best on the net!"</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161086329861541.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Mellicent P.</b>
+                                        <p>"No matter where you go, florist is the coolest, most happening thing around!
+                                            It really saves me time and effort."</p>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- tab3 -->

@@ -227,55 +227,87 @@
 //REVIEW FORM
 .reviews {
 
-    // rating star 
-    .rate {
-        height: 46px;
-        padding: 15px 10px;
-        display: inline-block;
+    //rating
+    .rating input {
+        display: none;
     }
 
-    .rate:not(:checked)>input {
-        position: absolute;
-        top: -9999px;
+    .rating {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
     }
 
-    .rate:not(:checked)>label {
-        float: right;
-        width: 1em;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-        font-size: 30px;
-        color: #ccc;
+    .rating>label {
+        display: block;
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        color: yellow;
+        /* color browser dependent */
+        font-family: sans-serif;
+        opacity: 0.33;
+        transition: opacity .2s;
+        /* OPTIONAL */
     }
 
-    .rate:not(:checked)>label:before {
-        content: '★ ';
-    }
+    #star-1:checked~label[for="star-1"],
+    #star-1:hover~label[for="star-1"],
 
-    .rate>input:checked~label {
-        color: #ffc700;
-    }
+    #star-2:checked~label[for="star-1"],
+    #star-2:checked~label[for="star-2"],
+    #star-2:hover~label[for="star-1"],
+    #star-2:hover~label[for="star-2"],
 
-    .rate:not(:checked)>label:hover,
-    .rate:not(:checked)>label:hover~label {
-        color: #deb217;
-    }
+    #star-3:checked~label[for="star-1"],
+    #star-3:checked~label[for="star-2"],
+    #star-3:checked~label[for="star-3"],
+    #star-3:hover~label[for="star-1"],
+    #star-3:hover~label[for="star-2"],
+    #star-3:hover~label[for="star-3"],
 
-    .rate>input:checked+label:hover,
-    .rate>input:checked+label:hover~label,
-    .rate>input:checked~label:hover,
-    .rate>input:checked~label:hover~label,
-    .rate>label:hover~input:checked~label {
-        color: #c59b08;
+    #star-4:checked~label[for="star-1"],
+    #star-4:checked~label[for="star-2"],
+    #star-4:checked~label[for="star-3"],
+    #star-4:checked~label[for="star-4"],
+    #star-4:hover~label[for="star-1"],
+    #star-4:hover~label[for="star-2"],
+    #star-4:hover~label[for="star-3"],
+    #star-4:hover~label[for="star-4"],
+
+    #star-5:checked~label[for="star-1"],
+    #star-5:checked~label[for="star-2"],
+    #star-5:checked~label[for="star-3"],
+    #star-5:checked~label[for="star-4"],
+    #star-5:checked~label[for="star-5"],
+    #star-5:hover~label[for="star-1"],
+    #star-5:hover~label[for="star-2"],
+    #star-5:hover~label[for="star-3"],
+    #star-5:hover~label[for="star-4"],
+    #star-5:hover~label[for="star-5"] {
+        opacity: 1;
     }
 
     .comments {
         .lasted-comments {
-            color:color(dark);
+            color: color(dark);
             padding-bottom: 10px;
             border-bottom: 1px solid color(dark);
             font-weight: 500px;
         }
     }
+
+    .customer {
+        margin-top: 15px;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+         img {
+            height: 65px;
+            width: 65px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    }
 }
+

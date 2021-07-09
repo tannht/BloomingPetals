@@ -8,6 +8,7 @@ $colors: (
   light:#f8f8f8,
   dark: #52414C,
   body-color: rgb(14, 14, 14),
+  alert: rgb(213, 11, 4),
 );
 @function color($color-name) {
   @return map-get($colors, $color-name);

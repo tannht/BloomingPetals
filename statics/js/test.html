@@ -6,9 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./test.js"></script>
-    <script src="validator.js"></script>
+    <script src="validator.js"></script>    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <form action="action.php" method="POST" id="registerForm">
+        <div class="form-group invalid">
+            <label for="fullname" class="form-label">Your Name</label>
+            <input id="fullname" name="fullname" type="text" placeholder="Your Name">
+            <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input id="email" name="email" type="text"  placeholder="Your Email">
+            <span class="form-message"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Your password</label>
+            <input id="password" name="password" type="password" placeholder="Your Password">
+            <span class="form-message"></span>
+
+        </div>
+        <div class="form-group">
+            <label for="confirm-password" class="form-label">Confirm Your Password</label>
+            <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm password">
+            <span class="form-message"></span>
+
+        </div>
+        <button type="submit" name="submit">Register</button>
+    </form> 
+    <script>
+        Validator({
+            form : '#registerForm',
+            errorSelector : '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Please enter your name!'),
+                Validator.isRequired('#email', 'Please enter your email!'),
+                Validator.isEmail('#email', 'Invalid email!'),
+                Validator.isRequired('#password', 'You must enter password!'),
+                Validator.minLength('#password', 6, 'Requires a password least 6 characters'),
+                Validator.isRequired('#confirm-password', 'You must enter confirm password!'),               
+                Validator.isConfirmed('#confirm-password', function () {
+                    return document.querySelector('#registerForm #password').value;
+                }, 'Password does not match!'),
+            ],
+            onSubmit : function (data) {
+                console.log(data)
+            }
+           
+        });
+    </script> 
+     
 </body>
 </html>

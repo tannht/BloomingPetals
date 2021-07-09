@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*//////////////DEFINE COLORS///////////////*/
 /* Fonts */
 @font-face {
@@ -329,3 +330,44 @@
   background-color: #598b2c;
   top: 0;
   left: 0; }
+
+.reviews .rate {
+  height: 46px;
+  padding: 15px 10px;
+  display: inline-block; }
+
+.reviews .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px; }
+
+.reviews .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc; }
+
+.reviews .rate:not(:checked) > label:before {
+  content: '★ '; }
+
+.reviews .rate > input:checked ~ label {
+  color: #ffc700; }
+
+.reviews .rate:not(:checked) > label:hover,
+.reviews .rate:not(:checked) > label:hover ~ label {
+  color: #deb217; }
+
+.reviews .rate > input:checked + label:hover,
+.reviews .rate > input:checked + label:hover ~ label,
+.reviews .rate > input:checked ~ label:hover,
+.reviews .rate > input:checked ~ label:hover ~ label,
+.reviews .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08; }
+
+.reviews .comments .lasted-comments {
+  color: #52414C;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #52414C;
+  font-weight: 500px; }

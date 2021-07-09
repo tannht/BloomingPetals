@@ -112,6 +112,7 @@ function getProduct(proID, selector) {
         .then(response => response.json())
         .then(res => {
             var data = Object.values(res.user)
+
             var productSingle = `
             <div class="container row">           
             <div class="product-image col-sm">
@@ -125,7 +126,7 @@ function getProduct(proID, selector) {
                     <li><a href="../index.html">Home</a>
                     <i class="fa fa-angle-right"></i>
                     </li>
-                    <li><a href="#">${data[proID].catName}</a>
+                    <li><a href="${data[proID].catSlug}">${data[proID].catName}</a>
                     <i class="fa fa-angle-right"></i>
                     </li>                    
                     <li>${data[proID].name}</li>
@@ -152,15 +153,23 @@ function getProduct(proID, selector) {
                 cart</a> 
                 <div class="social-share"></div>
                 `;
-
+            var downloadPdf = `
+                    <center>
+                        <p>You can download product's brochure here<p>
+                        <a href="../${data[proID].download}" target="_blank"><i class="fa fa-download"></i> Download Brochure</a>
+                    </center>
+            `;
+            console.log(downloadPdf)
             $(selector).html(productSingle);
+            $(".download").html(downloadPdf)
             $('title').append(data[proID].name + " | Blooming Petals")
             //add to cart event
             addItem();
             displayCart();
             socialComponent('.social-share');
-            
-            
+
+
+
         })
         .catch(err => console.log("Data Error"));
 }
@@ -174,8 +183,8 @@ renderproduct();
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); 
-  }
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 
 
@@ -192,7 +201,7 @@ function getProductsByCat(CatData) {
             var productsList = data.filter(Cat);
 
             function items(pro) {
-                
+
                 return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
@@ -233,17 +242,28 @@ function allProducts() {
     fetch(api_url)
         .then(response => response.json())
         .then(res => {
-            
 
-           
+
+
         })
         .catch(err => console.log("Data Error"));
 }
-//FILTER PRODUCTS BY CATEGORY
+//random array
+function randomArray(n) {
 
+    array = Array.from({
+        length: 50
+    }, (v, k) => k * 10);
 
+    var shuffled = array.sort(function () {
+        return .5 - Math.random()
+    });
 
+    var selected = shuffled.slice(0, n);
 
+    // $('#out').html(selected.toString());
+
+}
 
 
 function getUrl() {
@@ -610,54 +630,8 @@ $tabMenu.on('click', function () {
     $getWrapper.find($allTabs).hide();
     $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
 });
-//form
-
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-const contactForm = document.getElementById('contact-form');
-const errorElement = document.getElementById('error');
-const successMsg = document.getElementById('success-msg');
-const submitBtn = document.getElementById('submit');
-
-const validate = (e) => {
-    e.preventDefault();
-
-    if (name.value.length < 3) {
-        errorElement.innerHTML = 'Your name should be at least 3 characters long.';
-        return false;
-    }
-
-    if (!(email.value.includes('.') && (email.value.includes('@')))) {
-        errorElement.innerHTML = 'Please enter a valid email address.';
-        return false;
-    }
-
-    if (!emailIsValid(email.value)) {
-        errorElement.innerHTML = 'Please enter a valid email address.';
-        return false;
-    }
-
-    if (message.value.length < 15) {
-        errorElement.innerHTML = 'Please write a longer message.';
-        return false;
-    }
-
-    errorElement.innerHTML = '';
-    successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.';
-
-    e.preventDefault();
-    setTimeout(function () {
-        successMsg.innerHTML = '';
-        document.getElementById('contact-form').reset();
-    }, 6000);
-
-    return true;
-
+//FORMS
+function ratingForm() {
+    $('')
+    return
 }
-
-const emailIsValid = email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-};
-
-// submitBtn.addEventListener('click', validate);

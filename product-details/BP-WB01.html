@@ -34,6 +34,7 @@
                     <li class="active">Details</li>
                     <li>Reviews</li>
                     <li>How to order</li>
+                    <li>Download</li>
                 </ul>
                 <div class="tab-content ">
                     <!-- tab1 -->
@@ -55,36 +56,72 @@
                                 </ul>
                     </div>
                     <!-- tab2 -->
-                    <div data-name="reviews" class="reviews">
-                        <form id="register" method="POST">
+                    <div data-name="reviews" class="reviews row">
+                        <form id="ratingForm" method="GET" class="col-md-6">
                             <div class="form-group">
                                 <label for="fullname" class="form-label">Your Name</label>
-                                <input id="fullname" name="fullnane" type="text" />
+                                <input class="form-control" id="fullname" name="fullnane" type="text" />
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Your email</label>
-                                <input id="email" name="email" type="email" />
+                                <input class="form-control" id="email" name="email" type="email" />
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="form-label">Your password</label>
-                                <input id="password" name="password" type="password" />
+                                <label for="vote" class="form-label">Your vote</label>
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="5 stars">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="4 stars">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="3 stars">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="2 stars">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="1 star">1 star</label>
+                                </div>
                                 <span class="form-message"></span>
                             </div>
                             <div class="form-group">
-                                <label for="re-password" class="form-label">Retype password</label>
-                                <input id="re-password" name="re-password" type="password" />
+                                <label for="comment" class="form-label">Your Comment</label>
+                                <textarea class="form-control" id="comment" rows="3" cols="3"></textarea>
                                 <span class="form-message"></span>
                             </div>
-                            <button class="form-submit">Register</button>
+                            <a href="javascript:void(0)" class="btn btn-primary form-submit">Send</a>
                         </form>
+                        <div class="comments col-md-6">
+                            <p class="lasted-comments">LASTED COMMENTS</p>
+                        </div>
                     </div>
                     <!-- tab3 -->
-                    <div data-name="how-to-oder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, ad
-                        esse. Hic at officiis
-                        fuga mollitia quod.</div>
+                    <div data-name="how-to-oder">
+                        <img src="../uploads/media/how-to-order.jpg" alt="How to oder" width="100%">
+                        <p>You can choose to order as follows:</p>
+                        <b>1. Via Telephone:</b>
+                        <p>You can select your favourite flowers from the website or of your own and telephone to the
+                            hotline. Our team will folow up and give you instructions.</p>
+
+                        <b>2. Via Internet:</b>
+                        <p>You can order via email, online or directly via the website.</p>
+
+                        <b> Please contact us in case you need any further information at the following address:</b>
+
+                        <ul>
+                            <li> 351 Hoang Sa Street, Tan Dinh Ward, District 1, HCMC. </li>
+                            <li>Phone: 1900 88 99</li>
+                            <li> Email:
+                                contact@bloomingpetals.com</li>
+                        </ul>
+                    </div>
                     <!-- tab4 -->
+                    <div class="download" data-name="download">
+                        <!-- <center>
+                            <p>You can download product's brochure here<p>
+                                    <a href="#_blank"><i class="fa fa-download"></i> Download Brochure</a>
+                        </center> -->
+                    </div>
 
                 </div>
             </div>
@@ -119,21 +156,11 @@
         </div>
     </section>
     <!---end modal-->
-    
+
 </body>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="../statics/js/main.js"></script>
 <script src="../statics/js/validator.js"></script>
-<script>
-       
-    Validator({
-        form: '#register',
-        rules: [
-            Validator.isRequired('#fullname'),
-            Validator.isEmail('#email')
-        ]
-    });
 
-</script>
 </html>

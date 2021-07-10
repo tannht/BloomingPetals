@@ -695,7 +695,12 @@ section#header {
       @media (max-width: 576px) {
         #footer .footer_bottom-bar_left {
           text-align: center;
-          padding: 10px 15%; } }
+          padding: 0;
+          display: flex;
+          justify-content: center; }
+          #footer .footer_bottom-bar_left p {
+            width: 100%;
+            font-size: 0.9rem; } }
       @media (min-width: 768px) and (max-width: 1023px) {
         #footer .footer_bottom-bar_left {
           padding-right: 20%; } }
@@ -758,4 +763,5 @@ section#header {
 
 .invalid .form-message {
   color: #d50b04;
-  font-style: italic; }
+  font-style: italic;
+  font-size: 12px; }

@@ -803,7 +803,11 @@ section#header {
 
             @include mobile {
                 text-align: center;
-                padding: 10px 15%;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                p { width: 100%;
+                font-size: 0.9rem;}
             }
 
             @include tablet {
@@ -897,5 +901,6 @@ section#header {
     .form-message {
         color: color(alert);
         font-style: italic;
+        font-size: 12px;
     }
 }

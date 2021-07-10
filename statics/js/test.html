@@ -51,12 +51,8 @@
                     return document.querySelector('#registerForm #password').value;
                 }, 'Password does not match!'),
             ],
-            onSubmit : function () {
-<<<<<<< HEAD
-                alert('Bạn đã đăng nhập thành công!!!');
-=======
-                alert('Bạn đã đăng nhập thành công!');
->>>>>>> 6985f5a (no message)
+            onSubmit : function (data) {
+                console.log(data)
             }
            
         });

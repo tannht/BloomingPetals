@@ -33,10 +33,8 @@ function Validator(options) {
                 if (!isValid) {
                     isFormValid = false;
                 }
-            });
-          
-            
-            
+            });          
+                        
             if (isFormValid) {
                 if (typeof options.onSubmit === 'function') {
                     var enableInputs = formElement.querySelectorAll('[name]');

@@ -1,6 +1,9 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 ::-webkit-scrollbar {
     width: 8px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -611,7 +614,10 @@ section#header {
     width: 100%;
     height: 250px;
     justify-content: center;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
     @include mobile {
         height: 150px;
     }
@@ -634,16 +640,25 @@ section#header {
 
 .card-block {
     padding: 10px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
     .buy {
         display: flex;
         align-items: center;
         justify-content: space-between;
+<<<<<<< HEAD
+        @include mobile {
+            flex-direction: column;
+        }
+=======
 
         @include mobile {
             flex-direction: column;
         }
 
+>>>>>>> main
         .card-text {
             font-weight: 700px;
             font-size: 24px;
@@ -698,11 +713,17 @@ section#header {
     background-image: url(../images/footer-bg.svg);
     background-position: top center;
     background-size: cover;
+<<<<<<< HEAD
+    p {
+        color: white;
+    }
+=======
 
     p {
         color: white;
     }
 
+>>>>>>> main
     .footer_main {
         min-height: 300px;
         padding-top: 10vh;
@@ -840,6 +861,10 @@ section#header {
         justify-content: center;
         align-items: center;
         display: flex;
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
         img {
             width: 100%;
             transform: scale(1.2);
@@ -847,20 +872,32 @@ section#header {
     }
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 .total-count {
     background: #F98404;
     font-size: 13px;
     text-align: center;
     padding: 10px;
     color: #fff;
+<<<<<<< HEAD
+    left: 23px;
+=======
     left: 10px;
     bottom: 30px;
+>>>>>>> main
     border-radius: 50%;
     justify-content: center;
     width: 10px;
     height: 10px;
     display: flex;
+<<<<<<< HEAD
+    position: absolute;
+    top: 24px;
+    align-items: center;
+=======
     position: relative;    
     align-items: center;
 }
@@ -876,4 +913,5 @@ section#header {
         color: color(alert);
         font-style: italic;
     }
+>>>>>>> main
 }

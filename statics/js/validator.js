@@ -115,3 +115,20 @@ Validator.isConfirmed = function (selector, getConfirmValue, errorMgs) {
         }
     }
 }
+
+
+function isSubscribe(selector, msg) {
+    var formElement = document.querySelector(selector);
+    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var email = $('input[type="email"]').val();
+        
+    if (!regex.test(email)) {
+      formElement.onsubmit = (e) => {
+        e.preventDefault();
+      }
+      alert('Please enter correct email!')
+    } else {
+      alert(email + '!' + ' ' + msg)
+      formElement.reset();
+    }
+  }

@@ -42,11 +42,13 @@
         margin-top: 35vh;
 
         h1 {
+            font-family: $title-font;
             color: color(light);
             animation: fade-in-bottom 0.2s linear 0.2s both;
         }
 
-        p {
+        p { 
+            font-family: $title-font;
             color: color(light);
             animation: fade-in-bottom 0.4s linear 0.2s both;
         }
@@ -120,7 +122,7 @@
                     opacity: 0;
                     margin-top: 45%;
                     border-left: 3px solid color(light);
-                    font-family: 'SVN-Blenda Script';
+                    font-family: $title-font;
                     
                     
                 }
@@ -165,7 +167,7 @@
         color: color(primary);
         padding: 100px 0 20px 0;
         height: 300px;
-        font-family: 'SVN-Blenda Script';
+        font-family: $title-font;
         margin: 0 auto;
         max-width: 650px;
 
@@ -209,7 +211,7 @@
     h1 {
         color: color(primary);
         text-align: center;
-        font-family: 'SVN-Blenda Script';
+        font-family: $title-font;
         padding-bottom: 5vh;
     }
 }

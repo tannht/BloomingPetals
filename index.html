@@ -202,15 +202,18 @@
     <div class="box">
       <h2>Subscribe to our Newsletter</h2>
       <p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
-      <div class="form-control">
-        <input type="text" class="input" placeholder="Enter e-mail adress" />
-        <button class="btn">Subscribe</button>
-      </div>
+      <form id="subscribe" method="get">
+        <div class="form-control">
+          <input type="email" class="input" placeholder="Enter e-mail adress" />
+          <button class="btn" type="submit" onclick="isSubscribe('form', 'Thanks you for Subscribe!')">Subscribe</button>
+        </div>
+      </form>
     </div>
   </section>
   <!-- FOOTER -->
   <section include-footer="footer.html"></section>
-  <script>
+  <script>    
+
     $('.close-btn').click(() => {
       $('.mobile-menu_sidebar-menu').removeClass("show")
       $('.nav-btn').css("opacity", 1);
@@ -250,5 +253,6 @@
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
+<script src="statics/js/validator.js"></script>
 
 </html>

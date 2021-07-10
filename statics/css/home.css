@@ -222,9 +222,11 @@
   .homebanner_intro-txt {
     margin-top: 35vh; }
     .homebanner_intro-txt h1 {
+      font-family: "SVN-Blenda Script";
       color: #f8f8f8;
       animation: fade-in-bottom 0.2s linear 0.2s both; }
     .homebanner_intro-txt p {
+      font-family: "SVN-Blenda Script";
       color: #f8f8f8;
       animation: fade-in-bottom 0.4s linear 0.2s both; }
 
@@ -265,7 +267,7 @@
       opacity: 0;
       margin-top: 45%;
       border-left: 3px solid #f8f8f8;
-      font-family: 'SVN-Blenda Script'; }
+      font-family: "SVN-Blenda Script"; }
     #product-categories .product-cat .product-cat-item .over:hover {
       background: rgba(4, 100, 68, 0.481); }
       #product-categories .product-cat .product-cat-item .over:hover h4 {
@@ -291,7 +293,7 @@
     color: #598b2c;
     padding: 100px 0 20px 0;
     height: 300px;
-    font-family: 'SVN-Blenda Script';
+    font-family: "SVN-Blenda Script";
     margin: 0 auto;
     max-width: 650px; }
     #why-us .whyus_textblock span {
@@ -320,7 +322,7 @@
   .clients-logo h1 {
     color: #598b2c;
     text-align: center;
-    font-family: 'SVN-Blenda Script';
+    font-family: "SVN-Blenda Script";
     padding-bottom: 5vh; }
 
 .product-block img {

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="stylesheet" href="../statics/css/animate.css">
+    <link rel="stylesheet" href="../statics/css/style.css" />
+    <link rel="stylesheet" href="../statics/css/product-detail.css" />
+
+
+
+</head>
+
+
+<body>
+    <section include-header="header.html" id="header"></section>
+    <section class="product-main-container">
+        <div class="product-frame container-md">
+            <div id="product-container" data-id="24">
+                <!-- product-info here -->
+            </div>
+        </div>
+    </section>
+    <section class="product-detail-container container-md">
+        <div class="product-details">
+            <div class="tab-wrapper">
+                <ul class="tab-menu ">
+                    <li class="active">Details</li>
+                    <li>Reviews</li>
+                    <li>How to order</li>
+                    <li>Download</li>
+                </ul>
+                <div class="tab-content ">
+                    <!-- tab1 -->
+                    <div data-name="details">
+                        <p>Radiant, timeless, romantic. There's something so special about our red roses, especially the
+                            way the one you love will feel these beautiful blooms arrive at their door. Send a bouquet
+                            of
+                            red roses to celebrate an anniversary, or surprise them out of the blue.<p><br />
+
+                                <h4>Blooming Petals Shop Commitment</h4>
+                                <ul>
+                                    <li>Free delivery to 63 cities/provinces all over the country (even remote,
+                                        mountainous
+                                        areas and island areas).</li>
+                                    <li>Flowers are always fresh at delivery to receiver.</li>
+                                    <li>Flowers are designed upon design request and art.</li>
+                                    <li>Actual photos of product can be sent upon request.</li>
+                                    <li>Good consulting service and support for customers.</li>
+                                </ul>
+                    </div>
+                    <!-- tab2 -->
+                    <div data-name="reviews" class="reviews row">
+                        <div class="formblock col-md-6">
+                            <form id="ratingForm" method="GET">
+                                <div class="form-group">
+                                    <label for="fullname" class="form-label">Your Name</label>
+                                    <input class="form-control" id="fullname" name="fullnane" type="text" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Your email</label>
+                                    <input class="form-control" id="email" name="email" type="email" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vote" class="form-label">Your vote</label>
+                                    <div class="rating">
+                                        <input type="radio" name="star" id="star-1" value="1">
+                                        <input type="radio" name="star" id="star-2" value="2">
+                                        <input type="radio" name="star" id="star-3" value="3">
+                                        <input type="radio" name="star" id="star-4" value="4">
+                                        <input type="radio" name="star" id="star-5" value="5">
+                                        <label for="star-1">&#11088;</label>
+                                        <label for="star-2">&#11088;</label>
+                                        <label for="star-3">&#11088;</label>
+                                        <label for="star-4">&#11088;</label>
+                                        <label for="star-5">&#11088;</label>
+                                    </div>
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment" class="form-label">Your Comment</label>
+                                    <textarea class="form-control" id="comment" name="comment" rows="3"
+                                        cols="3"></textarea>
+                                    <span class="form-message"></span>
+                                </div>
+                                <button onclick="getInfo()" class="btn btn-primary form-submit"
+                                    type="submit">Send</button>
+                            </form>
+                        </div>
+                        <div class="comments col-md-6">
+                            <p class="lasted-comments">LASTED COMMENTS</p>
+                            <div class="comments-container">
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//female/female20161025795220154.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Sheppard I.</b>
+                                        <p>"Flowers was worth a fortune to my company. Flowers is the real deal!"</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161083813562042.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Diego X.</b>
+                                        <p>"This is simply unbelievable! Florist was worth a fortune to my company. It's
+                                            really wonderful."</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//female/female1021850105805.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Emilia Q.</b>
+                                        <p>"It really saves me time and effort. florist is exactly what our business has
+                                            been lacking. I will refer everyone I know."</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161086449342255.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Arden R.</b>
+                                        <p>"The best on the net!"</p>
+                                    </div>
+                                </div>
+                                <div class="customer">
+                                    <img src="https://www.coolgenerator.com/Pic/Face//male/male20161086329861541.jpg"
+                                        alt="">
+                                    <div>
+                                        <b>- Mellicent P.</b>
+                                        <p>"No matter where you go, florist is the coolest, most happening thing around!
+                                            It really saves me time and effort."</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tab3 -->
+                    <div data-name="how-to-oder">
+                        <img src="../uploads/media/how-to-order.jpg" alt="How to oder" width="100%">
+                        <p>You can choose to order as follows:</p>
+                        <b>1. Via Telephone:</b>
+                        <p>You can select your favourite flowers from the website or of your own and telephone to the
+                            hotline. Our team will folow up and give you instructions.</p>
+
+                        <b>2. Via Internet:</b>
+                        <p>You can order via email, online or directly via the website.</p>
+
+                        <b> Please contact us in case you need any further information at the following address:</b>
+
+                        <ul>
+                            <li> 351 Hoang Sa Street, Tan Dinh Ward, District 1, HCMC. </li>
+                            <li>Phone: 1900 88 99</li>
+                            <li> Email:
+                                contact@bloomingpetals.com</li>
+                        </ul>
+                    </div>
+                    <!-- tab4 -->
+                    <div class="download" data-name="download">
+                        <!-- <center>
+                            <p>You can download product's brochure here<p>
+                                    <a href="#_blank"><i class="fa fa-download"></i> Download Brochure</a>
+                        </center> -->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section include-footer="footer.html"></section>
+    <!-- Modal -->
+    <section id="modal-content-js">
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="show-cart table">
+
+                        </table>
+                        <div>Total price: $<span class="total-cart"></span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---end modal-->
+
+</body>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../statics/js/main.js"></script>
+<script src="../statics/js/validator.js"></script>
+
+</html>

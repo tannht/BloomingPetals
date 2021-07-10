@@ -865,34 +865,7 @@ section#header {
     align-items: center;
 }
 //FORM VALIDATE
-#registerForm{
-    
-    
-    max-width: 300px;
-    background: color(light);
-    padding: 40px;
-    border-radius: 15px;
-    .form-group{
-        display:flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        input {
-            height: 25px;
-            border: 0;
-            border-bottom: 1px solid color(dark);
-              
-        }
-        
-    }
-    button {
-        margin: 0 auto;
-        align-items: center;
-        border: 1px solid color(dark);
-        padding: 10px;
-        display: flex;
-        border-radius: 10px;       
-    }
-}
+
 .invalid {
     input {           
         border-color: color(alert);

@@ -43,7 +43,7 @@ function Validator(options) {
                         return values;
                     }, {});
                     options.onSubmit(formValues);
-                    console.log(formValues)
+                    
                 }
             }
             

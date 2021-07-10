@@ -168,8 +168,6 @@ function getProduct(proID, selector) {
             displayCart();
             socialComponent('.social-share');
 
-
-
         })
         .catch(err => console.log("Data Error"));
 }
@@ -192,10 +190,10 @@ function getInfo() {
         fullName: fullName,
         email: email,
         vote: vote,
-        commnet: comment,        
+        commnet: comment,
     }
-    
-    
+
+
     var render = `
         <h1>Thanks for your vote!</h1>    
         <p>Hi, <strong>${voteArray.fullName}</strong></p>
@@ -203,8 +201,8 @@ function getInfo() {
         <p>Your comment: <b>${voteArray.commnet} </b></p>
         <p>We will moderate and show your review on our website soon!</p> 
         `;
-    
-        $('.formblock').html(render)
+
+    $('.formblock').html(render)
 }
 
 

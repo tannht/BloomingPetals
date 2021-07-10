@@ -1,5 +1,9 @@
 @import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 ::-webkit-scrollbar {
     width: 8px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -89,6 +93,17 @@ section#header {
 
 }
 
+.overlay {
+    height: $banner-height;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+
+}
 
 /* NAVIGATION BAR */
 
@@ -262,6 +277,9 @@ section#header {
         }
 
         &_inner_right {
+            .icon-cart {
+                padding-top: 20px;
+            }
 
             i,
             a {
@@ -388,6 +406,9 @@ section#header {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            .cart-icon {
+                margin-top: 20px;}
+            // .total-count {}
 
             .nav-btn {
                 font-size: 28px;
@@ -417,9 +438,13 @@ section#header {
     .show {
         animation: fadeIn 0.5s;
         visibility: visible;
+        z-index: 999;
 
         .mobile-menu_sidebar-menu_content {
             left: 0;
+
+            
+
         }
 
         .close-btn {
@@ -433,7 +458,10 @@ section#header {
     &_sidebar-menu {
         position: fixed;
         background-color: rgba(83, 83, 83, 0.5);
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         visibility: hidden;
 
         &_content {
@@ -444,6 +472,7 @@ section#header {
             bottom: 0;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
+            padding-top: 55px;
             transition: all 0.5s;
             left: -75vw;
             height: 100vh;
@@ -454,6 +483,19 @@ section#header {
                 box-shadow: none;
                 background: transparent;
 
+            }
+            .category {
+                text-align: center;
+                font-weight: 700;
+                background: color(primary);
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 20;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
 
             .search {
@@ -572,6 +614,10 @@ section#header {
     width: 100%;
     height: 250px;
     justify-content: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     @include mobile {
         height: 150px;
     }
@@ -594,13 +640,25 @@ section#header {
 
 .card-block {
     padding: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     .buy {
         display: flex;
         align-items: center;
         justify-content: space-between;
+<<<<<<< HEAD
         @include mobile {
             flex-direction: column;
         }
+=======
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+>>>>>>> main
         .card-text {
             font-weight: 700px;
             font-size: 24px;
@@ -655,9 +713,17 @@ section#header {
     background-image: url(../images/footer-bg.svg);
     background-position: top center;
     background-size: cover;
+<<<<<<< HEAD
     p {
         color: white;
     }
+=======
+
+    p {
+        color: white;
+    }
+
+>>>>>>> main
     .footer_main {
         min-height: 300px;
         padding-top: 10vh;
@@ -778,6 +844,7 @@ section#header {
                 background: color(light);
                 transition: all 0.5s 0s ease-out;
             }
+            
         }
 
     }
@@ -794,7 +861,10 @@ section#header {
         justify-content: center;
         align-items: center;
         display: flex;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
         img {
             width: 100%;
             transform: scale(1.2);
@@ -802,19 +872,73 @@ section#header {
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 .total-count {
     background: #F98404;
     font-size: 13px;
     text-align: center;
     padding: 10px;
     color: #fff;
+<<<<<<< HEAD
     left: 23px;
+=======
+    left: 10px;
+    bottom: 30px;
+>>>>>>> main
     border-radius: 50%;
     justify-content: center;
     width: 10px;
     height: 10px;
     display: flex;
+<<<<<<< HEAD
     position: absolute;
     top: 24px;
     align-items: center;
+=======
+    position: relative;    
+    align-items: center;
+}
+//FORM VALIDATE
+#registerForm{
+    
+    
+    max-width: 300px;
+    background: color(light);
+    padding: 40px;
+    border-radius: 15px;
+    .form-group{
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        input {
+            height: 25px;
+            border: 0;
+            border-bottom: 1px solid color(dark);
+              
+        }
+        
+    }
+    button {
+        margin: 0 auto;
+        align-items: center;
+        border: 1px solid color(dark);
+        padding: 10px;
+        display: flex;
+        border-radius: 10px;       
+    }
+}
+.invalid {
+    input {           
+        border-color: color(alert);
+        border-bottom:color(alert);
+       
+    }
+    .form-message {
+        color: color(alert);
+        font-style: italic;
+    }
+>>>>>>> main
 }

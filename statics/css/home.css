@@ -193,7 +193,7 @@
 
 /* END */
 .homebanner {
-  background-image: url(/uploads/media/banner-bg-3.jpg);
+  background-image: url(../../uploads/media/banner-bg-3.jpg);
   height: 100vh;
   box-sizing: content-box;
   background-color: #f8f8f8;
@@ -228,25 +228,53 @@
       color: #f8f8f8;
       animation: fade-in-bottom 0.4s linear 0.2s both; }
 
-#product-categories .product-cat .product-cat-item {
-  height: 250px;
-  align-items: center;
-  display: flex; }
-
-#product-categories .product-cat .cat-1 {
-  background-image: url(/uploads/media/cat-1.jpg);
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-#product-categories .product-cat .cat-2 {
-  background-image: url(/uploads/media/cat-2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-#product-categories .product-cat .cat-3 {
-  background-image: url(/uploads/media/cat-3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat; }
+#product-categories .product-cat {
+  margin: 0 auto; }
+  #product-categories .product-cat .product-cat-item {
+    height: 350px;
+    align-items: center;
+    display: flex; }
+  #product-categories .product-cat .cat-1 {
+    background-image: url(../../uploads/media/cat-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  #product-categories .product-cat .cat-2 {
+    background-image: url(../../uploads/media/cat-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  #product-categories .product-cat .cat-3 {
+    background-image: url(../../uploads/media/cat-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  #product-categories .product-cat .product-cat-item .over {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center; }
+    #product-categories .product-cat .product-cat-item .over h4 {
+      animation: fadeInUp all 1s;
+      color: #f8f8f8;
+      margin: auto;
+      opacity: 0;
+      margin-top: 45%;
+      border-left: 3px solid #f8f8f8;
+      font-family: 'SVN-Blenda Script'; }
+    #product-categories .product-cat .product-cat-item .over:hover {
+      background: rgba(4, 100, 68, 0.481); }
+      #product-categories .product-cat .product-cat-item .over:hover h4 {
+        opacity: 1;
+        margin-top: 40%;
+        padding-bottom: 10px;
+        border-left: 0;
+        border-bottom: 3px solid #f8f8f8;
+        transition: all 0.5s ease-in-out; }
 
 #why-us {
   background-image: url(../images/section-bg.svg);

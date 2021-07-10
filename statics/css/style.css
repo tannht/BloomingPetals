@@ -255,6 +255,16 @@ section#header {
   display: flex;
   justify-content: center; }
 
+.overlay {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0; }
+
 /* NAVIGATION BAR */
 /* --- SECTION NORMAL MENU --- */
 /* NAVIGATION BAR WHEN SCROLL */
@@ -355,6 +365,12 @@ section#header {
   color: #f8f8f8 !important; }
   .light-menu .navibar_inner_center a:hover {
     color: #8bc954 !important; }
+<<<<<<< HEAD
+=======
+
+.light-menu .navibar_inner_right .icon-cart {
+  padding-top: 20px; }
+>>>>>>> main
 
 .light-menu .navibar_inner_right i,
 .light-menu .navibar_inner_right a {
@@ -438,6 +454,8 @@ section#header {
       display: flex;
       justify-content: space-evenly;
       align-items: center; }
+      .mobile-menu_inner_right .cart-icon {
+        margin-top: 20px; }
       .mobile-menu_inner_right .nav-btn {
         font-size: 28px;
         color: #598b2c;
@@ -451,7 +469,8 @@ section#header {
     transition: all 0.5s 0s ease-out; }
   .mobile-menu .show {
     animation: fadeIn 0.5s;
-    visibility: visible; }
+    visibility: visible;
+    z-index: 999; }
     .mobile-menu .show .mobile-menu_sidebar-menu_content {
       left: 0; }
     .mobile-menu .show .close-btn {
@@ -459,7 +478,10 @@ section#header {
   .mobile-menu_sidebar-menu {
     position: fixed;
     background-color: rgba(83, 83, 83, 0.5);
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     visibility: hidden; }
     .mobile-menu_sidebar-menu_content {
       position: absolute;
@@ -468,6 +490,7 @@ section#header {
       bottom: 0;
       background: rgba(255, 255, 255, 0.9);
       padding: 20px;
+      padding-top: 55px;
       transition: all 0.5s;
       left: -75vw;
       height: 100vh;
@@ -476,6 +499,18 @@ section#header {
       .mobile-menu_sidebar-menu_content::-webkit-scrollbar {
         box-shadow: none;
         background: transparent; }
+      .mobile-menu_sidebar-menu_content .category {
+        text-align: center;
+        font-weight: 700;
+        background: #598b2c;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 20;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px; }
       .mobile-menu_sidebar-menu_content .search {
         margin-bottom: 15px; }
         .mobile-menu_sidebar-menu_content .search input {
@@ -703,12 +738,51 @@ section#header {
   text-align: center;
   padding: 10px;
   color: #fff;
+<<<<<<< HEAD
   left: 23px;
+=======
+  left: 10px;
+  bottom: 30px;
+>>>>>>> main
   border-radius: 50%;
   justify-content: center;
   width: 10px;
   height: 10px;
   display: flex;
+<<<<<<< HEAD
   position: absolute;
   top: 24px;
   align-items: center; }
+=======
+  position: relative;
+  align-items: center; }
+
+#registerForm {
+  max-width: 300px;
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 15px; }
+  #registerForm .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; }
+    #registerForm .form-group input {
+      height: 25px;
+      border: 0;
+      border-bottom: 1px solid #52414C; }
+  #registerForm button {
+    margin: 0 auto;
+    align-items: center;
+    border: 1px solid #52414C;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px; }
+
+.invalid input {
+  border-color: #d50b04;
+  border-bottom: #d50b04; }
+
+.invalid .form-message {
+  color: #d50b04;
+  font-style: italic; }
+>>>>>>> main

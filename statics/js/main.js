@@ -108,6 +108,29 @@ var api_url = 'https://script.google.com/macros/s/AKfycbzREWIKw-FELGuiFFmfRh4T0R
 //     .catch(err => console.log("API Error"));
 function getProduct(proID, selector) {
 
+<<<<<<< HEAD
+// GET PRODUCT BY ID  
+function getProduct(proID, selector) {
+    fetch(api_ulr)
+        .then(response => response.json())
+        .then(data => {
+
+            var productSingle = `
+            <div class="container row">           
+            <div class="product-image col-sm-6">
+            <div class="img-frame">
+                <img id="${data[proID].id}" src="../${data[proID].img}" alt="${data[proID].name}">
+            </div>
+        </div>
+        <div class="right-content col-sm-6">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="../index.html">Home</a>></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a>></li>
+                    <li><a href="#">${data[proID].catName}</a></li>
+=======
     fetch(api_url)
         .then(response => response.json())
         .then(res => {
@@ -130,11 +153,14 @@ function getProduct(proID, selector) {
                     <i class="fa fa-angle-right"></i>
                     </li>                    
                     <li>${data[proID].name}</li>
+>>>>>>> main
                 </ul>
             </div>
             <div class="product-info">
                 <h1 class="price">$${data[proID].price}</h1>
                 <h2 class="product-title">${data[proID].name}</h2>
+<<<<<<< HEAD
+=======
                 <div class="rating-group">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -144,12 +170,23 @@ function getProduct(proID, selector) {
                 (<span>${getRandomInt(10, 50)} reviews</span>)
                 </div>
         
+>>>>>>> main
                 <ul class="more-info">
                     <li class="sku">SKU: <b>${data[proID].sku}</b></li>
                     <li class="category">Category: <a href="${data[proID].catSlug}">${data[proID].catName}</a></li>
                 </ul>
                 
                 <a href="javascript:void(0)" data-id="${data[proID].id}" data-imgurl="../${data[proID].img}" data-name="${data[proID].name}" data-sku="${data[proID].sku}" data-price="${data[proID].price}" class="add-to-cart btn btn-primary">Add to
+<<<<<<< HEAD
+                cart</a> `;
+
+            $(selector).html(productSingle);
+            $('title').append(data[proID].name + " | Blooming Petals")
+            //add to cart event
+            addItem();
+
+            displayCart();
+=======
                 cart</a> 
                 <div class="social-share"></div>
                 `;
@@ -168,6 +205,12 @@ function getProduct(proID, selector) {
             displayCart();
             socialComponent('.social-share');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+
+>>>>>>> f4c3f97e6931314ca399a38526bf2d13610e632e
         })
         .catch(err => console.log("Data Error"));
 }
@@ -220,8 +263,13 @@ function getRandomInt(min, max) {
 function getProductsByCat(CatData) {
     fetch(api_url)
         .then(response => response.json())
+<<<<<<< HEAD
+        .then(data => {
+            // FILTER PRODUCTS BY CATEGORY
+=======
         .then(res => {
             var data = Object.values(res.user)
+>>>>>>> main
 
             function Cat(products) {
                 return products.catID == CatData;
@@ -233,6 +281,16 @@ function getProductsByCat(CatData) {
                 return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
+<<<<<<< HEAD
+                    <img src="../${pro.img}" alt="${pro.name}"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">${pro.name}</h4>
+                        <div class="buy">                      
+                        <p class="card-text">$${pro.price}</p>
+                        <a href="javascript:void(0)"
+                        data-id="${pro.id}"
+                        data-imgurl="../${pro.img}"
+=======
                     <img src="${pro.img}" alt="${pro.name}"></div>
                     <div class="card-block">
                         <a href="${pro.proSlug}"><h5 class="card-title">${pro.name}</h5>
@@ -241,6 +299,7 @@ function getProductsByCat(CatData) {
                         <a href="javascript:void(0)"
                         data-id="${pro.key}"
                         data-imgurl="${pro.img}"
+>>>>>>> main
                         data-name="${pro.name}"
                         data-sku="${pro.sku}"
                         data-price="${pro.price}"
@@ -269,8 +328,26 @@ function getProductsByCat(CatData) {
 function allProducts() {
     fetch(api_url)
         .then(response => response.json())
+<<<<<<< HEAD
+        .then(data => {
+
+            function productsArray(pro) {
+                return `
+            <div class="product-block col-6 col-md-4">                                           
+                <div class="img-wrapper">
+                <img  src="../${pro.img}" alt="${pro.name}" width="300" />
+                </div>
+                <p>${pro.name}<p>
+                <span>$${pro.price}</span> <a href="${pro.proSlug}" class="add-to-cart btn btn-primary">Add To Cart</a>
+            </div>
+        `;
+            };
+            var allProducts = data.map(productsArray)
+            $('#products').html(allProducts.join(''));
+=======
         .then(res => {
 
+>>>>>>> main
 
 
         })
@@ -293,7 +370,10 @@ function randomArray(n) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 function getUrl() {
     var url = window.location.href.slice(-5);
     if (url == ".html") {
@@ -338,13 +418,21 @@ function ratingGroup(selector) {
 <input class="rating__input" name="rating" id="rating-2" value="2" type="radio">
 <label aria-label="3 stars" class="rating__label" for="rating-3"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
+<<<<<<< HEAD
+<input class="rating__input" name="rating" id="rating-3" value="3" type="radio" checked>
+=======
 <input class="rating__input" name="rating" id="rating-3" value="3" type="radio" >
+>>>>>>> main
 <label aria-label="4 stars" class="rating__label" for="rating-4"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
 <input class="rating__input" name="rating" id="rating-4" value="4" type="radio">
 <label aria-label="5 stars" class="rating__label" for="rating-5"><i
         class="rating__icon rating__icon--star fa fa-star"></i></label>
+<<<<<<< HEAD
+<input class="rating__input" name="rating" id="rating-5" value="5" type="radio">
+=======
 <input class="rating__input" name="rating" id="rating-5" value="5" type="radio" checked>
+>>>>>>> main
     `;
     $(selector).html(htmlRating);
 }
@@ -611,8 +699,13 @@ function modal() {
     for (var i in cartArray) {
         output += "<tr  class='incart-itemts'>" +
             "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
+<<<<<<< HEAD
+            "<td>" + cartArray[i].name + "</td>" +
+            "<td>SKU: " + cartArray[i].sku + "</td>" +
+=======
             "<td><ul>" + "<li>" + cartArray[i].name + "</li>" +
             +"<li>SKU: " + cartArray[i].sku + "</li>" + "</ul></td>" +
+>>>>>>> main
             "<td>$" + cartArray[i].price + "</td>" +
             "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
             "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
@@ -626,6 +719,60 @@ function modal() {
     $('.total-cart').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
 }
+<<<<<<< HEAD
+
+ //form
+
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const contactForm = document.getElementById('contact-form');
+const errorElement = document.getElementById('error');
+const successMsg = document.getElementById('success-msg');
+const submitBtn = document.getElementById('submit');
+  
+const validate = (e) => {
+  e.preventDefault();
+ 
+  if (name.value.length < 3) {
+    errorElement.innerHTML = 'Your name should be at least 3 characters long.';
+    return false;
+  } 
+  
+  if (!(email.value.includes('.') && (email.value.includes('@')))) {
+    errorElement.innerHTML = 'Please enter a valid email address.';
+    return false;
+  } 
+
+  if (!emailIsValid(email.value)) {
+    errorElement.innerHTML = 'Please enter a valid email address.';
+    return false;
+  }
+
+  if (message.value.length < 15) {
+    errorElement.innerHTML = 'Please write a longer message.';
+    return false;
+  }
+
+  errorElement.innerHTML = '';
+  successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.'; 
+
+  e.preventDefault();
+  setTimeout(function () {
+    successMsg.innerHTML = '';
+    document.getElementById('contact-form').reset();
+  }, 6000);
+
+  return true;
+
+}
+
+const emailIsValid = email => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+submitBtn.addEventListener('click', validate);
+=======
 //product-detail-tabs
 var $wrapper = $('.tab-wrapper'),
     $allTabs = $wrapper.find('.tab-content > div'),
@@ -658,4 +805,9 @@ $tabMenu.on('click', function () {
     $getWrapper.find($allTabs).hide();
     $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
 });
+<<<<<<< HEAD
 //FORMS
+=======
+//FORMS
+>>>>>>> main
+>>>>>>> f4c3f97e6931314ca399a38526bf2d13610e632e

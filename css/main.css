@@ -1,37 +1,7 @@
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-  font-family: Ubuntu-Regular;
-  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
-}
-
-@font-face {
-  font-family: Ubuntu-Bold;
-  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
-}
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  font-family: Ubuntu-Regular, sans-serif;
-}
 
 /*---------------------------------------------*/
 a {
-  font-family: Ubuntu-Regular;
+ 
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
@@ -48,32 +18,20 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #fff;
+  color: brown;
 }
 
 /*---------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px;
-}
+
 
 p {
-  font-family: Ubuntu-Regular;
+  
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
   margin: 0px;
 }
 
-ul,
-li {
-  margin: 0px;
-  list-style-type: none;
-}
 
 
 /*---------------------------------------------*/
@@ -264,7 +222,7 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: Ubuntu-Bold;
+  
   font-size: 28px;
   color: #fff;
   line-height: 1.2;
@@ -282,11 +240,10 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 1px solid #e6e6e6;
-  padding: 10px 0;
 }
 
 .input100 {
-  font-family: Ubuntu-Regular;
+  
   font-size: 20px;
   color: #555555;
   line-height: 1.2;
@@ -304,13 +261,9 @@ iframe {
 
 /*---------------------------------------------*/
 .focus-input100 {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+  color: red;
+  padding-left: 80px;
+  
 }
 
 .focus-input100::before {
@@ -342,7 +295,7 @@ iframe {
   display: block;
   width: 100%;
   position: absolute;
-  top: 22px;
+  top: 16px;
   left: 35px;
 
 
@@ -393,7 +346,7 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Ubuntu-Bold;
+  
   font-size: 18px;
   color: #fff;
   line-height: 1.2;
@@ -478,7 +431,7 @@ iframe {
   right: 10px;
   pointer-events: none;
 
-  font-family: Ubuntu-Bold;
+  
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;

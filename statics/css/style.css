@@ -745,27 +745,6 @@ section#header {
   position: relative;
   align-items: center; }
 
-#registerForm {
-  max-width: 300px;
-  background: #f8f8f8;
-  padding: 40px;
-  border-radius: 15px; }
-  #registerForm .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px; }
-    #registerForm .form-group input {
-      height: 25px;
-      border: 0;
-      border-bottom: 1px solid #52414C; }
-  #registerForm button {
-    margin: 0 auto;
-    align-items: center;
-    border: 1px solid #52414C;
-    padding: 10px;
-    display: flex;
-    border-radius: 10px; }
-
 .invalid input {
   border-color: #d50b04;
   border-bottom: #d50b04; }

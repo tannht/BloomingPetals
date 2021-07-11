@@ -2,60 +2,55 @@
 <html lang="en">
 
 <head>
+	<title>Register</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
 	<link rel="stylesheet" href="statics/css/animate.css">
 	<link rel="stylesheet" href="statics/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<title>Register</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-
-
-
+	<link rel="stylesheet" href="statics/css/account.css">
+	<link rel="stylesheet" type="text/css" href="statics/fonts/linearicon.css">
 </head>
-
 <body>
 	<section include-header="header.html" class="light-menu" id="header"></section>
 	<br>
 
 	<div class="limiter">
 		<div class="container-login100" style="background-image:url('uploads/media/contact-bg.jpg');">
-			<div class="wrap-login100 p-t-30 p-b-50">
-				<span class="login100-form-title p-b-41">
+			<div class="wrap-login100 ">
+				<span class="login100-form-title ">
 					Sign up
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5">
+				<form class="login100-form " id="registerForm">
 
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="username" placeholder="User name">
+					<div class="wrap-input100 form-group">
+						<input class="input100" type="text" id="username" name="username" placeholder="User name">
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
+					<div class="wrap-input100 form-group">
 						<input class="input100" type="email" id="email" name="email" placeholder="Email" required>
 						<span class="focus-input100" data-placeholder="&#xe818;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+					<div class="wrap-input100 form-group">
+						<input class="input100" type="password" id="pass" name="pass" placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="repass" placeholder="Confirm password">
+					<div class="wrap-input100 form-group">
+						<input class="input100" type="password" id="repass" name="repass" placeholder="Confirm password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
-
-
-					<div class="container-login100-form-btn m-t-32">
+					<div class="container-login100-form-btn ">
 						<button class="login100-form-btn">
 							Regiser
-						</button>
-						<div>Already Member?<a href="login.html">Login here!</a></div>
+						</button><br />
+						<span>Already Member? <a href="login.html">Login here!</a></span>
 					</div>
+					
 				</form>
 			</div>
 		</div>
@@ -64,26 +59,32 @@
 	<!-- FOOTER -->
 	<section include-footer="footer.html"></section>
 </body>
-<script src="js/main.js"></script>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
-<script src="vendor/countdowntime/countdowntime.js"></script>
-<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="statics/js/validator.js"></script>
 <script>
 	Validator({
-		form: '#loginForm',
-		errorSelector: '.focus-input100',
+		form : '#registerForm',
+		errorSelector : '.focus-input100',
 		rules: [
 			Validator.isRequired('#username', 'Please enter your username!'),
-			Validator.isRequired('#pass', 'Please enter your password!'),
-
+			Validator.isRequired('#email', 'Please enter your email!'),
+			Validator.isEmail('#email', 'Invalid email!'),
+			Validator.isRequired('#pass', 'You must enter password!'),
+			Validator.minLength('#pass', 6, 'Requires a password least 6 characters'),
+			Validator.isRequired('#repass', 'You must enter confirm password!'),               
+			Validator.isConfirmed('#repass', function () {
+				return document.querySelector('#registerForm #pass').value;
+			}, 'Password does not match!'),
 		],
-		onSubmit: function (data) {
-			alert(`Hi! ${data.username}, you has login sucess!`)
+		onSubmit : function (data) {
+			var formElement = $('#registerForm')
+			var notifyMsg = `<h1>REGISTER SUCESSS!</h1> <Please verifiy your email ${data.email} before login!`;
+			formElement.html(notifyMsg)
 		}
-
+	   
 	});
-</script>
+</script> 
 
 </html>

@@ -96,6 +96,17 @@ function closeMenu() {
     $('.nav-btn').css("opacity", 1);
 }
 
+function addCommas(nStr) {
+    nStr += '';
+    var x = nStr.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
 // Declare api urls
 var api_url = 'https://script.google.com/macros/s/AKfycbzREWIKw-FELGuiFFmfRh4T0RRqbDfPjBbKhcT6rsGatjogUUVAysDKjsW5B6XeT5zW0A/exec';
 // var api_url = 'https://morizone.com/products-data.json';
@@ -535,7 +546,7 @@ function displayCart() {
             "</tr>";
     }
     $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-cart').html(addCommas(shoppingCart.totalCart()));
     $('.total-count').html(shoppingCart.totalCount());
 }
 
@@ -582,29 +593,29 @@ displayCart();
 
 function modal() {
     var htmlModel = `
-    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-       <div class="modal-content">
-           <div class="modal-header">
-               <h5 class="modal-title" id="ModalLabel">Cart</h5>
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                   <span aria-hidden="true">&times;</span>
-               </button>
-           </div>
-           <div class="modal-body">
-               <table class="show-cart table">
-    
-               </table>
-               <div>Total price: $<span class="total-cart"></span></div>
-           </div>
-           <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               <a href="../checkout.html" class="btn btn-primary">Check Out</a>
-           </div>
-       </div>
-    </div>
-    </div>`;
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+        
+                </table>
+                <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="../checkout.html" class="btn btn-primary">Check Out</a>
+            </div>
+        </div>
+        </div>
+        </div>`;
     $('#modal-content-js').html(htmlModel);
 }
 var cartArray = shoppingCart.listCart();
@@ -620,31 +631,36 @@ for (var i in cartArray) {
         "<button data-id='" + cartArray[i].id + "' class='plus-item btn btn-primary input-group-addon' value='" + cartArray[i].count + "' >+</button></div></td>" +
         "<td><button data-id='" + cartArray[i].id + "' class='delete-item btn btn-danger' value='" + cartArray[i].count + "' >X</button></td>" +
         " = " +
-        "<td>$" + cartArray[i].total + "</td>" +
+        `<td>$${addCommas(cartArray[i].total)}</td>` +
         "</tr>";
 }
 $('.show-cart').html(output);
-$('.total-cart').html(shoppingCart.totalCart());
+$('.total-cart').html(addCommas(shoppingCart.totalCart()));
 $('.total-count').html(shoppingCart.totalCount());
+$('.total-price').html(`<h3>$${addCommas(shoppingCart.totalCart())}</h3>`);
 
 //CHECK OUT PRODUCT LIST
-function cartList(pro) {
-    {
-        return `<tr class="cart-item">
-  <td class="product-name">
-    ${pro.name}
-    <span><strong class="product-quantity">
-        ${pro.count}
-      </strong></span>
-  </td>
-  <td class="product-total">
-    <span>$${pro.total}</span>
-  </td>
-</tr>`;
+function getCheckOutList() {
+    function cartList(pro) {
+        {
+            return `<tr class="cart-item">
+            <td class="product-name">
+                ${pro.name}
+                <span><strong class="product-quantity">
+                    ${pro.count}
+                </strong></span>
+            </td>
+            <td class="product-total">
+                <span>$${addCommas(pro.total)}</span>
+            </td>
+            </tr>`;
+        }
     }
+    var results = cartArray.map(cartList);
+    $('.items').html(results)
 }
-var results = cartArray.map(cartList);
-$('.items').html(results)
+getCheckOutList();
+
 //product-detail-tabs
 var $wrapper = $('.tab-wrapper'),
     $allTabs = $wrapper.find('.tab-content > div'),

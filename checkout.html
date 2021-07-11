@@ -31,18 +31,48 @@
       getUrl();
     });
   </script>
-<section id="products-main-content">
-    <div class="checkout-body container-md">
-      <div class="shipping-info col-md-6 col-sm-12"></div>
+  <section id="products-main-content">
+
+    <form id="checkout-form" class="row container-md">
+      <div class="shipping-info col-md-6 col-sm-12">
+        <!-- SHIPPING INFO -->
+        <h3>SHIPPING INFO</h3>
+        <div class="form-group">
+          <label for="fullname" class="form-label">Your Name</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Your Name">
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Your Email</label>
+          <input id="email" name="email" type="text" placeholder="Your Email">
+          <span class="form-message"></span>
+        </div>
+        <!-- LIST PRODUCT IN CART -->
+      </div>
       <div class="cart-info col-md-6 col-sm-12">
         <table class="list-items">
-          <thead></thead>
+          <thead>
+            <tr>
+              <th>
+                <h3>Products</h3>
+              </th>
+              <th>
+                <h3>Price</h3>
+              </th>
+            </tr>
+          </thead>
           <tbody class="items"> </tbody>
-          <tfoot class="total-price"></tfoot>
+          <tfoot>
+            <tr>
+              <th>
+                <h3>Total</h3>
+              </th>
+              <th class="total-price"></th>
         </table>
       </div>
-    </div>
-</section>
+    </form>
+
+  </section>
   <!-- Modal -->
   <section id="modal-content-js">
     <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">

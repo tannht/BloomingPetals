@@ -606,26 +606,45 @@ function modal() {
     </div>
     </div>`;
     $('#modal-content-js').html(htmlModel);
-    var cartArray = shoppingCart.listCart();
-    var output = "";
-    for (var i in cartArray) {
-        output += "<tr  class='incart-itemts'>" +
-            "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
-            "<td><ul>" + "<li>" + cartArray[i].name + "</li>" +
-            +"<li>SKU: " + cartArray[i].sku + "</li>" + "</ul></td>" +
-            "<td>$" + cartArray[i].price + "</td>" +
-            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
-            "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
-            "<button data-id='" + cartArray[i].id + "' class='plus-item btn btn-primary input-group-addon' value='" + cartArray[i].count + "' >+</button></div></td>" +
-            "<td><button data-id='" + cartArray[i].id + "' class='delete-item btn btn-danger' value='" + cartArray[i].count + "' >X</button></td>" +
-            " = " +
-            "<td>$" + cartArray[i].total + "</td>" +
-            "</tr>";
-    }
-    $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
-    $('.total-count').html(shoppingCart.totalCount());
 }
+var cartArray = shoppingCart.listCart();
+var output = "";
+for (var i in cartArray) {
+    output += "<tr  class='incart-itemts'>" +
+        "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
+        "<td><ul>" + "<li>" + cartArray[i].name + "</li>" +
+        +"<li>SKU: " + cartArray[i].sku + "</li>" + "</ul></td>" +
+        "<td>$" + cartArray[i].price + "</td>" +
+        "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>-</button>" +
+        "<input type='number' class='item-count form-control' data-id='" + cartArray[i].id + "' value='" + cartArray[i].count + "'>" +
+        "<button data-id='" + cartArray[i].id + "' class='plus-item btn btn-primary input-group-addon' value='" + cartArray[i].count + "' >+</button></div></td>" +
+        "<td><button data-id='" + cartArray[i].id + "' class='delete-item btn btn-danger' value='" + cartArray[i].count + "' >X</button></td>" +
+        " = " +
+        "<td>$" + cartArray[i].total + "</td>" +
+        "</tr>";
+}
+$('.show-cart').html(output);
+$('.total-cart').html(shoppingCart.totalCart());
+$('.total-count').html(shoppingCart.totalCount());
+
+//CHECK OUT PRODUCT LIST
+function cartList(pro) {
+    {
+        return `<tr class="cart-item">
+  <td class="product-name">
+    ${pro.name}
+    <span><strong class="product-quantity">
+        ${pro.count}
+      </strong></span>
+  </td>
+  <td class="product-total">
+    <span>$${pro.total}</span>
+  </td>
+</tr>`;
+    }
+}
+var results = cartArray.map(cartList);
+$('.items').html(results)
 //product-detail-tabs
 var $wrapper = $('.tab-wrapper'),
     $allTabs = $wrapper.find('.tab-content > div'),
@@ -658,4 +677,6 @@ $tabMenu.on('click', function () {
     $getWrapper.find($allTabs).hide();
     $getWrapper.find($allTabs).filter('[data-tab=' + dataTab + ']').show();
 });
+
+
 //FORMS

@@ -203,15 +203,16 @@
       <form id="subscribe" method="get">
         <div class="form-control">
           <input type="email" class="input" placeholder="Enter e-mail adress" />
-          <button class="btn" type="submit" onclick="isSubscribe('form', 'Thank you for Subscribing!')">Subscribe</button>
+          <button class="btn" type="submit"
+            onclick="isSubscribe('form', 'Thank you for Subscribing!')">Subscribe</button>
         </div>
       </form>
     </div>
   </section>
   <!-- FOOTER -->
   <section include-footer="footer.html"></section>
-  <script>    
-
+  <script>
+    displayCart();
     $('.close-btn').click(() => {
       $('.mobile-menu_sidebar-menu').removeClass("show")
       $('.nav-btn').css("opacity", 1);

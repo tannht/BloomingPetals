@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | Blooming Petals</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
   <link rel="stylesheet" href="statics/css/animate.css">
   <link rel="stylesheet" href="statics/css/style.css" />
@@ -21,11 +21,7 @@
   <div class="pagetitlebanner">
     <div class="overlay">
       <div class="pagetitlebanner_intro-txt">
-        <h1>OUR PRODUCTS</h1>
-        <p>
-          We specialize in providing fresh flowers, wedding flowers, event
-          flowers with a variety of designs
-        </p>
+        <h1>CHECK OUT</h1>
       </div>
     </div>
   </div>
@@ -35,16 +31,18 @@
       getUrl();
     });
   </script>
-
-  <section id="products-main-content">
-    <div class="shoppingcart-body container-md">
-      <table class="show-cart table">
-
-      </table>
-      <div>Total price: $<span class="total-cart"></span></div>
+<section id="products-main-content">
+    <div class="checkout-body container-md">
+      <div class="shipping-info col-md-6 col-sm-12"></div>
+      <div class="cart-info col-md-6 col-sm-12">
+        <table class="list-items">
+          <thead></thead>
+          <tbody class="items"> </tbody>
+          <tfoot class="total-price"></tfoot>
+        </table>
+      </div>
     </div>
-
-  </section>
+</section>
   <!-- Modal -->
   <section id="modal-content-js">
     <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">

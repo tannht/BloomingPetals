@@ -98,6 +98,15 @@ Validator.isEmail = function (selector, errorMgs) {
 
     };
 }
+Validator.isPhone = function (selector, errorMgs) {
+    return {
+        selector : selector,
+        test: (value) => {
+            var phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+            return phoneRegex.test(value) ? undefined : errorMgs || `Error!`;
+        }
+    }
+}
 Validator.minLength = function (selector, min, errorMgs) {
     return {
         selector: selector,
@@ -119,8 +128,8 @@ Validator.isConfirmed = function (selector, getConfirmValue, errorMgs) {
 
 function isSubscribe(selector, msg) {
     var formElement = document.querySelector(selector);
-    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var email = $('input[type="email"]').val();
+    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;   
+    var email = $('input[type="email"]').val();   
         
     if (!regex.test(email)) {
       formElement.onsubmit = (e) => {
@@ -131,4 +140,5 @@ function isSubscribe(selector, msg) {
       alert(email + '!' + ' ' + msg)
       formElement.reset();
     }
+
   }

@@ -251,6 +251,9 @@ a {
 .txt-dark, .txt-dark a {
   color: #52414C; }
 
+select {
+  appearance: none; }
+
 section#header {
   display: flex;
   justify-content: center; }

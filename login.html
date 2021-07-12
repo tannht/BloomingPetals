@@ -101,6 +101,9 @@
             ],
             onSubmit : function (data) {
 				alert (`Hi! ${data.username}, you has login sucess!`)
+				setTimeout(function () {
+				window.location = "all-products.html";
+			}, 2000);
             }
            
         });

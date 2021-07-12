@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="statics/css/account.css">
 	<link rel="stylesheet" type="text/css" href="statics/fonts/linearicon.css">
 </head>
+
 <body>
 	<section include-header="header.html" class="light-menu" id="header"></section>
 	<br>
@@ -40,7 +41,8 @@
 					</div>
 
 					<div class="wrap-input100 form-group">
-						<input class="input100" type="password" id="repass" name="repass" placeholder="Confirm password">
+						<input class="input100" type="password" id="repass" name="repass"
+							placeholder="Confirm password">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 
@@ -48,9 +50,10 @@
 						<button class="login100-form-btn">
 							Regiser
 						</button><br />
+
 						<span>Already Member? <a href="login.html">Login here!</a></span>
 					</div>
-					
+
 				</form>
 			</div>
 		</div>
@@ -59,58 +62,73 @@
 	<!-- FOOTER -->
 	<section include-footer="footer.html"></section>
 	<!-- Modal -->
-    <section id="modal-content-js">
-        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Cart</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table class="show-cart table">
+	<section id="modal-content-js">
+		<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="ModalLabel">Cart</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<table class="show-cart table">
 
-                        </table>
-                        <div>Total price: $<span class="total-cart"></span></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="checkout.html" class="btn btn-primary">Check Out</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!---end modal-->
+						</table>
+						<div>Total price: $<span class="total-cart"></span></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<a href="checkout.html" class="btn btn-primary">Check Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!---end modal-->
+
 </body>
 <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="statics/js/main.js"></script>
 <script src="statics/js/validator.js"></script>
 <script>
+	var timer = setInterval("countDown()", 1000);
+	seconds = 5;
+
+	function countDown() {
+		document.getElementById("div_timer").innerHTML =
+			seconds; // this is the same as $("div_timer").html(timer) in       jquery.
+		seconds--;
+	}
 	Validator({
-		form : '#registerForm',
-		errorSelector : '.focus-input100',
+		form: '#registerForm',
+		errorSelector: '.focus-input100',
 		rules: [
 			Validator.isRequired('#username', 'Please enter your username!'),
 			Validator.isRequired('#email', 'Please enter your email!'),
 			Validator.isEmail('#email', 'Invalid email!'),
 			Validator.isRequired('#pass', 'You must enter password!'),
 			Validator.minLength('#pass', 6, 'Requires a password least 6 characters'),
-			Validator.isRequired('#repass', 'You must enter confirm password!'),               
+			Validator.isRequired('#repass', 'You must enter confirm password!'),
 			Validator.isConfirmed('#repass', function () {
 				return document.querySelector('#registerForm #pass').value;
 			}, 'Password does not match!'),
 		],
-		onSubmit : function (data) {
+		onSubmit: function (data) {
 			var formElement = $('#registerForm')
-			var notifyMsg = `<div class="notifyMsg"><h1>REGISTER SUCESSS!</h1> <p>Please verifiy your email ${data.email} before login!<p</div>`;
+			var notifyMsg =
+				`<div class="notifyMsg"><h2>REGISTER SUCESSS!</h2><p class="msg">Please verifiy your email <b>${data.email}</b> before login!</p>Auto redirect after <b id="div_timer"></b> seconds... or <br />Go to <a href="all-products.html">Shop Page</a> now</div>`;
+
 			formElement.html(notifyMsg)
+			setTimeout(function () {
+				window.location = "all-products.html";
+			}, 5000);
+			
 		}
-	   
+
 	});
-</script> 
+</script>
 
 </html>

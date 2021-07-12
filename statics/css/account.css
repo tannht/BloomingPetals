@@ -898,6 +898,9 @@ iframe {
   text-transform: uppercase;
   display: block; }
 
+.notifyMsg {
+  padding: 40px; }
+
 /*------------------------------------------------------------------
   [ Input ]*/
 .wrap-input100 {

@@ -104,6 +104,11 @@ section#header {
     padding: 0;
 
 }
+.modal-content {
+    @include mobile {
+    top: 10vh;
+    max-width: 100%; }
+}
 .modal-body {
     max-height: 400px;
     overflow-y: scroll;

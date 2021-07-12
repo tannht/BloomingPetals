@@ -104,7 +104,10 @@ section#header {
     padding: 0;
 
 }
-
+.modal-body {
+    max-height: 400px;
+    overflow-y: scroll;
+}
 /* NAVIGATION BAR */
 .account a:hover {
     transition: all 1s;

@@ -634,10 +634,18 @@ for (var i in cartArray) {
         `<td>$${addCommas(cartArray[i].total)}</td>` +
         "</tr>";
 }
-$('.show-cart').html(output);
-$('.total-cart').html(addCommas(shoppingCart.totalCart()));
-$('.total-count').html(shoppingCart.totalCount());
-$('.total-price').html(`<h3>$${addCommas(shoppingCart.totalCart())}</h3>`);
+if (shoppingCart.totalCount() > 0) {
+    
+    $('.show-cart').html(output);
+    $('.total-cart').html(addCommas(shoppingCart.totalCart()));
+    $('.total-count').html(shoppingCart.totalCount());
+    $('.total-price').html(`<h3>$${addCommas(shoppingCart.totalCart())}</h3>`);
+
+} else { 
+    $('.show-cart').html('<h1> Your Cart Empty</h1>'); 
+    $('#checkout-form').html('<h1> Your Cart Empty</h1>');
+}
+
 
 //CHECK OUT PRODUCT LIST
 function getCheckOutList() {
@@ -654,6 +662,7 @@ function getCheckOutList() {
                 <span>$${addCommas(pro.total)}</span>
             </td>
             </tr>`;
+
         }
     }
     var results = cartArray.map(cartList);

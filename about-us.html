@@ -3,15 +3,32 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" container="IE=edge" />
-  <meta name="viewport" container="width=device-width, initial-scale=1.0" />
-  <title>About Us | Blooming Petals</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Blooming Petals</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
   <link rel="stylesheet" href="statics/css/animate.css">
   <link rel="stylesheet" href="statics/css/style.css" />
   <link rel="stylesheet" href="statics/css/about-us.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    rel="stylesheet" />
 
+
+  <!-- Social Share -->
+  <meta property="og:title" content="BLOOMING PETALS - FLORAL DESIGN ONLINE SHOP">
+  <meta property="og:description" content="We specialize in providing fresh flowers, wedding flowers, event
+      flowers with a variety of designs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ABOUT US | BLOOMING PETALS">
+  <meta property="og:image" content="uploads/media/banner-bg.jpg">
+  <meta property="og:locale" content="en">
+  <link rel="icon" href="images/logo-dark.svg">
+  <link rel="alternate" href="index.html" hreflang="en">
+  <meta property="og:url" content="/">
 </head>
 
 <body>
@@ -32,44 +49,78 @@
   <section id="ourstory" class="container-md">
     <div class="text-block">
       <h1>Our Story</h1>
-      <blockquote class="blockquote">“Start with simple thoughts but bring great faith Blooming <br> Petals has been built
-        and constantly changed but still retains the original value." <br>*********</blockquote>
+      <blockquote>“Start with simple thoughts but bring great faith Blooming Petals <br> has been built and constantly
+        changed but still retains the original value." <br>*********</blockquote>
     </div>
-    <div class="sub-title">
-      <h2>Blooming Petals- From passion to create value</h2>
-      <p>Blooming Petals is the place to express all the ideas of people who have a passion for floral design and
-        decoration. For each of your big occasions to leave a deep impression, we have put all our enthusiasm and
-        dedication into every smallest design to create the best scene.</p>
+    <div class="sub-title row justify-content-center">
+      <div class="col-md-10 col-sm">
+        <h2>Blooming Petals- From passion to create value</h2>
+        <p>Blooming Petals is the place to express all the ideas of people who have a passion for floral design and
+          decoration. For each of your big occasions to leave a deep impression, we have put all our enthusiasm and
+          dedication into every smallest design to create the best scene.</p>
+      </div>
       <img src="uploads/media/banner-bg-2.jpg" alt="teamwork">
     </div>
-    <div>
-      <blockquote class="blockquote" style="font-weight: 20px;">We are always happy for the value we bring to you</blockquote>
-      <table>
-        <tr>
-          <th><p>The process of building Blooming Petals will probably be a story full of challenges and hardships. But it is
-            the experiences and the results achieved by customers that have <br>become an important motivation for Blooming
-            Petals to exist and develop.</p></th>
-            <td><img src="uploads/media/banner-bg-4.jpg" alt="teamwork" style="border: 1px solid#ddd; border-radius: 4px;padding: 5px;width: 300px;"></td>
-        </tr>
-      </table>
-     
-      
-      
+    <div class="sub-2 row">
+      <div class="col-md-6 col-sm">
+        <blockquote>We are always happy for the value we bring to you
+        </blockquote>
+        <p>The process of building Blooming Petals will probably be a story full of challenges and hardships. But it is
+          the experiences and the results achieved by customers that have become an important motivation for
+          Blooming Petals to exist and develop.</p>
+      </div>
+      <img class="col-md-6 col-sm" src="uploads/media/banner-bg-4.jpg" alt="teamwork" />
     </div>
   </section>
   <section id="ourteam" class="container-md">
     <h1>Our Team</h1>
-    <blockquote class="blockquote">“The members of Blooming Petal always use their enthusiasm to bring guests miracles.”
+    <blockquote>“The members of Blooming Petal always use their enthusiasm to bring guests miracles.”
     </blockquote>
     <img src="uploads/media/banner-bg.jpg" alt="">
-    <h1>staff</h1>
-    <blockquote class="blockquote">Blooming Petal members always use their enthusiasm to bring customers miracles</blockquote>
-    <img src="#" alt="#">
+
   </section>
   <section id="testimonials" class="container-md">
-    <h1>Testimonials</h1>
-    <blockquote class="blockquote">“The good experiences of our customers are the driving force of our spirit”
-    </blockquote>
+    <div class="container-fluid px-3 px-sm-5 my-5 text-center">
+      <h1 class="mb-5 font-weight-bold">What Our Client Say</h1>
+      <div class="owl-carousel owl-theme">
+        <div class="item first prev">
+          <div class="card border-0 py-3 px-4">
+            <div class="row justify-content-center"> <img
+                src="https://www.coolgenerator.com/Pic/Face//female/female20161025795220154.jpg"
+                class="img-fluid profile-pic mb-4 mt-3"> </div>
+            <h6 class="mb-3 mt-2">Marielle Haag</h6>
+            <p class="content mb-5 mx-2">"Flowers was worth a fortune to my company. Flowers is the real deal!"</p>
+          </div>
+        </div>
+        <div class="item show">
+          <div class="card border-0 py-3 px-4">
+            <div class="row justify-content-center"> <img src="https://i.imgur.com/oW8Wpwi.jpg"
+                class="img-fluid profile-pic mb-4 mt-3"> </div>
+            <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+            <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua Ut enim.</p>
+          </div>
+        </div>
+        <div class="item next">
+          <div class="card border-0 py-3 px-4">
+            <div class="row justify-content-center"> <img src="https://i.imgur.com/ndQx2Rg.jpg"
+                class="img-fluid profile-pic mb-4 mt-3"> </div>
+            <h6 class="mb-3 mt-2">John Paul</h6>
+            <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua Ut enim.</p>
+          </div>
+        </div>
+        <div class="item last">
+          <div class="card border-0 py-3 px-4">
+            <div class="row justify-content-center"> <img src="https://i.imgur.com/T5aOhwh.jpg"
+                class="img-fluid profile-pic mb-4 mt-3"> </div>
+            <h6 class="mb-3 mt-2">William Doe</h6>
+            <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua Ut enim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- FOOTER -->
   <section include-footer="footer.html"></section>
@@ -102,7 +153,9 @@
   <!---end modal-->
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  
+</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="statics/js/main.js"></script>
 

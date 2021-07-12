@@ -196,6 +196,11 @@
   background: url(../../uploads/media/producst-banner.jpg);
   background-size: cover;
   background-position: center; }
+  .pagetitlebanner_intro-txt {
+    font-family: 'SVN-Blenda Script';
+    text-transform: capitalize; }
+  .pagetitlebanner p {
+    font-family: 'SVN-Blenda Script'; }
 
 #products-main-content {
   margin: 0 auto; }

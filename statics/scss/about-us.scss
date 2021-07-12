@@ -1,0 +1,142 @@
+@import 'variables';
+
+h1 {
+
+    color: color(primary);
+}
+
+p {
+    text-align: justify;
+}
+
+h1,
+h2,
+blockquote {
+    font-family: 'SVN-Blenda Script';
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    font-style: italic;
+    color: rgb(63, 63, 63);
+    font-size: 18px;
+
+}
+
+#ourstory,
+#ourteam,
+#testimonials {
+    margin-top: 40px;
+}
+
+.pagetitlebanner {
+    background: url(../../uploads/media/about-banner.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &_intro-txt {
+        font-family: 'SVN-Blenda Script';
+        text-transform: capitalize;
+    }
+
+    p {
+        font-family: 'SVN-Blenda Script';
+        text-align: center;
+    }
+
+}
+
+.text-block {
+    text-align: center;
+
+}
+
+.sub-title {
+    img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.sub-2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: #1E88E5 !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: #0D47A1 !important;
+    background-color: transparent !important
+}
+
+.owl-dots {
+    display: none
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.item {
+    display: none
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.item.show {
+    display: block;
+    transition-duration: 0.4s
+}
+
+@media screen and (max-width: 999px) {
+
+    .next,
+    .prev {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .item {
+        display: block !important
+    }
+}

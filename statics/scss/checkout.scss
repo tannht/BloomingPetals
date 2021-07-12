@@ -4,6 +4,11 @@
     background: url(../../uploads/media/contact-bg.jpg);
     background-size: cover;
     background-position: center;
+    &_intro-txt {
+        font-family: 'SVN-Blenda Script';
+        text-transform: capitalize;
+    }
+    
 }
 .msg {
     color: grey;

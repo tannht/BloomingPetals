@@ -7,35 +7,58 @@
     <title>Document</title>
     <script src="./test.js"></script>
     <script src="validator.js"></script>    
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/test.css">
 </head>
 <body>
-    <form action="action.php" method="POST" id="registerForm">
-        <div class="form-group invalid">
-            <label for="fullname" class="form-label">Your Name</label>
-            <input id="fullname" name="fullname" type="text" placeholder="Your Name">
-            <span class="form-message"></span>
-        </div>
-        <div class="form-group">
-            <label for="email" class="form-label">Your Email</label>
-            <input id="email" name="email" type="text"  placeholder="Your Email">
-            <span class="form-message"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="password" class="form-label">Your password</label>
-            <input id="password" name="password" type="password" placeholder="Your Password">
-            <span class="form-message"></span>
-
-        </div>
-        <div class="form-group">
-            <label for="confirm-password" class="form-label">Confirm Your Password</label>
-            <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm password">
-            <span class="form-message"></span>
-
-        </div>
-        <button type="submit" name="submit">Register</button>
-    </form> 
+    <head>
+        <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossOrigin="anonymous"
+      />
+      </head>
+      <head>
+        <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossOrigin="anonymous"
+      />
+      </head>
+        <div class="line-text"><span>CodingUI</span></div>
+              <div class="signup">
+                <img src="https://imgur.com/aILP3CD.png" alt="" class="signup-image">
+                <div class="signup-container">
+                  <div class="tab">
+                    <div class="tab-item is-active">Sign up</div>
+                    <div class="tab-item">Sign in</div>
+                  </div>
+                  <h1 class="signup-heading">Sign up</h1>
+                  <form class="signup-form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="name"  class="form-label">Full name</label>
+                      <input type="text" id="name" class="form-input" placeholder="Ex: John Doe" required name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" id="email" class="form-input" placeholder="Ex: johndoe@email.com" required name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" id="password" class="form-input" placeholder="************" required name="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="re-password" class="form-label">Repeat password</label>
+                      <input type="password" id="re-password" class="form-input" placeholder="************" required name="re-password">
+                    </div>
+                    <div class="form-group signup-term">
+                      By clicking you agree with our <a href="#" class="signup-term-link">Term of use.</a>
+                    </div>
+                    <button type="submit" class="btn btn--gradient">Sign up</button>
+                  </form>
+                </div>
+              </div>
     <script>
         Validator({
             form : '#registerForm',

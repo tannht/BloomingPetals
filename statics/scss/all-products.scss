@@ -1,9 +1,20 @@
 @import 'variables';
 
+
+
+
 .pagetitlebanner {
     background: url(../../uploads/media/producst-banner.jpg);
     background-size: cover;
     background-position: center;
+    &_intro-txt {
+        font-family: 'SVN-Blenda Script';
+        text-transform: capitalize;
+    }
+    p {
+        font-family: 'SVN-Blenda Script';
+        
+    }
 }
 
 #products-main-content {

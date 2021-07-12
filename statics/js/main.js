@@ -621,6 +621,7 @@ function modal() {
 var cartArray = shoppingCart.listCart();
 var output = "";
 for (var i in cartArray) {
+
     output += "<tr  class='incart-itemts'>" +
         "<td class='img-frame'><img src='" + cartArray[i].img + "' ></td>" +
         "<td><ul>" + "<li>" + cartArray[i].name + "</li>" +
@@ -635,15 +636,16 @@ for (var i in cartArray) {
         "</tr>";
 }
 if (shoppingCart.totalCount() > 0) {
-    
+
     $('.show-cart').html(output);
     $('.total-cart').html(addCommas(shoppingCart.totalCart()));
     $('.total-count').html(shoppingCart.totalCount());
-    $('.total-price').html(`<h3>$${addCommas(shoppingCart.totalCart())}</h3>`);
+    $('.total-price').html(`<b>$${addCommas(shoppingCart.totalCart())}</b>`);
 
-} else { 
-    $('.show-cart').html('<h1> Your Cart Empty</h1>'); 
-    $('#checkout-form').html('<h1> Your Cart Empty</h1>');
+} else {
+    var msg= `<div class="msg"><h1>Your Cart Empty</h1><a href="all-products.html"><i class="fa fa-arrow-circle-left"></i> Continue Shopping</a></div>`
+    $('.show-cart').html(`<h1 class="msg"> Your Cart Empty</h1>`);
+    $('#checkout-form').html(msg);
 }
 
 
@@ -655,14 +657,13 @@ function getCheckOutList() {
             <td class="product-name">
                 ${pro.name}
                 <span><strong class="product-quantity">
-                    ${pro.count}
+                    x${pro.count}
                 </strong></span>
             </td>
             <td class="product-total">
                 <span>$${addCommas(pro.total)}</span>
             </td>
             </tr>`;
-
         }
     }
     var results = cartArray.map(cartList);

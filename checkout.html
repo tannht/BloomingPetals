@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
   <link rel="stylesheet" href="statics/css/animate.css">
   <link rel="stylesheet" href="statics/css/style.css" />
-  <link rel="stylesheet" href="statics/css/all-products.css" />
+  <link rel="stylesheet" href="statics/css/checkout.css" />
 
 </head>
 
@@ -36,7 +36,7 @@
     <form id="checkout-form" class="row container-md">
       <div class="shipping-info col-md-6 col-sm-12">
         <!-- SHIPPING INFO -->
-        <h3>SHIPPING INFO</h3>
+        <h3><strong>SHIPPING INFO</strong></h3> 
         <div class="form-group">
           <label for="fullname" class="form-label">Your Name</label>
           <input id="fullname" name="fullname" type="text" class="form-control" placeholder="" >
@@ -61,14 +61,15 @@
         <!-- LIST PRODUCT IN CART -->
       </div>
       <div class="cart-info col-md-6 col-sm-12">
+        <h3><strong>YOUR BILLING</strong></h3> 
         <table class="list-items">
           <thead>
             <tr>
               <th>
-                <h3>Products</h3>
+                <b>Products</b>
               </th>
               <th>
-                <h3>Price</h3>
+                <b>Price</b>
               </th>
             </tr>
           </thead>
@@ -76,10 +77,10 @@
           <tfoot>
             <tr>
               <th>
-                <h3>Total</h3>
+                <b>Total</b>
               </th>
               <th class="total-price"></th>
-        </table>
+        </table>        
         <button type="submit" id="place-order" class="btn btn-primary">Place Order</button>
       </div>      
     </form>

@@ -1,0 +1,54 @@
+@import 'variables';
+
+.pagetitlebanner {
+    background: url(../../uploads/media/contact-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.msg {
+    color: grey;
+    text-align: center;
+    margin: 0 auto;
+}
+#products-main-content {
+    display: flex;
+    justify-content: center;
+
+    #checkout-form {
+        padding: 40px
+    }
+
+    button#place-order {
+        float: right;
+        margin-top: 20px;
+        border-radius: 40px;
+        background-color: color(primary);
+        border-color: transparent;
+
+        &:hover {
+            background-color: color(second-color);
+        }
+    }
+
+    .cart-info {
+        .list-items {
+            width: 100%;
+            .cart-item {
+                border-bottom: 1px dashed #bdbdbd;
+                
+                td {
+                    padding: 5px;
+                   
+                }
+
+                &:last-child {
+                    border-bottom: 2px solid #bdbdbd;
+                    padding-bottom: 20px;
+                    td {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

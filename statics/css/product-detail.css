@@ -300,6 +300,7 @@
   justify-content: center; }
   @media (max-width: 576px) {
     .product-detail-container .product-details .tab-menu {
+      display: block;
       justify-content: left; } }
 
 .product-detail-container .product-details .tab-menu li {

@@ -109,14 +109,7 @@ function addCommas(nStr) {
 }
 // Declare api urls
 var api_url = 'https://script.google.com/macros/s/AKfycbzREWIKw-FELGuiFFmfRh4T0RRqbDfPjBbKhcT6rsGatjogUUVAysDKjsW5B6XeT5zW0A/exec';
-// var api_url = 'https://morizone.com/products-data.json';
-// GET PRODUCT BY ID 
-// fetch(api_url) 
-//     .then(response => response.json())
-//     .then(res => {
-//         console.log(Object.values(res.user))
-//     })
-//     .catch(err => console.log("API Error"));
+
 function getProduct(proID, selector) {
 
     fetch(api_url)
@@ -241,7 +234,7 @@ function getProductsByCat(CatData) {
 
             function items(pro) {
 
-                return `<div class="col-md-4 col-6">
+               return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
                     <img src="${pro.img}" alt="${pro.name}"></div>
@@ -259,34 +252,23 @@ function getProductsByCat(CatData) {
                         </div>           
                     </div>
                 </div>
-            </div>`;
-            }
-
+            </div>`;         
+        }
             var a = productsList.map(items);
-            $('#products').html(a.join(''))
+             $('#products').html(a.join(''))
             // GET CATEGORY NAME
 
             addItem();
             displayCart();
-
-
 
         })
         .catch(err => console.log("Data Error"));
 };
 
 
-// RENDER ALL PRODUCTS
-function allProducts() {
-    fetch(api_url)
-        .then(response => response.json())
-        .then(res => {
 
 
 
-        })
-        .catch(err => console.log("Data Error"));
-}
 //random array
 function randomArray(n) {
 
@@ -740,7 +722,7 @@ var CustomerData = [
     )
 ]
 
-function getComments() {  
+function getComments() {
 
     function comments(cus) {
         return `<div class="item show ">
@@ -753,7 +735,7 @@ function getComments() {
       </div>`;
     }
     var results = CustomerData.map(comments);
-    console.log(results)
+
     $('.owl-carousel').html(results)
 
     $('.owl-prev').click(function () {
@@ -794,9 +776,9 @@ function getComments() {
             }
         }
     });
-   
 
-    
+
+
 }
 getComments();
 

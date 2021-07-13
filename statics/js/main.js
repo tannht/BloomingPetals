@@ -706,63 +706,6 @@ $tabMenu.on('click', function () {
 
 
 //TESTIMONIALS
-
-$('.owl-carousel').owlCarousel({
-    mouseDrag: false,
-    loop: true,
-    margin: 2,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 3
-        }
-    }
-});
-
-$('.owl-prev').click(function () {
-    $active = $('.owl-item .item.show');
-    $('.owl-item .item.show').removeClass('show');
-    $('.owl-item .item').removeClass('next');
-    $('.owl-item .item').removeClass('prev');
-    $active.addClass('next');
-    if ($active.is('.first')) {
-        $('.owl-item .last').addClass('show');
-        $('.first').addClass('next');
-        $('.owl-item .last').parent().prev().children('.item').addClass('prev');
-    } else {
-        $active.parent().prev().children('.item').addClass('show');
-        if ($active.parent().prev().children('.item').is('.first')) {
-            $('.owl-item .last').addClass('prev');
-        } else {
-            $('.owl-item .show').parent().prev().children('.item').addClass('prev');
-        }
-    }
-});
-
-$('.owl-next').click(function () {
-    $active = $('.owl-item .item.show');
-    $('.owl-item .item.show').removeClass('show');
-    $('.owl-item .item').removeClass('next');
-    $('.owl-item .item').removeClass('prev');
-    $active.addClass('prev');
-    if ($active.is('.last')) {
-        $('.owl-item .first').addClass('show');
-        $('.owl-item .first').parent().next().children('.item').addClass('prev');
-    } else {
-        $active.parent().next().children('.item').addClass('show');
-        if ($active.parent().next().children('.item').is('.last')) {
-            $('.owl-item .first').addClass('next');
-        } else {
-            $('.owl-item .show').parent().next().children('.item').addClass('next');
-        }
-    }
-});
 //RENDER TESTIMONIALS 
 function customers(name, avartar, comment) {
     this.name = name
@@ -792,21 +735,86 @@ var CustomerData = [
     ),
     new customers(
         "Mellicent P.",
-        "https: //www.coolgenerator.com/Pic/Face//male/male20161086329861541.jpg",
+        "https://i.pravatar.cc/150?img=41",
         "No matter where you go, florist is the coolest, most happening thing around! It really saves me time and effort."
     )
 ]
 
-function render() {
-    for (var i in CustomerData) {
-        return `<div class="item"><div class="card border-0 py-3 px-4">
-            <div class="row justify-content-center"> <img src="${CustomerData[i].avartar}"
-                class="img-fluid profile-pic mb-4 mt-3"> </div>
-            <h6 class="mb-3 mt-2">${CustomerData[i].name}</h6>
-            <p class="content mb-5 mx-2">${CustomerData[i].comment}</p>
-          </div></div>`;
+function getComments() {  
+
+    function comments(cus) {
+        return `<div class="item show ">
+        <div class="card border-0 py-3 px-4">
+          <div class="row justify-content-center"> 
+          <img src=\"${cus.avartar}\" class="img-fluid profile-pic mb-4 mt-3"></div>
+          <h6 class="mb-3 mt-2">${cus.name}</h6>
+          <p class="content mb-5 mx-2">"${cus.comment}"</p>
+        </div>
+      </div>`;
     }
+    var results = CustomerData.map(comments);
+    console.log(results)
+    $('.owl-carousel').html(results)
+
+    $('.owl-prev').click(function () {
+        $active = $('.owl-item .item.show');
+        $('.owl-item .item.show').removeClass('show');
+        $('.owl-item .item').removeClass('next');
+        $('.owl-item .item').removeClass('prev');
+        $active.addClass('next');
+        if ($active.is('.first')) {
+            $('.owl-item .last').addClass('show');
+            $('.first').addClass('next');
+            $('.owl-item .last').parent().prev().children('.item').addClass('prev');
+        } else {
+            $active.parent().prev().children('.item').addClass('show');
+            if ($active.parent().prev().children('.item').is('.first')) {
+                $('.owl-item .last').addClass('prev');
+            } else {
+                $('.owl-item .show').parent().prev().children('.item').addClass('prev');
+            }
+        }
+    });
+
+    $('.owl-next').click(function () {
+        $active = $('.owl-item .item.show');
+        $('.owl-item .item.show').removeClass('show');
+        $('.owl-item .item').removeClass('next');
+        $('.owl-item .item').removeClass('prev');
+        $active.addClass('prev');
+        if ($active.is('.last')) {
+            $('.owl-item .first').addClass('show');
+            $('.owl-item .first').parent().next().children('.item').addClass('prev');
+        } else {
+            $active.parent().next().children('.item').addClass('show');
+            if ($active.parent().next().children('.item').is('.last')) {
+                $('.owl-item .first').addClass('next');
+            } else {
+                $('.owl-item .show').parent().next().children('.item').addClass('next');
+            }
+        }
+    });
+   
+
+    
 }
-var resultRender = render();
-// $(".owl-carousel").html(resultRender);
-console.log(resultRender);
+getComments();
+
+
+$('.owl-carousel').owlCarousel({
+    mouseDrag: false,
+    loop: true,
+    margin: 2,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 3
+        }
+    }
+});

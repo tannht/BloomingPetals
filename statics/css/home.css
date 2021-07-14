@@ -395,6 +395,16 @@
   #newsletters .btn:focus {
     outline: 0; }
 
+.card-title {
+  font-size: 14px; }
+
+.card-block .buy .add-to-cart {
+  background: #F25757;
+  border: 0;
+  border-radius: 20px; }
+  .card-block .buy .add-to-cart:hover {
+    background: #daa104; }
+
 #footer {
   background: #E9BC32;
   background-image: url(../images/footer-bg.svg);

@@ -317,6 +317,22 @@
     }
 
 }
+.card-title {
+    font-size: 14px;
+    
+}
+.card-block {
+    .buy {
+        .add-to-cart {
+            background: color(redColor);
+            border: 0;
+            border-radius:20px;
+            &:hover {
+                background: color(second-color);
+            }
+        }
+    }
+}
 
 #footer {
     background: #E9BC32;

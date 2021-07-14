@@ -7,13 +7,15 @@
     background: url(../../uploads/media/producst-banner.jpg);
     background-size: cover;
     background-position: center;
+
     &_intro-txt {
         font-family: 'SVN-Blenda Script';
         text-transform: capitalize;
     }
+
     p {
         font-family: 'SVN-Blenda Script';
-        
+
     }
 }
 
@@ -29,7 +31,22 @@
     animation: fadeInUp 0.2s;
 
 }
+
 .card-title {
     font-size: 14px;
-    
+
+}
+
+.card-block {
+    .buy {
+        .add-to-cart {
+            background: color(redColor);
+            border: 0;
+            border-radius: 20px;
+
+            &:hover {
+                background: color(second-color);
+            }
+        }
+    }
 }

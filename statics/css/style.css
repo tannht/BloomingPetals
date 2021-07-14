@@ -589,6 +589,9 @@ section#header {
       color: #f8f8f8;
       animation: fade-in-bottom 0.4s linear 0.2s both; }
 
+.card {
+  animation: fade-in-bottom 0.4s linear 0.2s both; }
+
 .product-block img {
   width: 100%; }
 

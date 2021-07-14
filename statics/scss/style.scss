@@ -629,7 +629,10 @@ section#header {
 }
 
 
-// PRODUCTS ITEMS STYLE 
+// PRODUCTS ITEMS STYLE
+.card {
+    animation: fade-in-bottom 0.4s linear 0.2s both;
+}
 .product-block img {
     width: 100%;
 }

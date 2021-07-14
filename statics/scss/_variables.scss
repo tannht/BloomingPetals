@@ -8,6 +8,8 @@ $colors: (primary: #598b2c,
   dark: #52414C,
   body-color: rgb(14, 14, 14),
   alert: rgb(213, 11, 4),
+  redColor: #F25757,
+  redColor-light: #EC5766,
 );
 
 @function color($color-name) {

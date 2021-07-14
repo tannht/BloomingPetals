@@ -85,6 +85,7 @@ function includeFooter() {
     }
 };
 includeFooter();
+
 // SHOW / HIDE MOBILE MENU
 function openMenu() {
     $('.mobile-menu_sidebar-menu').addClass("show");
@@ -189,7 +190,7 @@ function getInfo() {
         email = $('input#email').val(),
         vote = $('input[name="star"]:checked').val(),
         comment = $('textarea#comment').val();
-    console.log(vote)
+    // console.log(vote)
     var voteArray = {
         fullName: fullName,
         email: email,

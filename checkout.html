@@ -36,32 +36,32 @@
     <form id="checkout-form" class="row container-md">
       <div class="shipping-info col-md-6 col-sm-12">
         <!-- SHIPPING INFO -->
-        <h3><strong>SHIPPING INFO</strong></h3> 
+        <h3><strong>SHIPPING INFO</strong></h3>
         <div class="form-group">
           <label for="fullname" class="form-label">Your Name</label>
-          <input id="fullname" name="fullname" type="text" class="form-control" placeholder="" >
+          <input id="fullname" name="fullname" type="text" class="form-control" placeholder="">
           <span class="form-message "></span>
         </div>
         <div class="form-group">
           <label for="email" class="form-label">Your Email</label>
-          <input id="email" name="email" type="text" class="form-control" placeholder="" >
+          <input id="email" name="email" type="text" class="form-control" placeholder="">
           <span class="form-message "></span>
         </div>
         <div class="form-group">
           <label for="phone" class="form-label">Your Phone</label>
-          <input id="phone" name="phone" type="text" class="form-control" placeholder="Ex: 1234567890" >
+          <input id="phone" name="phone" type="text" class="form-control" placeholder="Ex: 1234567890">
           <span class="form-message "></span>
-        </div>        
+        </div>
         <div class="form-group">
           <label for="address" class="form-label">Address</label>
           <textarea id="address" name="address" type="text" class="form-control" placeholder="Your Address"></textarea>
           <span class="form-message"></span>
         </div>
-        
+
         <!-- LIST PRODUCT IN CART -->
       </div>
       <div class="cart-info col-md-6 col-sm-12">
-        <h3><strong>YOUR BILLING</strong></h3> 
+        <h3><strong>YOUR BILLING</strong></h3>
         <table class="list-items">
           <thead>
             <tr>
@@ -80,9 +80,9 @@
                 <b>Total</b>
               </th>
               <th class="total-price"></th>
-        </table>        
+        </table>
         <button type="submit" id="place-order" class="btn btn-primary">Place Order</button>
-      </div>      
+      </div>
     </form>
 
   </section>
@@ -123,25 +123,26 @@
 <script src="statics/js/validator.js"></script>
 <script>
   Validator({
-      form : '#checkout-form',
-      errorSelector : '.form-message ',
-      rules: [
-          Validator.isRequired('#fullname', 'Please enter your name!'),
-          Validator.isRequired('#email', 'Please enter your email!'),
-          Validator.isEmail('#email', 'Invalid email!'),
-          Validator.isRequired('#phone', 'Please enter your phone!'),
-          Validator.isPhone('#phone', 'Phone must be numeric and at least 10 digits'),
-          Validator.isRequired('#address', 'Please enter your shipping address!'),
-         
-      ],
-      onSubmit : function (data) {
-          
-          $('#checkout-form').html(`<h1>Thank you for order!</h1>`);
-         
+    form: '#checkout-form',
+    errorSelector: '.form-message ',
+    rules: [
+      Validator.isRequired('#fullname', 'Please enter your name!'),
+      Validator.isRequired('#email', 'Please enter your email!'),
+      Validator.isEmail('#email', 'Invalid email!'),
+      Validator.isRequired('#phone', 'Please enter your phone!'),
+      Validator.isPhone('#phone', 'Phone must be numeric and at least 10 digits'),
+      Validator.isRequired('#address', 'Please enter your shipping address!'),
+
+    ],
+    onSubmit: function (data) {
+      $('#checkout-form').html(`<h1 class="msg">Thank you for order!</h1>`);
+      shoppingCart.clearCart();
+      displayCart();
     }
-         
-      
-     
+
+
+
   });
-</script> 
+</script>
+
 </html>

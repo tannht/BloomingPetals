@@ -235,7 +235,7 @@ function getProductsByCat(CatData) {
 
             function items(pro) {
 
-               return `<div class="col-md-4 col-6">
+                return `<div class="col-md-4 col-6">
                 <div class="card" >
                     <div class="img-wrapper">
                     <img src="${pro.img}" alt="${pro.name}"></div>
@@ -253,15 +253,12 @@ function getProductsByCat(CatData) {
                         </div>           
                     </div>
                 </div>
-            </div>`;         
-        }
+            </div>`;
+            }
             var a = productsList.map(items);
-             $('#products').html(a.join(''))
-            // GET CATEGORY NAME
-
+            $('#products').html(a.join(''))
             addItem();
             displayCart();
-
         })
         .catch(err => console.log("Data Error"));
 };
@@ -270,24 +267,92 @@ function getProductsByCat(CatData) {
 
 
 
-//random array
-function randomArray(n) {
-
-    array = Array.from({
-        length: 50
-    }, (v, k) => k * 10);
-
-    var shuffled = array.sort(function () {
-        return .5 - Math.random()
-    });
-
-    var selected = shuffled.slice(0, n);
-
-    // $('#out').html(selected.toString());
-
-}
 
 
+
+
+//GET RANDOM PRODUCTS
+fetch(api_url)
+    .then(response => response.json())
+    .then(res => {
+        var data = Object.values(res.user)
+        //lasted product
+        var lastedList = getRandom(data, 4);
+        // data.slice(-4)
+            
+        
+        //random array
+        function getRandom(arr, n) {
+            var result = new Array(n),
+                len = arr.length,
+                taken = new Array(len);
+            if (n > len)
+                throw new RangeError("getRandom: more elements taken than available");
+            while (n--) {
+                var x = Math.floor(Math.random() * len);
+                result[n] = arr[x in taken ? taken[x] : x];
+                taken[x] = --len in taken ? taken[len] : len;
+            }
+            return result;
+
+        }
+        var randomArray = getRandom(data, 4);
+        function items(pro) {
+
+            return `<div class="col-md-3 col-6">
+            <div class="card" >
+                <div class="img-wrapper">
+                <img src="${pro.img}" alt="${pro.name}"></div>
+                <div class="card-block">
+                    <a href="${pro.proSlug}"><h5 class="card-title">${pro.name}</h5>
+                    <div class="buy">                      
+                    <p class="card-text">$${pro.price}</p>
+                    <a href="javascript:void(0)"
+                    data-id="${pro.key}"
+                    data-imgurl="${pro.img}"
+                    data-name="${pro.name}"
+                    data-sku="${pro.sku}"
+                    data-price="${pro.price}"
+                    class="add-to-cart btn btn-primary">Add to cart</a>
+                    </div>           
+                </div>
+            </div>
+        </div>`;
+        }
+        function latest(lastpro) {
+
+            return `<div class="col-md-3 col-6">
+            <div class="card" >
+                <div class="img-wrapper">
+                <img src="${lastpro.img}" alt="${lastpro.name}"></div>
+                <div class="card-block">
+                    <a href="${lastpro.proSlug}"><h5 class="card-title">${lastpro.name}</h5>
+                    <div class="buy">                      
+                    <p class="card-text">$${lastpro.price}</p>
+                    <a href="javascript:void(0)"
+                    data-id="${lastpro.key}"
+                    data-imgurl="${lastpro.img}"
+                    data-name="${lastpro.name}"
+                    data-sku="${lastpro.sku}"
+                    data-price="${lastpro.price}"
+                    class="add-to-cart btn btn-primary">Add to cart</a>
+                    </div>           
+                </div>
+            </div>
+        </div>`;
+        }
+        var r = randomArray.map(items);
+        $('#popular-products').html(r.join(''))
+        var l = lastedList.map(latest);
+        $('#lastest-products').html(l.join(''))
+        addItem();
+        displayCart();
+    })
+    .catch(err => console.log("Data Error"));
+
+
+
+// --------------------------- //
 function getUrl() {
     var url = window.location.href.slice(-5);
     if (url == ".html") {

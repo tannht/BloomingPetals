@@ -220,3 +220,33 @@
   border-radius: 20px; }
   .card-block .buy .add-to-cart:hover {
     background: #daa104; }
+
+#loading-bg {
+  position: absolute;
+  background: #dee2e6c9;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  right: 0;
+  visibility: hidden; }
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #598b2c;
+  border-radius: 100%;
+  margin: auto;
+  animation: spin 1s infinite linear; }
+
+#loading-bg.display {
+  visibility: visible;
+  animation: fadeIn 0.5s; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

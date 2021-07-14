@@ -18,7 +18,8 @@
 <body>
   <script>
     $(document).ready(function () {
-      getUrl(); 
+      getUrl();
+      displayLoading();
     });
   </script>
 
@@ -58,11 +59,11 @@
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 <ul class="submenu_items">
-                  <li><a class="cat01" href="#?cat01" onclick="getProductsByCat('cat01'); ">Wedding</a></li>
-                  <li><a class="cat02" href="#?cat02" onclick="getProductsByCat('cat02'); ">Valentine's day</a></li>
-                  <li><a class="cat03" href="#?cat03" onclick="getProductsByCat('cat03'); ">Birthday</a></li>
-                  <li><a class="cat04" href="#?cat04" onclick="getProductsByCat('cat04'); ">Feast day</a></li>
-                  <li><a class="cat05" href="#?cat05" onclick="getProductsByCat('cat05'); ">Events</a></li>
+                  <li><a class="cat01" href="#?cat01" onclick="getProductsByCat('cat01'); displayLoading()">Wedding</a></li>
+                  <li><a class="cat02" href="#?cat02" onclick="getProductsByCat('cat02'); displayLoading()">Valentine's day</a></li>
+                  <li><a class="cat03" href="#?cat03" onclick="getProductsByCat('cat03'); displayLoading()">Birthday</a></li>
+                  <li><a class="cat04" href="#?cat04" onclick="getProductsByCat('cat04'); displayLoading()">Feast day</a></li>
+                  <li><a class="cat05" href="#?cat05" onclick="getProductsByCat('cat05'); displayLoading()">Events</a></li>
                 </ul>
               </div>
             </div>
@@ -79,12 +80,12 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
                 <ul class="submenu_items">
-                  <li><a class="catname" href="#?cat06" onclick="getProductsByCat('cat06'); ">VIP Flowers</a></li>
-                  <li><a class="catname" href="#?cat07" onclick="getProductsByCat('cat07'); ">99 Rose</a></li>
-                  <li><a class="catname" href="#?cat08" onclick="getProductsByCat('cat08'); ">Love Flowers</a></li>
-                  <li><a class="catname" href="#?cat09" onclick="getProductsByCat('cat09'); ">Basket Arrangements</a>
+                  <li><a class="catname" href="#?cat06" onclick="getProductsByCat('cat06'); displayLoading() ">VIP Flowers</a></li>
+                  <li><a class="catname" href="#?cat07" onclick="getProductsByCat('cat07'); displayLoading()">99 Rose</a></li>
+                  <li><a class="catname" href="#?cat08" onclick="getProductsByCat('cat08'); displayLoading()">Love Flowers</a></li>
+                  <li><a class="catname" href="#?cat09" onclick="getProductsByCat('cat09'); displayLoading() ">Basket Arrangements</a>
                   </li>
-                  <li><a class="catname" href="#?cat10" onclick="getProductsByCat('cat10'); ">Bouquet</a></li>
+                  <li><a class="catname" href="#?cat10" onclick="getProductsByCat('cat10'); displayLoading()">Bouquet</a></li>
                 </ul>
               </div>
             </div>
@@ -101,11 +102,11 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
                 <ul class="submenu_items">
-                  <li><a class="catname" href="#?cat11" onclick="getProductsByCat('cat11'); ">Rose</a></li>
-                  <li><a class="catname" href="#?cat12" onclick="getProductsByCat('cat12'); ">Lily</a></li>
-                  <li><a class="catname" href="#?cat13" onclick="getProductsByCat('cat13'); ">Sunflower</a></li>
-                  <li><a class="catname" href="#?cat14" onclick="getProductsByCat('cat14'); ">Orchid Kinds</a></li>
-                  <li><a class="catname" href="#?cat15" onclick="getProductsByCat('cat15'); ">Phalaenopsis Orchid</a>
+                  <li><a class="catname" href="#?cat11" onclick="getProductsByCat('cat11'); displayLoading()">Rose</a></li>
+                  <li><a class="catname" href="#?cat12" onclick="getProductsByCat('cat12'); displayLoading() ">Lily</a></li>
+                  <li><a class="catname" href="#?cat13" onclick="getProductsByCat('cat13'); displayLoading()">Sunflower</a></li>
+                  <li><a class="catname" href="#?cat14" onclick="getProductsByCat('cat14'); displayLoading()">Orchid Kinds</a></li>
+                  <li><a class="catname" href="#?cat15" onclick="getProductsByCat('cat15'); displayLoading()">Phalaenopsis Orchid</a>
                   </li>
                 </ul>
               </div>
@@ -115,7 +116,11 @@
         <!-- ------------------------------- -->
       </div>
       <div class="main-content col-md-9">
+        <div id="loading-bg">
+          <div id="loading"></div>
+        </div>        
         <div id="products" class="prd-slider_item row">
+          
           <!-- ||Database query -->
         </div>
       </div>

@@ -279,8 +279,8 @@ fetch(api_url)
         //lasted product
         var lastedList = getRandom(data, 4);
         // data.slice(-4)
-            
-        
+
+
         //random array
         function getRandom(arr, n) {
             var result = new Array(n),
@@ -297,6 +297,7 @@ fetch(api_url)
 
         }
         var randomArray = getRandom(data, 4);
+
         function items(pro) {
 
             return `<div class="col-md-3 col-6">
@@ -319,6 +320,7 @@ fetch(api_url)
             </div>
         </div>`;
         }
+
         function latest(lastpro) {
 
             return `<div class="col-md-3 col-6">
@@ -866,3 +868,20 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+// loading effect
+// selecting loading div
+
+
+// showing loading
+function displayLoading() {
+    $('#loading-bg').addClass("display");
+    // to stop loading after some time
+    setTimeout(() => {
+        $('#loading-bg').removeClass("display");
+    }, 2000);
+}
+// hiding loading 
+function hideLoading() {
+    loader.classList.remove("display");
+}

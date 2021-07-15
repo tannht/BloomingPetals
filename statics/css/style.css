@@ -601,9 +601,6 @@ section#header {
   width: 100%;
   height: 250px;
   justify-content: center; }
-  @media (max-width: 576px) {
-    .img-wrapper {
-      height: 150px; } }
   .img-wrapper:hover {
     border-radius: 10px;
     transition: all 3s; }

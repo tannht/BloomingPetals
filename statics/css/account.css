@@ -812,16 +812,14 @@ button:hover {
 iframe {
   border: none !important; }
 
-/*//////////////////////////////////////////////////////////////////
-  [ Utility ]*/
+/*  [ Utility ]*/
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
   color: #e5e5e5;
   line-height: 1.5; }
 
-/*//////////////////////////////////////////////////////////////////
-  [ login ]*/
+/*  [ login ]*/
 .limiter {
   width: 100%;
   margin: -35px auto; }

@@ -205,7 +205,7 @@ blockquote {
   text-align: center; }
 
 img {
-  width: 100%; }
+  max-width: 90%; }
 
 blockquote {
   font-style: italic;

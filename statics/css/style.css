@@ -596,11 +596,10 @@ section#header {
   width: 100%; }
 
 .img-wrapper {
-  display: flex;
   overflow: hidden;
-  width: 100%;
-  height: 250px;
   justify-content: center; }
+  .img-wrapper img {
+    width: 100%; }
   .img-wrapper:hover {
     border-radius: 10px;
     transition: all 3s; }

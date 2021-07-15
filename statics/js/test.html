@@ -8,6 +8,7 @@
     <script src="./test.js"></script>
     <script src="validator.js"></script>    
     <link rel="stylesheet" href="../css/test.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <head>
@@ -26,6 +27,7 @@
         crossOrigin="anonymous"
       />
       </head>
+      <div id="test"></div>
         <div class="line-text"><span>CodingUI</span></div>
               <div class="signup">
                 <img src="https://imgur.com/aILP3CD.png" alt="" class="signup-image">
@@ -59,27 +61,5 @@
                   </form>
                 </div>
               </div>
-    <script>
-        Validator({
-            form : '#registerForm',
-            errorSelector : '.form-message',
-            rules: [
-                Validator.isRequired('#fullname', 'Please enter your name!'),
-                Validator.isRequired('#email', 'Please enter your email!'),
-                Validator.isEmail('#email', 'Invalid email!'),
-                Validator.isRequired('#password', 'You must enter password!'),
-                Validator.minLength('#password', 6, 'Requires a password least 6 characters'),
-                Validator.isRequired('#confirm-password', 'You must enter confirm password!'),               
-                Validator.isConfirmed('#confirm-password', function () {
-                    return document.querySelector('#registerForm #password').value;
-                }, 'Password does not match!'),
-            ],
-            onSubmit : function (data) {
-                console.log(data)
-            }
-           
-        });
-    </script> 
-     
 </body>
 </html>

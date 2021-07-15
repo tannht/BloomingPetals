@@ -95,6 +95,7 @@ function openMenu() {
 function closeMenu() {
     $('.mobile-menu_sidebar-menu').removeClass("show")
     $('.nav-btn').css("opacity", 1);
+    
 }
 
 function addCommas(nStr) {

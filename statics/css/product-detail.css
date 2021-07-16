@@ -202,8 +202,15 @@
   justify-content: center;
   padding-top: 120px;
   text-align: center; }
+  @media (max-width: 576px) {
+    .product-main-container {
+      padding: 120px 0 20px 0; } }
   .product-main-container .product-frame {
     background: #f8f8f8; }
+    @media (max-width: 576px) {
+      .product-main-container .product-frame #product-container {
+        display: flex;
+        justify-content: center; } }
     .product-main-container .product-frame #product-container .price,
     .product-main-container .product-frame #product-container .product-tile {
       text-align: center; }
@@ -231,10 +238,17 @@
       padding: 10px; }
       .product-main-container .product-frame #product-container .add-to-cart-btn:hover {
         background: #406420; }
+    @media (max-width: 576px) {
+      .product-main-container .product-frame #product-container .right-content {
+        padding-left: 0;
+        padding-right: 0; } }
     .product-main-container .product-frame #product-container .product-image {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 576px) {
+        .product-main-container .product-frame #product-container .product-image {
+          margin-bottom: 20px; } }
       .product-main-container .product-frame #product-container .product-image img {
         max-width: 100%; }
     .product-main-container .product-frame #product-container .product-info {
@@ -253,6 +267,10 @@
       /* make hovered input's following siblings grey on hover */
       /* make none icon grey on rating group hover */
       /* make none icon red on hover */ }
+      @media (max-width: 576px) {
+        .product-main-container .product-frame #product-container .product-info {
+          padding: 0;
+          max-width: 100%; } }
       .product-main-container .product-frame #product-container .product-info .rating-group {
         display: inline-flex;
         margin-top: 20px;
